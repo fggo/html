@@ -223,7 +223,7 @@
 		<li><a href = "contact.html">Contact</a></li>
 	</ul>
 </p>
-
+```
 
 ### Directory structure
 ```html
@@ -306,13 +306,13 @@ mailto:
 <a href = "#interlude">Interlude</a>
 <a href = "#prologue">Prologue</a>
 
-<h2 id = "arc_short">Arc Shot</h1>
+<h2 id = "arc_short">Arc Shot</h2>
 <p>a shot in which the subject is photographed by ...</p>
 
-<h2 id = "interlude">Interlude</h1>
+<h2 id = "interlude">Interlude</h2>
 <p>a breif, intervening film scene or ...</p>
 
-<h2 id = "prologue">Prologue</h1>
+<h2 id = "prologue">Prologue</h2>
 <p>a speech, preface, intro...</p>
 
 <p><a href = "#top">Top</a></p>
