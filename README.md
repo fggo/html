@@ -202,26 +202,128 @@
 
 ## Links
 
+### Absolute and Relative URL
+```html
+<p>Movie Reviews:
+	<ul>
+		<li><a href = "https://www.rottentomatoes.com/"> 
+			Rotten Tomatoes</a></li>
+		<li><a href = "http://www.imdb.com/?ref_=nv_home">
+			IMDB</a></li>
+		<li><a href = "http://www.rogerebert.com/">
+			Roger Ebert</a></li>
+	</ul>
+</p>
 
-	
-  &#128193; examplearts
-    &#128459; index.html
-    &#128193; images
-      &#128443; logo.gif
-    &#128193; movies
-      &#128193; cinema
-        &#128459; index.html
-        &#128459; listings.html
-        &#128459; reviews.html
-      &#128193; dvd
-        &#128193; index.html
-        &#128193; reviews.html
-        &#128193; reviews.html
-    &#128193; music
-      &#128193; index.html
-      &#128193; listings.html
-      &#128193; reviews.html
-    &#128193; theater
-      &#128193; index.html
-      &#128193; listings.html
-      &#128193; reviews.html
+<p>
+	<ul>
+		<li><a href = "index.html">Home</a></li>
+		<li><a href = "about-us.html">About</a></li>
+		<li><a href = "movie.html">Movies</a></li>
+		<li><a href = "contact.html">Contact</a></li>
+	</ul>
+</p>
+
+
+### Directory structure
+```html
+Web servers usually set up to return the index.html file.
+Every page and every image on a website has a URL,
+which is made up of the domain name followed by the 
+path to that page or image.
+
+Path to the homepage:
+	www.examplearts.com/index.html
+Path to the logo for the site:
+	examplearts.com/images/logo.gif
+```
+
+
+> the root folder contains:
+* a file called index.html, homepage for entire site
+* folders for movie, music, theatre section of the site
+
+> each sub-dir contains:
+* index.html, homepage for that section
+* reviews.html
+* listings.html except DVD dir
+
+> movies section contains 
+* cinema folder
+* DVD folder
+
+### Relative URL
+```
+when you link to a page on your own website,
+you do not need to specify the domain name.
+instead you can use relative URLs.
+```
+
+* same dir
+```html
+<a href = "reviews.html">Reviews</a>
+```
+
+* child dir
+```html
+<a href = "music/listings.html">Listings</a>
+```
+
+* grandchild dir
+```html
+<a href = "movies/dvd/reviews.html">Reviews</a>
+```
+
+* parent dir
+```html
+<a href = "../index.html">Home</a>
+```
+
+* grandparent dir
+```html
+<a href = "../../index.html">Home</a>
+```
+
+### Email Links
+```html
+mailto:
+<p>
+	<a href = "mailto:jon@example.org">Email Jon</a>
+</p>
+```
+
+
+### Open Links in new window
+```html
+<!--target-->
+<a href = "https://www.youtube.com/" target = "_blank">Youtube</a>
+```
+
+### Link to same page
+```html
+<h1 id = "top">Film-Making Terms</h1>
+<a href = "#arc_short">Arc shot</a>
+<a href = "#interlude">Interlude</a>
+<a href = "#prologue">Prologue</a>
+
+<h2 id = "arc_short">Arc Shot</h1>
+<p>a shot in which the subject is photographed by ...</p>
+
+<h2 id = "interlude">Interlude</h1>
+<p>a breif, intervening film scene or ...</p>
+
+<h2 id = "prologue">Prologue</h1>
+<p>a speech, preface, intro...</p>
+
+<p><a href = "#top">Top</a></p>
+```
+
+
+### Link to different page
+```html
+same but href attr will contain the address for the page
+(absolute or relative URL), followed by the value of the id attr
+<a href = "http:/www.htmlandcssbookcom/#bottom">book</a>
+```
+
+## Images
