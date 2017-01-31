@@ -186,6 +186,7 @@
 ```
 
 ### Nested Lists
+```html
 <ul>
 	<li>Mathematics</li>
 	<li>English</li>
@@ -199,6 +200,7 @@
 			<li>PHP</li>
 		</ul>
 </ul>
+```
 
 ## Links
 
