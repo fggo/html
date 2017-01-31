@@ -181,7 +181,7 @@
 	<dd>Bread is a staple food prepared from a dough of flour and water, usually by baking.</dd>
 
 	<dt>Coffee</dt>
-	<dd>Coffee is a brewed drink prepared from roasted coffee beans, seeds of berries from the Coffea plant.</dd>
+	<dd>Coffee is a brewed drink prepared from roasted coffee beans.</dd>
 </dl>
 ```
 
