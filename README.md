@@ -240,17 +240,19 @@ Path to the logo for the site:
 	examplearts.com/images/logo.gif
 ```
 
+root folder contains:
 
-> the root folder contains:
 * a file called index.html, homepage for entire site
 * folders for movie, music, theatre section of the site
 
-> each sub-dir contains:
+each sub-dir contains:
+
 * index.html, homepage for that section
 * reviews.html
 * listings.html except DVD dir
 
-> movies section contains 
+'movie' dir contains 
+
 * cinema folder
 * DVD folder
 
@@ -288,12 +290,11 @@ instead you can use relative URLs.
 
 ### Email Links
 ```html
-mailto:
+<!--mailto:-->
 <p>
 	<a href = "mailto:jon@example.org">Email Jon</a>
 </p>
 ```
-
 
 ### Open Links in new window
 ```html
