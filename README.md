@@ -330,3 +330,70 @@ same but href attr will contain the address for the page
 ```
 
 ## Images
+```html
+<!--src: relative url-->
+<!--alt: text desc that shows up if image is broken-->
+<!--title: additional info when mouse cursor hover-->
+<!--height, width: size-->
+<!--specifying img size make page load faster -->
+<!--CSS handles images better-->
+<!--img placement can be changed around paragraph-->
+<p>
+	<img 
+	src = "../Pictures/astronaut.jpg"
+	alt ="NASA astronaut lands on moon for the first time in human history"
+	title = "Astronaut"
+	height = "200"
+	width = "110">
+</p>
+```
+
+### img align
+```html
+'align' attr is no longer used in HTML5.
+<!--align left, right-->
+<p>
+	<img 
+	src = "../Pictures/yass.jpg"
+	alt ="stretches before workout"
+	title = "yoga"
+	height = "100"
+	width = "150"
+	align = "left">Working out is essential for people who works on the desk daily.
+	<img 
+	src = "../Pictures/yass.jpg"
+	alt ="stretches before workout"
+	title = "yoga"
+	height = "100"
+	width = "150"
+	align = "right">Working out is essential for people who works on the desk daily.
+</p>
+
+<!--align top, middle, bottom (first line)-->
+<p>
+	<img 
+	src = "../Pictures/MochoPuma.jpg"
+	alt ="puma in nature"
+	title = "puma"
+	height = "100"
+	width = "180"
+	align = "top">Puma is a big cat. It hunts at night.
+	During the day puma sleeps in shades.
+	<img 
+	src = "../Pictures/MochoPuma.jpg"
+	alt ="puma in nature"
+	title = "puma"
+	height = "100"
+	width = "180"
+	align = "middle">Puma is a big cat. It hunts at night.
+	During the day puma sleeps in shades.
+	<img 
+	src = "../Pictures/MochoPuma.jpg"
+	alt ="puma in nature"
+	title = "puma"
+	height = "100"
+	width = "180"
+	align = "bottom">Puma or panther is a big cat. It hunts at night.
+	During the day puma sleeps in shades.
+</p>
+```
