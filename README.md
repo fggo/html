@@ -427,6 +427,19 @@ two formats :
 * png : diagonal, round, semi-opaque, drop-shadow img
 
 
-### figure
+### figure figcaption
+```html
+<figure>
+	<img src = "../../Pictures/astronaut.jpg" 
+	alt = "astronaut standing on the moon">
+	<img src = "../../Pictures/astro2.jpg"
+	alt = "astronaut saying hello">
+	<br/>
+	<figcaption>
+		HTML5 allows figure caption for multiple images
+	</figcaption>
+</figure>
+```
 
-### figcaption
+
+## Table
