@@ -375,3 +375,58 @@ same but href attr will contain the address for the page
 	align = "bottom">Puma is a big cat.
 </p>
 ```
+
+### Rules for creating img
+1. img in right format
+2. img in right size
+3. img in correct resolution (px)
+
+### Tools to edit img
+1. Adobe Photoshop
+2. GIMP
+4. Blender
+5. Abobe Fireworks
+6. Pixelmator
+7. PaintShop Pro
+8. Paint.net
+
+### jpeg
+use picture format as .jpeg
+
+### gif
+use .gif or .png for img with few colors <br/>
+or large areas of the same color
+
+### img dimensions
+1. reduce size
+2. increase size
+3. change shape, crop
+
+### img resolution
+```html
+img for web should be saved at a resolution of 72 ppi
+bitmap format : JPG, GIF, PNG
+```
+
+### Vector img
+differs from bitmap image<br/>
+resolution-independent<br/>
+commonly created with Adobe Illustrator<br/>
+place points on a gird and draw lines between them <br/><br/>
+
+The current method of using vector images for display on websites <br/>
+involves saving bitmap version of the original vector images and using that. <br/>
+
+### Animated gif
+shows several frames of an image in sequence to create simple animations
+due to increasing file sizes, gif is only suitable for simple illustration
+
+### Transparency
+two formats :
+* transparent gif : straight edged img
+* png : diagonal, round, semi-opaque, drop-shadow img
+
+
+### figure
+
+### figcaption
