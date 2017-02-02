@@ -4,6 +4,7 @@
 * [Lists] (https://github.com/fggo/html/blob/master/README.md#lists)
 * [Links] (https://github.com/fggo/html/blob/master/README.md#links)
 * [Images] (https://github.com/fggo/html/blob/master/README.md#images)
+* [Table] (https://github.com/fggo/html/blob/master/README.md#table)
 
 ## Structure
 ```html
@@ -349,9 +350,10 @@ same but href attr will contain the address for the page
 </p>
 ```
 
-### img align
-```html
-'align' attr is no longer used in HTML5.
+### img align [old code]
+```html 
+'align' attr is no longer used in HTML5.<br/>
+new website should use CSS to control alignment of images.
 <!--align left, right-->
 <p>
 	<img 
@@ -361,7 +363,6 @@ same but href attr will contain the address for the page
 	src = "work.jpg" alt ="stretches before workout" title = "work" height = "100" width = "150"
 	align = "right">Working out is essential for people who works on the desk daily.
 </p>
-
 <!--align top, middle, bottom (first line)-->
 <p>
 	<img 
@@ -441,5 +442,6 @@ two formats :
 </figure>
 ```
 
-
 ## Table
+
+
