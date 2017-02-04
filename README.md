@@ -5,6 +5,7 @@
 * [Links] (https://github.com/fggo/html/blob/master/README.md#links)
 * [Images] (https://github.com/fggo/html/blob/master/README.md#images)
 * [Table] (https://github.com/fggo/html/blob/master/README.md#table)
+* [Forms] (https://github.com/fggo/html/blob/master/README.md#forms)
 
 ## Structure
 ```html
