@@ -445,5 +445,290 @@ two formats :
 
 ## Table
 
+### table heading
+<!--th: heading for row or col-->
+<table border =1>
+	<tr>
+		<th></th>
+		<th scope = "col">SAT</th>
+		<th scope = "col">SUN</th>
+	</tr>
+	<tr>
+		<th scope = "row">Tickets sold:</th>
+		<td>120</td>
+		<td>135</td>
+	</tr>
+	<tr>
+		<th scope = "row">Total sales:</th>
+		<td>$600</td>
+		<td>$675</td>
+	</tr>
+</table>
+
+
+### spanning columns
+```html
+colspan can be used on <td> or <th>
+<table border =1>
+	<tr>
+		<td colspan ="2">A</td>
+		<td colspan ="2">B</td>
+	</tr>
+	<tr>
+		<th colspan ="4">C</th>
+	</tr>
+</table>
+```
+
+### spanning rows
+```html
+<table border = 1>
+	<tr>
+		<td rowspan ="2">A</td>
+		<td>B</td>
+	</tr>
+	<tr>
+		<td>C</td>
+	</tr>
+</table>
+```
+
+### thead tbody tfoot
+in case of long table, thead tbody tfoot <br/>
+allow header and footer visible <br/>
+allowing scrolls in body.
+```html
+<table border = "1">
+	<thead>
+		<tr>
+			<th>Data</th>
+			<th>Income</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th>1st Jan</th>
+			<td>10</td>
+		</tr>
+		<!--2-30 Jan-->
+		<tr>
+			<th>31st Jan</th>
+			<td>10</td>
+		</tr>
+	</tbody>
+	<tfoot>
+		<tr>
+			<td></td>
+			<td>120</td>
+		</tr>
+	</tfoot>
+</table>
+```
+
+### Width & spacing [old code]
+```html
+<!--width: table width-->
+<!--cellpadding: space inside each cell-->
+<!--cellspacing: space between each cell-->
+<table width ="400" cellpadding = "10" cellspacing = "5" border = "1">
+	<tr>
+		<th width ="150"> </th>
+		<th>withdrawn</th>
+		<th>credit</th>
+		<th width ="150">balance</th>
+	</tr>
+	<tr>
+		<th>January</th>
+		<th>250</th>
+		<th>600</th>
+		<th>400</th>
+	</tr>
+</table>
+```
+
+### Border & background [old code]
+```html
+<table border ="2" bgcolor = "#efefef">
+	<tr>
+		<th width = "150"></th>
+		<th>withdrawn</th>
+		<th>cefdit</th>
+		<th width = "150" bgcolor = "#cccccc">balance</th>
+	</tr>
+	<tr>
+		<th>January</th>
+		<td>250.00</td>
+		<td>660.50</td>
+		<td bgcolor = "#cccccc">410.50</td>
+	</tr>
+</table>
+
+```
+
+## Forms
+
+### Form control
+
+### adding text
+1. text input (single line)
+2. pw input
+3. text area
+
+### making choices
+1. radio btn
+2. checkboxes
+3. drop-down boxes
+
+### how forms work
+1. user fills in a form and press submit btn
+2. name and value pair of each form control is sent to the server
+3. server processes info using lang like PHP, C#, VB.net, Java <br/> and stores info in a database.
+4. server creates a new page to send back to the brower <br/> based on the info received
+
+### form structure
+1. action: url for the page on the server receiving submitted info
+2. method : get(action url + form val added at the end), <br/> post(val is sent in what are knownas HTTP headers)
+  * get for short forms (such as search boxes)
+  * get for retrieving data from web server, not seding info that <br/> should be added to or deleted from database
+  * get method is default (when method attr is not used)
+  * post for forms that allow users to upload a file
+  * post for very long forms
+  * post for forms containing sensitive data (pw)
+  * post for forms that add info to or deletee info from a database
+3. id: identify the form distinctly from other elements on the page
+
+```html
+<form action = "http://www.example.com/subscribe.php" method = "get">
+	<p>This is where the form controls will appear</p>
+</form>
+```
+
+### input
+
+```html
+<!--name: each form control needs name attr-->
+<!--size: num of char [old forms: now CSS can control]-->
+<form action = "http://www.example.com/login.php" method = "get">
+	<p>username: 
+		<input type = "text" name = "username" size = "15" maxlength = "30" />
+	</p>
+	<p>password: 
+		<input type = "password" name = "password" size = "15" maxlength = "30" />
+	</p>
+</form>
+```
+
+### text area
+```html
+<form action = "http://www.example.com/comments.php" method = "get">
+	<p>What do you think of  this gig</p>
+	<textarea name = "comments" cols = "20" rows = "4">Enter your comments</textarea>
+</form>
+```
+
+### radio btn
+```html
+<!--checked: which val should be selected when page loads-->
+<form action = "http://www.example.com/profile.php">
+	<p>Please select your favorite genre</p>
+	<br/>
+	<input type = "radio" name = "genre" value = "rock" checked = "checked"/> Rock
+	<input type = "radio" name = "genre" value = "pop"/> Pop
+	<input type = "radio" name = "genre" value = "jazz"/> Jazz
+</form>
+```
+
+### checkbox
+```html
+<form action = "http://www.example.com/profile.php">
+	<p>Please select your favorite music service(s)</p>
+	<br/>
+	<input type = "checkbox" name = "service" value = "itunes" checked = "checked"/> iTunes
+	<input type = "checkbox" name = "service" value = "lastfm"/> Last.fm
+	<input type = "checkbox" name = "service" value = "spotify"/> Spotify
+</form>
+```
+
+### drop down list box
+```html
+<!--select: it creates drop down list which allows users to select one val-->
+<!--selected: default selected when page loads. if not used, the first is selected-->
+<form action = "http://www.example.com/profile.php">
+	<p>What device do you listen to music on?</p>
+	<select name = "devices">
+		<option value = "ipod" selected = "selected">iPod</option>
+		<option value = "radio">Radio</option>
+		<option value = "computer">Computer</option>
+	</select>
+</form>
+```
+
+### multiple select box
+```html
+<form action = "http://www.example.com/profile.php">
+	<p>Play any Instruments? (multi select available)</p>
+	<select name = "instruments" size = "3" multiple = "multiple">
+		<option value = "guitar" selected = "selected">Guitar</option>
+		<option value = "drums">Drums</option>
+		<option value = "keyboard">Keyboard</option>
+		<option value = "bass">Bass</option>
+	</select>
+</form>
+```
+
+### file input box
+```html
+<form action = "http://www.example.com/upload.php" method = "post">
+	<p>upload your song in mp3 format</p>
+	<input type = "file" name = "user-song"/> <br />
+	<input type = "submit" value = "Upload"/>
+</form>
+```
+
+### submit btn
+```html
+<!--value: text that appears on the page-->
+<form action = "http://www.example.com/subscribe.php">
+	<p>subscribe to our email list:</p>
+	<input type = "text" name = "email"/>
+	<input type = "submit" name = "subscribe" value = "Subscribe"/>
+</form>
+```
+
+### img btn
+```html
+<!--alt works as used in <img>-->
+<form action = "http://www.example.com/subscribe.php">
+	<p>subscribe to our email list:</p>
+	<input type = "text" name = "email"/>
+	<input type = "image" src = "subscribe.png" width = "100" height ="20"/>
+</form>
+```
+
+### btn & hidden controls
+```html
+<!--input hidden: allow page authors to add val to forms users can't see-->
+<!--for example, author might use hidden field to indicate which page the user was on when submitting a form-->
+<form action = "http://www.example.com/add.php">
+	<button><img src = "add.gif" alt = "add" width = "10" height = "10"/>Add</button>
+	<input type = "hidden" name = "bookmark" value = "lyrics"/>
+</form>
+```
+
+### labelling form controls
+
+### grouping form elements
+
+### HTML5: form validation
+
+### HTML5: data input
+
+### HTML5: email & url input
+
+### HTML5: search input
+
+## Exstra markup
+
+
 
 ## Forms
