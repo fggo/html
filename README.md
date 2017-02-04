@@ -708,7 +708,7 @@ allowing scrolls in body.
 ### btn & hidden controls
 ```html
 <!--input hidden: allow page authors to add val to forms users can't see-->
-<!--for example, author might use hidden field to indicate which page the user was on when submitting a form-->
+<!--author might use hidden field to indicate which page the user was on when submitting a form-->
 <form action = "http://www.example.com/add.php">
 	<button><img src = "add.gif" alt = "add" width = "10" height = "10"/>Add</button>
 	<input type = "hidden" name = "bookmark" value = "lyrics"/>
