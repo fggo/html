@@ -6,6 +6,7 @@
 * [Images] (https://github.com/fggo/html/blob/master/README.md#images)
 * [Table] (https://github.com/fggo/html/blob/master/README.md#table)
 * [Forms] (https://github.com/fggo/html/blob/master/README.md#forms)
+* [Extra markup] (https://github.com/fggo/html/blob/master/README.md#extra-markup)
 
 ## Structure
 ```html
@@ -727,8 +728,4 @@ allowing scrolls in body.
 
 ### HTML5: search input
 
-## Exstra markup
-
-
-
-## Forms
+## Extra markup
