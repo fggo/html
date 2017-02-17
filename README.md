@@ -207,9 +207,8 @@
 ```
 
 ### Directory structure
-```html
-Web servers usually set up to return the index.html file. examplearts.com will return examplearts.com/index.html
-```
+Web servers usually set up to return the index.html file <br/>
+examplearts.com will return examplearts.com/index.html<br/><br/>
 
 root folder contains:
 
@@ -751,12 +750,14 @@ HTML4
 
 Traditional XHTML 1.0
 ```html
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Traditional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-traditional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Traditional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-traditional.dtd">
 ```
 
 Strict XHTML 1.0
 ```html
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 ```
 
 XML Declaration
