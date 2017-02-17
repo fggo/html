@@ -25,16 +25,10 @@
 ```
 ## Text
 
-### Bold
+### Bold Italic
 ```html
 <p>
 	<b>bold</b> text
-</p>
-```
-
-### Italic
-```html
-<p>
 	<i>italic</i> text
 </p>
 ```
@@ -86,50 +80,35 @@
 
 ### Quotation
 ```html
-<!--block quote-->
-<blockquote cite = "https://en.wikipedia.org/wiki/Floyd_Mayweather_Jr.">
-	<p>Like I said before... Easy work!</p>
+<!--Block quote-->
+<blockquote cite = "https://en.wikipedia.org/wiki/Floyd_Mayweather_Jr."> 
+	<p>Easy Work.</p> 
 </blockquote>
 
-<!--quotation mark-->
-<p>Respect is earned. You have to 
-	<q>work hard.</q>  
-	<!--does not work in IE-->
-</p>
+<!--Quotation mark: does not work in IE-->
+<q>Fly like a butterfly. Sting like a bee.</q>
 ```
 
 ### Abbreviation
 ```html
-<p>
-	<abbr title = "Professor">Prof</abbr> 
-	Foo will discuss the topic.
-</p>
+<abbr title = "Professor">Prof</abbr> will discuss the topic.
 ```
 
 ### Acronym
 ```html
-<p>
-	<acronym title = "President Of The United States">POTUS</acronym> 
-	will address soon.
-</p>
+<acronym title = "President Of The United States">POTUS</acronym> is flying.
 ```
 
 ### Citation
 ```html
 <!--cite-->
-<p>
-	<cite>A Brief History of Time</cite> by Stephen Hawking 
-	has sold over ten million copies worldwide.
-</p>
+<cite>A Brief History of Time</cite> by Stephen Hawking has sold over ten million copies worldwide.
 ```
 
 ### Definitions
 ```html
 <!--dfn-->
-<p>A
-	<dfn>black hole</dfn> is a region of space 
-	from which nothing, not even light, can escape.
-</p>
+<dfn>Black hole</dfn> is a region of space from which nothing, not even light, can escape.
 ```
 
 ### Author details
@@ -139,18 +118,12 @@
 	<p><a href = "mailto:homer@example.org"> homer@example.org</a> </p>
 	<p>742 Evergreen Terrace, Springfield.</p>
 </address>
-
 ```
 
 ### Changes to content
 ```html
-<!--del ins-->
-<p>It was the 
-	<del>worst</del> 
-	<ins>best</ins> 
-	decision I'd ever made
+<p>It was the <del>worst</del>  <ins>best</ins> decision I'd ever made
 </p>
-
 
 <!--no longer relevant-->
 <p><s>Price is $200</s></p>
@@ -209,6 +182,8 @@
 ## Links
 
 ### Absolute and Relative URL
+* Abosolute URL : domain name for a site followed by the path to a specific page
+* Relative URL: link to other pages within the same site
 ```html
 <p>Movie Reviews:
 	<ul>
@@ -233,21 +208,13 @@
 
 ### Directory structure
 ```html
-Web servers usually set up to return the index.html file.
-Every page and every image on a website has a URL,
-which is made up of the domain name followed by the 
-path to that page or image.
-
-Path to the homepage:
-	www.examplearts.com/index.html
-Path to the logo for the site:
-	examplearts.com/images/logo.gif
+Web servers usually set up to return the index.html file. examplearts.com will return examplearts.com/index.html
 ```
 
 root folder contains:
 
-* a file called index.html, homepage for entire site
-* folders for movie, music, theatre section of the site
+* a file called index.html, homepage
+* folders for movie, music, theatre
 
 each sub-dir contains:
 
@@ -255,49 +222,38 @@ each sub-dir contains:
 * reviews.html
 * listings.html except DVD dir
 
-'movie' dir contains 
+movie dir contains 
 
 * cinema folder
 * DVD folder
 
 ### Relative URL
 ```
-when you link to a page on your own website,
-you do not need to specify the domain name.
+when you link to a page on your own website, you do not need to specify the domain name.
 instead you can use relative URLs.
 ```
 
-* same dir
+cur dir
 ```html
 <a href = "reviews.html">Reviews</a>
 ```
 
-* child dir
+child dir
 ```html
 <a href = "music/listings.html">Listings</a>
-```
-
-* grandchild dir
-```html
 <a href = "movies/dvd/reviews.html">Reviews</a>
 ```
 
-* parent dir
+parent dir
 ```html
 <a href = "../index.html">Home</a>
-```
-
-* grandparent dir
-```html
 <a href = "../../index.html">Home</a>
 ```
 
 ### Email Links
 ```html
 <!--mailto:-->
-<p>
-	<a href = "mailto:jon@example.org">Email Jon</a>
-</p>
+<a href = "mailto:jon@example.org">Email Jon</a>
 ```
 
 ### Open Links in new window
@@ -325,22 +281,19 @@ instead you can use relative URLs.
 <p><a href = "#top">Top</a></p>
 ```
 
-
 ### Link to different page
 ```html
-same but href attr will contain the address for the page
-(absolute or relative URL), followed by the value of the id attr
+absolute or relative URL, followed by the value of the id attr
 <a href = "http:/www.htmlandcssbookcom/#bottom">book</a>
 ```
 
 ## Images
 ```html
 <!--src: relative url-->
-<!--alt: text desc that shows up if image is broken-->
-<!--title: additional info when mouse cursor hover-->
-<!--height, width: size-->
-<!--specifying img size make page load faster -->
-<!--CSS handles images better-->
+<!--alt: desc that shows up if image is broken-->
+<!--title: info when mouse cursor hover-->
+<!--height width: size-->
+<!--specify img size to make page load faster -->
 <!--img placement can be changed around paragraph-->
 <p>
 	<img 
@@ -353,10 +306,10 @@ same but href attr will contain the address for the page
 ```
 
 ### img align [old code]
-```html 
-'align' attr is no longer used in HTML5.<br/>
+```html
+'align' attr is no longer used in HTML5.
 new website should use CSS to control alignment of images.
-<!--align left, right-->
+<!--left, right-->
 <p>
 	<img 
 	src = "work.jpg" alt ="stretches before workout" title = "work" height = "100" width = "150"
@@ -365,7 +318,7 @@ new website should use CSS to control alignment of images.
 	src = "work.jpg" alt ="stretches before workout" title = "work" height = "100" width = "150"
 	align = "right">Working out is essential for people who works on the desk daily.
 </p>
-<!--align top, middle, bottom (first line)-->
+<!--top, middle, bottom (first line)-->
 <p>
 	<img 
 	src = "puma.jpg" alt ="in nature" title = "puma" height = "100" width = "180"
@@ -380,9 +333,9 @@ new website should use CSS to control alignment of images.
 ```
 
 ### Rules for creating img
-1. img in right format
+1. img in right format (jpeg gif png)
 2. img in right size
-3. img in correct resolution (px)
+3. img in correct resolution (72 px)
 
 ### Tools to edit img
 1. Adobe Photoshop
@@ -394,16 +347,13 @@ new website should use CSS to control alignment of images.
 8. Paint.net
 
 ### jpeg
-use picture format as .jpeg
+use .jpeg for img with many different colors
 
-### gif
-use .gif or .png for img with few colors <br/>
-or large areas of the same color
+### gif png
+use .gif or .png for img with few colors or large areas of the same color
 
-### img dimensions
-1. reduce size
-2. increase size
-3. change shape, crop
+## img dimension
+reduce, increase, change shapes of a img
 
 ### img resolution
 ```html
@@ -412,34 +362,31 @@ bitmap format : JPG, GIF, PNG
 ```
 
 ### Vector img
-differs from bitmap image<br/>
-resolution-independent<br/>
+differs from bitmap image and resolution-independent<br/>
 commonly created with Adobe Illustrator<br/>
-place points on a gird and draw lines between them <br/><br/>
-
+place points on a gird and draw lines between them and color can be fill in<br/><br/>
 The current method of using vector images for display on websites <br/>
 involves saving bitmap version of the original vector images and using that. <br/>
 
-### Animated gif
+### Animated gifs
 shows several frames of an image in sequence to create simple animations
 due to increasing file sizes, gif is only suitable for simple illustration
 
 ### Transparency
-two formats :
+creating a partially transparent img for web involves selecting one of two formats :
 * transparent gif : straight edged img
 * png : diagonal, round, semi-opaque, drop-shadow img
 
 
 ### figure figcaption
+To contain both img and caption
 ```html
 <figure>
-	<img src = "../../Pictures/astronaut.jpg" 
-	alt = "astronaut standing on the moon">
-	<img src = "../../Pictures/astro2.jpg"
-	alt = "astronaut saying hello">
+	<img src = "../../Pictures/astronaut.jpg"  alt = "astronaut standing on the moon">
+	<img src = "../../Pictures/astro2.jpg" alt = "astronaut saying hello">
 	<br/>
 	<figcaption>
-		HTML5 allows figure caption for multiple images
+		HTML5 allows caption for multiple images
 	</figcaption>
 </figure>
 ```
@@ -495,9 +442,7 @@ colspan can be used on <td> or <th>
 ```
 
 ### thead tbody tfoot
-in case of long table, thead tbody tfoot <br/>
-allow header and footer visible <br/>
-allowing scrolls in body.
+in case of long table, thead tbody tfoot allow header and footer visible allowing scrolls in body
 ```html
 <table border = "1">
 	<thead>
@@ -528,6 +473,7 @@ allowing scrolls in body.
 
 ### Width & spacing [old code]
 ```html
+replaced with CSS
 <!--width: table width-->
 <!--cellpadding: space inside each cell-->
 <!--cellspacing: space between each cell-->
@@ -583,19 +529,20 @@ allowing scrolls in body.
 ### how forms work
 1. user fills in a form and press submit btn
 2. name and value pair of each form control is sent to the server
-3. server processes info using lang like PHP, C#, VB.net, Java <br/> and stores info in a database.
-4. server creates a new page to send back to the brower <br/> based on the info received
+3. server processes info using lang like PHP, C#, VB.net, Java and stores info in a database.
+4. server creates a new page to send back to the brower based on the info received
 
 ### form structure
 1. action: url for the page on the server receiving submitted info
-2. method : get(action url + form val added at the end), <br/> post(val is sent in what are knownas HTTP headers)
-  * get for short forms (such as search boxes)
-  * get for retrieving data from web server, not seding info that <br/> should be added to or deleted from database
-  * get method is default (when method attr is not used)
-  * post for forms that allow users to upload a file
-  * post for very long forms
-  * post for forms containing sensitive data (pw)
-  * post for forms that add info to or deletee info from a database
+2. method : get(action url + form val added at the end)<br/> post(val is sent in what are known as HTTP headers)
+  * get: short forms (such as search boxes)
+  * get: when retrieving data from web server, not sending info that <br/> should be added to or deleted from database
+  * get:  default (when method attr is not used)
+
+  * post: forms that allow users to upload a file
+  * post: long forms
+  * post: containing sensitive data (pw)
+  * post: forms that add or delete info from a database
 3. id: identify the form distinctly from other elements on the page
 
 ```html
@@ -605,10 +552,9 @@ allowing scrolls in body.
 ```
 
 ### input
-
 ```html
 <!--name: each form control needs name attr-->
-<!--size: num of char [old forms: now CSS can control]-->
+<!--size: num of char [old forms: CSS]-->
 <form action = "http://www.example.com/login.php" method = "get">
 	<p>username: 
 		<input type = "text" name = "username" size = "15" maxlength = "30" />
@@ -619,7 +565,7 @@ allowing scrolls in body.
 </form>
 ```
 
-### text area
+### textarea
 ```html
 <form action = "http://www.example.com/comments.php" method = "get">
 	<p>What do you think of  this gig</p>
@@ -650,7 +596,7 @@ allowing scrolls in body.
 </form>
 ```
 
-### drop down list box
+### dropdown list box
 ```html
 <!--select: it creates drop down list which allows users to select one val-->
 <!--selected: default selected when page loads. if not used, the first is selected-->
@@ -696,7 +642,7 @@ allowing scrolls in body.
 </form>
 ```
 
-### img btn
+### image btn
 ```html
 <!--alt works as used in <img>-->
 <form action = "http://www.example.com/subscribe.php">
@@ -706,7 +652,7 @@ allowing scrolls in body.
 </form>
 ```
 
-### btn & hidden controls
+### button & hidden controls
 ```html
 <!--input hidden: allow page authors to add val to forms users can't see-->
 <!--author might use hidden field to indicate which page the user was on when submitting a form-->
@@ -717,15 +663,105 @@ allowing scrolls in body.
 ```
 
 ### labelling form controls
+1. wrap around text and form input 
+2. separate form form and use 'for' to indicate which form to label
+```html
+<label>Age: <input type = "text" name = "age"/></label><br/> 
 
-### grouping form elements
+Gender:
+<input id = "female" type = "radio" name = "gender" value = "f">
+<label for = "female">Female</label>
+<input id = "male" type = "radio" name = "gender" value = "m">
+<label for = "male">Male</label>
+```
+
+### Grouping form elements
+```html
+<fieldset>
+	<legend>Contact details</legend>
+	<label>Email:<br/><input type = "text" name = "email"/></label>
+	<label>Mobile:<br/><input type = "text" name = "mobile"/></label>
+	<label>Tel:<br/><input type = "text" name = "tel"/></label>
+</fieldset>
+```
 
 ### HTML5: form validation
+validate contents of the form before sent to the server. traditionally javascript 
+```html
+<form action = "http://www.example.com/login/" method = "post">
+	<label for "username">Username:</label>
+	<input type = "text" name = "username" required = "required"/><br/>
+	<label for "password">Password:</label>
+	<input type = "password" name = "password" required = "required"/>
+	<input type = "submit" value  = "Submit"/>
+</form>
+```
 
-### HTML5: data input
+### HTML5: date input
+```html
+<form action = "http://www.example.com/bookings/" method = "post">
+	<label for = "username">Departure date:</label>
+	<input type = "date" name = "depart"/>
+	<input type = "submit" value = "Submit"/>
+</form>
+```
 
 ### HTML5: email & url input
+```html
+<form action = "http://www.example.org/subscribe.php">
+	<p>Please enter your email address:</p>
+	<input type = "email" name = "email"/>
+	<input type = "submit" value = "Submit"/>
+</form>
+
+<form action = "http://www.example.org/profile.php">
+	<p>Please enter your website address:</p>
+	<input type = "url" name = "website"/>
+	<input type = "submit" value = "Submit"/>
+</form>
+```
 
 ### HTML5: search input
+```html
+<form action = "http://www.example.org/search.php">
+	<p>Search:</p>
+	<input type = "search" name = "search"/ placeholder = "Enter keyword">
+	<input type = "submit" name = "submit"/>
+</form>
+```
 
 ## Extra markup
+
+### The Evolution of HTML
+HTML4<br/>
+XHTML 1.0 follow the rule of XML<br/>s
+HTML5
+
+### DOCTYPE
+to tell a browser which vedrsion of HTML the page is using and render page correctly<br/>
+HTML5
+```html
+<!DOCTYPE html>
+```
+
+HTML4
+```html
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Traditional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+```
+
+Traditional XHTML 1.0
+```html
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Traditional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-traditional.dtd">
+```
+
+Strict XHTML 1.0
+```html
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+```
+
+XML Declaration
+```html
+<?xml version = "1.0" ?>
+```
+
+## id
