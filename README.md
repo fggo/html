@@ -7,6 +7,7 @@
 * [Table] (https://github.com/fggo/html/blob/master/README.md#table)
 * [Forms] (https://github.com/fggo/html/blob/master/README.md#forms)
 * [Extra markup] (https://github.com/fggo/html/blob/master/README.md#extra-markup)
+* [Flash Video Audio] (https://github.com/fggo/html/blob/master/README.md#flash-video-audio)
 
 ## Structure
 ```html
@@ -647,7 +648,7 @@ replaced with CSS
 <form action = "http://www.example.com/subscribe.php">
 	<p>subscribe to our email list:</p>
 	<input type = "text" name = "email"/>
-	<input type = "image" src = "subscribe.png" width = "100" height ="20"/>
+	<input type = "image" src = "image/subscribe.png" width = "100" height ="20"/>
 </form>
 ```
 
@@ -656,7 +657,7 @@ replaced with CSS
 <!--input hidden: allow page authors to add val to forms users can't see-->
 <!--author might use hidden field to indicate which page the user was on when submitting a form-->
 <form action = "http://www.example.com/add.php">
-	<button><img src = "add.gif" alt = "add" width = "10" height = "10"/>Add</button>
+	<button><img src = "image/add.gif" alt = "add" width = "10" height = "10"/>Add</button>
 	<input type = "hidden" name = "bookmark" value = "lyrics"/>
 </form>
 ```
@@ -737,7 +738,7 @@ XHTML 1.0 follow the rule of XML<br/>s
 HTML5
 
 ### DOCTYPE
-to tell a browser which vedrsion of HTML the page is using and render page correctly<br/>
+to tell a browser which version of HTML the page is using and render page correctly<br/>
 HTML5
 ```html
 <!DOCTYPE html>
@@ -765,4 +766,203 @@ XML Declaration
 <?xml version = "1.0" ?>
 ```
 
-## id
+### id
+Any HTML elements can carry id attr which uniquely identify themselves. useful in CSS and javascript
+```html
+<p id = "pullquote">this is a quotation test. this text appearance can be changed by CSS</p>
+```
+
+### class
+unlike id attr, elements can share a class attr. If you would like to indicate that an element belongs <br/> to several classes, you can separate class names with a space. e.g class = "important admittance""
+```html
+<p class = "important">this is a public announcement...</p>
+<p>here is additional info</p>
+<p class = "important admittance">Hours: 9-5</p>
+```
+
+### Block or inline element
+
+### Grouping text and elements in a block
+group a set of elements together in one block-level box<br/>
+contents of the div element will start on a new line and no others changes to the page
+```html
+<div id = "header">
+	<img src = "images/logo.gif" alt = "Anish Kapoor"/>
+</div><!--end of header-->
+```
+
+### Grouping text & elements inline
+```html
+<p>Anish Kapoor won the Turner Prize in 1991 and exhibited at the 
+	<span class = "gallery">Tate Modern</span>
+	gallery in London in 2003.
+</p>
+```
+
+### iframe
+iframe is like a window that has been cut into your page where you can see another page.
+* scrolling (html4 xhtml)
+* frameborder (html4 xhtml)
+* seamless (html5) for iframe where scrollbars are not desired
+
+```html
+<iframe 
+	src = "http://maps.google.co.uk/maps?q=moma+new+york&amp;output=embed"
+	width="450"
+	height="350"
+	frameborder="0"
+	scrolling="no">
+</iframe>
+```
+
+### meta
+not visible to users but fulfills a number of purposes such as telling search engines about your page,<br/>who created it, and where or not it is time sensitive.(expire)
+
+* meta name: property you are setting (e.g. description keywords robots)
+* content: value to give to the property
+  * robots-noindex: page should not be added
+  * robots-nofollow: should be added to search engine results but not any pages that it links to
+* meta http-equiv
+  * pragma: prevents browser from caching the page
+  * expires: indicate when the page should expire(no longer cached)
+
+```html
+<!--<!DOCTYPE html>-->
+<!--<html>
+	<head>-->
+		<!--robots indicate whether search engines should add this page to their search results-->
+		<meta name="description" content="An Essay on Installation Art"/>
+		<meta name="keywords" content="instgallation, art, opinion"/>
+		<meta name="robots" content="nofollow"/>
+		<meta http-equiv="author" content="Jon Duckett"/>
+		<meta http-equiv="pragma" content="no-cache"/>
+		<meta http-equiv="expires" content="Fri, 04 Apr 2014 23:59:59 GMT"/>
+	<!--</head>
+	<body>
+	</body>
+</html>-->
+```
+
+### Escape char
+
+## Flash Video Audio
+1. Create Flash .fla and Export as .swf to use on a web page web pages
+2. HTML5 video audio tag to add video or audio on
+3. YouTube or SoundCloud services
+
+### How Flash works
+Exporting .fla to .swf creates code to embed the flash movie in your page.<br/>
+
+### Use of Flash
+Fewer websites use Flash since JavaScript lib(script.aculo.us JQuery) made it easy to create animation<br/>
+Browsers are switching to HTML5 video audio tags
+
+### Adding a Flash Movie
+SWFObject checks if user's browser is capable of playing Flash. <br/>
+If it can, scripts will replace div content with .swf
+
+```html
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Adding a Flash Movie</title>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js">
+		</script>
+		<script type="text/javascript">
+			swfobject.embedSWF("test.swf","myContent", "400","300","10.0.0","expressInstall.swf");
+		</script>
+	</head>
+	<body>
+		<div id="myContent">
+			<p>My content test</p>
+		</div>
+	</body>
+</html>
+```
+
+### Understanding video formats and players
+* Flash or HTML5 video can be used
+* encode video formats to WebM or MP4 format
+
+### Using hosted video services
+
+### Preparing a flash video for your site
+1. convert your video into FLV format
+2. find an FLV player to play the video (osflv.com longtailvideo.com)
+3. include the player & video in your page
+  * using javascript SWFObject
+
+```html
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Adding a Flash Video</title>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js">
+		</script>
+		<script type="text/javascript">
+			var flashvars = {};
+			var params = {movie:"video/puppy.flv"};
+			swfobject.embedSWF("flash/osplayer.swf","snow", "400","320","8.0.0",flashvars,params);
+		</script>
+	</head>
+	<body>
+		<div id="snow">
+			<p>A video of a puppy playing in the snow</p>
+		</div>
+	</body>
+</html>
+```
+
+### HTML5 : preparing video for your pages
+* Formats H264 in Safari IE, WebM in Android Chrome Firefox Opera
+
+### HTML5 : adding video to your pages
+* preload: tells browser what to do in page loading [none auto metadata]
+* controls: browser should apply its own controls for playback
+* autoplay: play automatically
+* loop: repeat playing
+
+```html
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Adding HTML5 Video</title>
+	</head>
+	<body>
+		<video src="video/puppy.mp4"
+			poster="image/puppy.jpg"
+			width="400" height="300"
+			preload
+			controls
+			loop>
+			<p>A video of a puppy playing in the snow</p>
+		</video>
+	</body>
+</html>
+```
+
+### Multiple video sources
+```html<source>``` is equivalent to ```html<video src="">```
+use source to specify multiple video formats
+
+```html
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Multiple video sources</title>
+	</head>
+	<body>
+		<video poster="image/puppy.jpg" width="400" hiehgt="320" preload controls loop>
+		<source src="video/puppy.mp4" type='video/mp4;codecs="avcl.42E01E, mp4a.40.2"'/>
+		<source src="video/puppy.webm" type='video/webm;codecs="vp8, vorbis"'/>
+		<p>A video of a puppy playing in the snow</p>
+	</body>
+</html>
+```
+
+### HTML5: combining flash & HTML5 video
+Ensure users from different browsers. HTML5 further provides playback, adopt different sized screens,<br/>
+tell different parts of a page to change when the video reaches a certain point
+
+### Adding audio to web pages
+
