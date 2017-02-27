@@ -8,6 +8,7 @@
 * [Forms] (https://github.com/fggo/html/blob/master/README.md#forms)
 * [Extra markup] (https://github.com/fggo/html/blob/master/README.md#extra-markup)
 * [Flash Video Audio] (https://github.com/fggo/html/blob/master/README.md#flash-video-audio)
+* [CSS] (https://github.com/fggo/html/blob/master/README.md#css)
 
 ## Structure
 ```html
@@ -842,13 +843,13 @@ not visible to users but fulfills a number of purposes such as telling search en
 	</body>
 </html>-->
 ```
-
 ### Escape char
 
 ## Flash Video Audio
-1. Create Flash .fla and Export as .swf to use on a web page web pages
-2. HTML5 video audio tag to add video or audio on
+1. Flash .fla is exported into .swf for use on web pages
+2. HTML5 video audio tag to add video or audio on web pages
 3. YouTube or SoundCloud services
+
 
 ### How Flash works
 Exporting .fla to .swf creates code to embed the flash movie in your page.<br/>
@@ -860,7 +861,6 @@ Browsers are switching to HTML5 video audio tags
 ### Adding a Flash Movie
 SWFObject checks if user's browser is capable of playing Flash. <br/>
 If it can, scripts will replace div content with .swf
-
 ```html
 <!DOCTYPE html>
 <html>
@@ -913,6 +913,7 @@ If it can, scripts will replace div content with .swf
 </html>
 ```
 
+
 ### HTML5 : preparing video for your pages
 * Formats H264 in Safari IE, WebM in Android Chrome Firefox Opera
 
@@ -929,12 +930,8 @@ If it can, scripts will replace div content with .swf
 		<title>Adding HTML5 Video</title>
 	</head>
 	<body>
-		<video src="video/puppy.mp4"
-			poster="image/puppy.jpg"
-			width="400" height="300"
-			preload
-			controls
-			loop>
+		<video src="video/puppy.mp4" poster="image/puppy.jpg" width="400" height="300"
+			preload controls loop>
 			<p>A video of a puppy playing in the snow</p>
 		</video>
 	</body>
@@ -942,8 +939,7 @@ If it can, scripts will replace div content with .swf
 ```
 
 ### Multiple video sources
-```html<source>``` is equivalent to ```html<video src="">```
-use source to specify multiple video formats
+Similar to ```html<video src="">``` use ```HTML <source>``` to specify multiple video formats 
 
 ```html
 <!DOCTYPE html>
@@ -953,7 +949,7 @@ use source to specify multiple video formats
 	</head>
 	<body>
 		<video poster="image/puppy.jpg" width="400" hiehgt="320" preload controls loop>
-		<source src="video/puppy.mp4" type='video/mp4;codecs="avcl.42E01E, mp4a.40.2"'/>
+		<source src="video/puppy.mp4" type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"'/>
 		<source src="video/puppy.webm" type='video/webm;codecs="vp8, vorbis"'/>
 		<p>A video of a puppy playing in the snow</p>
 	</body>
@@ -961,8 +957,300 @@ use source to specify multiple video formats
 ```
 
 ### HTML5: combining flash & HTML5 video
-Ensure users from different browsers. HTML5 further provides playback, adopt different sized screens,<br/>
-tell different parts of a page to change when the video reaches a certain point
+Ensure users from different browsers. HTML5 further provides playback, adopting different sized screens or<br/>
+telling different parts of a page to change when the video reaches a certain point.
 
 ### Adding audio to web pages
+Similar to video method 1. used a hosted service 2. use Flash 3. use HTML5
+
+### Adding a flash MP3 player
+```html
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Adding a Flash MP3 Player</title>
+		<script type="text/javascript"
+			src="http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js">
+		</script>
+		<script type="text/javascript">
+			var flashvars={};
+			var params={mp3:"audio/test-audio.mp3"};
+			swfobject.embedSWF(
+				"flash/player_mp3_1.0.0.swf",
+				"music-player",
+				"200","20",
+				"8.0.0",
+				flashvars, params
+			);
+		</script>
+	</head>
+	<body>
+		<div id="music-player">
+			<p>This browser does not support our Flash music player.</p>
+		</div>
+	</body>
+</html>
+```
+
+
+### HTML5: Adding HTML audio to your pages
+```html
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Adding HTML5 Audio</title>
+	</head>
+	<body>
+		<audio src="audio/test-audio.ogg" controls autoplay>
+			<p>This browser does not support our audio format.</p>
+		</audio>
+	</body>	
+</html>
+```
+
+### HTML5: Multiple audio sources
+provide multiple audio formats for different browsers
+```html
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Multiple Audio Sources</title>
+	</head>
+	<body>
+		<audio controls autoplay>
+			<source src="audio/test-audio.ogg"/>
+			<source src="audio/test-audio.mp3"/>
+			<p>This browser does not support our audio format.</p>
+		</audio>
+	</body>
+</html>
+```
+
+Example: both Flash and HTML5 enabled
+```html
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Flash Video Audio</title>
+		<script type="text/javascript"
+			src="http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js">
+		</script>
+		<script type="text/javascript">
+			var flashvars={};
+			var params={movie:"video/puppy.flv"};
+			swfobject.embedSWF(
+				"flash/osplayer.swf","snow","400","320","8.0.0",
+				flashvars,
+				params
+			);
+		</script>
+	</head>
+	<body>
+		<video poster="image/puppy.jpg" width="400" height="320" controls="controls">
+		<source src="video/puppy.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'/>
+		<source src="video/puppy.webm" type='video/webm; codecs="vp8, vorbis"'/>
+		<div id="snow">
+			<p>This browser does not support our video formats.</p>
+		</div>
+	</body>
+</html>
+```
+
+
+## CSS
+CSS allows you to create rules that control the way that each individual box is presented
+
+1. selector
+2. declaration {property: value}
+
+```html
+<!--example.html-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Introducing CSS</title>
+		<link href="css/example.css" type="text/css" rel="stylesheet"/>
+	</head>
+	<body>
+		<h1>From Garden to Plate</h1>
+		<p>A <i>potager</i> is a French term fro an ornamental vegetable or kitchen garden...</p>
+		<h2>What to Plant</h2>
+		<p>Planes are chosen as much for their functionality as for their color and form...</p>
+	</body>
+</html>
+```
+```css
+/*example.css*/
+body {
+	font-family: Arial, Verdana, sans-serif;
+	background-color: rgb(185,179,175);}
+h1,h2 {
+	color: #ee3e80;}
+p {
+	color: #665544}
+```
+
+### Using internal CSS
+```html
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Introducing CSS</title>
+		<style type="text/css">
+			body {
+				font-family: Arial, Verdana, sans-serif;
+				background-color: rgb(185,179,175);}
+			h1,h2 {
+				color: #ee3e80;}
+			p {
+				color: #665544}
+		</style>
+	</head>
+	<body>
+		<h1>From Garden to Plate</h1>
+		<p>A <i>potager</i> is a French term fro an ornamental vegetable or kitchen garden...</p>
+		<h2>What to Plant</h2>
+		<p>Planes are chosen as much for their functionality as for their color and form...</p>
+	</body>
+</html>
+```
+
+### CSS selectors
+target rules to specific elements in an HTML document
+```html
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>CSS selectors</title>
+	</head>
+	<body>
+		<h1 id="top">Kitchen Garden Calendar</h1>
+		<p id="introduction">Here you can read our handy guide about what to do when</p>
+		<h2>Spring</h2>
+		<ul>
+			<li><a href="mulch.html">Spring mulch vegetable beds</a></li>
+			<li><a href="potato.html">Plant out early potatoes</a></li>
+			<li><a href="tomato.html">Sow tomato seeds</a></li>
+			<li><a href="beet.html">Sow beet seeds</a></li>
+			<li><a href="zucchini.html">Sow zucchini seeds</a></li>
+			<li><a href="rhubarb.html">Deadhead rhubarb flowers</a></li>
+		</ul>
+		<p class="note">
+			This page was written by <a href="mailto:ivy@example.org">ivy@example.org</a> for
+			<a hef="http://www.example.org">Example</a>
+		</p>
+		<p>
+			<a href="#top">Top of page</a>
+		</p>
+	</body>
+</html>
+```
+
+<table>
+	<tr>
+		<th>SELECTOR</th>
+		<th>MEANING</th>
+		<th>EXAMPLE</th>
+	</tr>
+	<tr>
+		<th>Universal Selector</th>
+		<td>Applies to all elements in the document</td>
+		<td>* {} targets all elements on the page</td>
+	</tr>
+	<tr>
+		<th>Type Selector</th>
+		<td>Matches element names</td>
+		<td>h1,h2,h3{} targets h1 h2 h3 elements</td>
+	</tr>
+	<tr>
+		<th>Class Selector</th>
+		<td>Matches an elements whose class attribute matches one of the values after the period(or full stop) symbol</td>
+		<td>.note{} targets any element whose class attribute has a value of note p.note{} targets only &ltp&gt elements whose class attribute has a value of note</td>
+	</tr>
+	<tr>
+		<th>ID Selector</th>
+		<td>Matches an elements whose id attribute has a value that matches the one specified afterthe hash symbol</td>
+		<td>#introduction {} targets element whose id has a value of introduction</td>
+	</tr>
+	<tr>
+		<th>Child Selector</th>
+		<td>Matches an element that is a direct child of another</td>
+		<td>li>a {} targets any &lta&gt elements that are children of an &ltli&gt elements(but not other &lta&gt elements in the page)</td>
+	</tr>
+	<tr>
+		<th>Descendant Selector</th>
+		<td>Matches an element that is a descendent of another specified element(not just a direct child of that element)</td>
+		<td>p a {} targets any &lta&gt elements that sit inside a &ltp&gt elements even if there are other elements nested between them</td>
+	</tr>
+	<tr>
+		<th>Adjacent sibling Selector</th>
+		<td>Matches an element that is the next sibling of another</td>
+		<td>hl+p {} targets the first &ltp&gt element after any &lth1&gt element (but not other &ltp&gt elements)</td>
+	</tr>
+	<tr>
+		<th>General sibling Selector</th>
+		<td>Matches an element that is a sibling of another, although it does not have to be the directly preceding element</td>
+		<td>h1~p {} If you had two &ltp&gt elements that are siblings of an &lth1&gt element, this rule would apply to both</td>
+	</tr>
+</table>
+
+### How CSS rules cascade
+If there are two or more rules that apply to the same element, it is important to understand which will take precedence.
+
+* Last Rule
+* Specificity
+* Important
+
+```html
+<h1>Potatoes</h1>
+<p id="intro">There are <i>dozens</i> of different <b>potato</b> varieties.</p>
+<p>There are usually described as early, second early and maincrop potatoes.</p>
+```
+
+```css
+*{font-family: Arial,Verdana,sans-serif;}
+h1{font-family: "Courier New", monospace;}
+i{color: green}
+i{color: red;}
+b{color:pink;}
+p b{color: blue !important}
+p b{color: violet;}
+p#intro{font-size: 100%}
+p{font-size: 75%;}
+```
+
+### Inheritance
+body element is inherited by child elements except background color or border properties.<br/>
+one can force a lot of properties to inherit values from their parent elements by using inherit.
+
+
+```html
+<div class="page">
+	<h1>Potatoes</h1>
+	<p>There are dozens of different potato varieties.</p>
+	<p>They are usually described as early, second early and maincrop potatoes.</p>
+</div>
+```
+
+```css
+/*div class will inherit body element padding property*/
+body{
+	font-family: Arial, Verdana, sans-serif;
+	color: #665544;
+	padding: 10px;
+}
+.page{
+	border: 1px solid #665544;
+	background-color: #efefef;
+	padding: inherit;
+}
+```
+
+### Test in multiple browsers and fix bugs
+* PositionIsEverything.net
+* QuirksMode.org
+
+## Color
+
+
 
