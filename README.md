@@ -1153,44 +1153,44 @@ target rules to specific elements in an HTML document
 		<th>EXAMPLE</th>
 	</tr>
 	<tr>
-		<th>Universal Selector</th>
+		<th>Universal</th>
 		<td>Applies to all elements in the document</td>
-		<td>* {} targets all elements on the page</td>
+		<td>* {} <br/>targets all elements on the page</td>
 	</tr>
 	<tr>
-		<th>Type Selector</th>
+		<th>Type</th>
 		<td>Matches element names</td>
-		<td>h1,h2,h3{} targets h1 h2 h3 elements</td>
+		<td>h1,h2,h3{} <br/>targets h1 h2 h3 elements</td>
 	</tr>
 	<tr>
-		<th>Class Selector</th>
+		<th>Class</th>
 		<td>Matches an elements whose class attribute matches one of the values after the period(or full stop) symbol</td>
-		<td>.note{} targets any element whose class attribute has a value of note p.note{} targets only &ltp&gt elements whose class attribute has a value of note</td>
+		<td>.note{} <br/>targets any element whose class attribute has a value of note <br/>p.note{} <br/>targets only &ltp&gt elements whose class attribute has a value of note</td>
 	</tr>
 	<tr>
-		<th>ID Selector</th>
+		<th>ID</th>
 		<td>Matches an elements whose id attribute has a value that matches the one specified afterthe hash symbol</td>
-		<td>#introduction {} targets element whose id has a value of introduction</td>
+		<td>#introduction {} <br/>targets element whose id has a value of introduction</td>
 	</tr>
 	<tr>
-		<th>Child Selector</th>
+		<th>Child</th>
 		<td>Matches an element that is a direct child of another</td>
-		<td>li>a {} targets any &lta&gt elements that are children of an &ltli&gt elements(but not other &lta&gt elements in the page)</td>
+		<td>li>a {} <br/>targets any &lta&gt elements that are children of an &ltli&gt elements(but not other &lta&gt elements in the page)</td>
 	</tr>
 	<tr>
-		<th>Descendant Selector</th>
+		<th>Descendant</th>
 		<td>Matches an element that is a descendent of another specified element(not just a direct child of that element)</td>
-		<td>p a {} targets any &lta&gt elements that sit inside a &ltp&gt elements even if there are other elements nested between them</td>
+		<td>p a {} <br/>targets any &lta&gt elements that sit inside a &ltp&gt elements even if there are other elements nested between them</td>
 	</tr>
 	<tr>
-		<th>Adjacent sibling Selector</th>
+		<th>Adjacent Sibling</th>
 		<td>Matches an element that is the next sibling of another</td>
-		<td>hl+p {} targets the first &ltp&gt element after any &lth1&gt element (but not other &ltp&gt elements)</td>
+		<td>hl+p {} <br/>targets the first &ltp&gt element after any &lth1&gt element (but not other &ltp&gt elements)</td>
 	</tr>
 	<tr>
-		<th>General sibling Selector</th>
+		<th>General Sibling</th>
 		<td>Matches an element that is a sibling of another, although it does not have to be the directly preceding element</td>
-		<td>h1~p {} If you had two &ltp&gt elements that are siblings of an &lth1&gt element, this rule would apply to both</td>
+		<td>h1~p {} <br/>If you had two &ltp&gt elements that are siblings of an &lth1&gt element, this rule would apply to both</td>
 	</tr>
 </table>
 
@@ -1251,6 +1251,5 @@ body{
 * QuirksMode.org
 
 ## Color
-
 
 
