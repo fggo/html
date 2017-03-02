@@ -9,6 +9,8 @@
 * [Extra markup] (https://github.com/fggo/html/blob/master/README.md#extra-markup)
 * [Flash Video Audio] (https://github.com/fggo/html/blob/master/README.md#flash-video-audio)
 * [CSS] (https://github.com/fggo/html/blob/master/README.md#css)
+* [Color] (https://github.com/fggo/html/blob/master/README.md#color)
+* [Text] (https://github.com/fggo/html/blob/master/README.md#text)
 
 ## Structure
 ```html
@@ -939,7 +941,7 @@ If it can, scripts will replace div content with .swf
 ```
 
 ### Multiple video sources
-Similar to ```html<video src="">``` use ```HTML <source>``` to specify multiple video formats 
+Similar to ```html<video src="">``` use ```HTML <source>``` to specify multiple video formats
 
 ```html
 <!DOCTYPE html>
@@ -1004,7 +1006,7 @@ Similar to video method 1. used a hosted service 2. use Flash 3. use HTML5
 		<audio src="audio/test-audio.ogg" controls autoplay>
 			<p>This browser does not support our audio format.</p>
 		</audio>
-	</body>	
+	</body>
 </html>
 ```
 
@@ -1223,7 +1225,6 @@ p{font-size: 75%;}
 body element is inherited by child elements except background color or border properties.<br/>
 one can force a lot of properties to inherit values from their parent elements by using inherit.
 
-
 ```html
 <div class="page">
 	<h1>Potatoes</h1>
@@ -1252,4 +1253,277 @@ body{
 
 ## Color
 
+### Foreground color
+* RGB values (red, green, blue)
+* HEX codes
+* Color names
 
+```css
+h1{
+	color: DarkCyan;}
+h2{
+	color: #ee3e80;}
+p{
+	color: rgb(100,100,90);}
+```
+
+### Background color
+```css
+body{
+	background-color: rgb(200,200,200);}
+h1{
+	background-color: DarkCyan;}
+h2{
+	background-color: #ee3e80;}
+p{
+	background-color: white;}
+```
+
+### Understanding color
+* RGB value
+* HEX code
+* Color name
+* Hue
+* Saturation: amount of gray (%)
+* Brightness: amount of black (%)
+* Contrast
+
+### CSS3: Opacity
+use opacity or rgba to specify fourth value, opacity
+```css
+/*use both RGB and RGBA properties for different browsers*/
+p.one{
+	background-color: rgb(0,0,0);
+	opacity:0.5;
+}
+p.two{
+	background-color: rgb(0,0,0);
+	background-color: rgba(0,0,0, 0.5);
+}
+```
+
+### CSS3: HSL & HSLA
+* Hue: (0~360 degree)
+* Saturation: amount of gray (%)
+* Lightness: amount of black (%)
+* Alpha: transparency(0~1.0)
+
+```css
+body{
+	background-color: #C8C8C8;
+	background-color: hsl(0,0%,78%);
+}
+p{
+	background-color: #ffffff;
+	background-color: hsla(0,100%,100%,0.5);
+}
+```
+
+
+## Text
+
+### Typeface
+* serif (Georgia, Times, Times New Roman)
+* sans-serif (Arial, Verdana, Helvetica)
+* monospace (Courier, Courier New)
+* cursive (Comic Sans MS, Monotype Corsiva)
+* fantasy (Impact, Haettenschweiler)
+
+### Weight Style stretches
+* Weight(light medium bold black)
+* Style(normal italic oblique)
+* Stretch(condensed regular extended)
+
+### Typeface choices
+* Font-Family: installed
+* Font-Face: download, license to use the font must permit its distribution using @font-face
+* Service-Based Font-Face: paid license
+* Images
+* SIFR
+* Cufon
+
+### Font-Family
+
+### Font-Size
+
+### Units of Type size
+* Twelve Pixel Scale
+  * 12px == 75% == .75em
+* Sixteen Pixel Scale
+  * 16px == 100% == 1em
+
+### More font choice @font-face
+@font-face allows a version of the font to be downloaded to the user's computer.<br/>
+It is important that the license for the font permits it to be used in this way.
+
+### Open source fonts
+* fontsquirrel.com
+* fontex.org
+* openfontlibrary.org
+
+fee charged:
+* typekit.com
+* kernest.com
+* fontspring.com
+
+Google provides fonts (instead of @font-face specify link address)
+* www.google.com/webfonts
+
+
+```css
+@font-face{
+	font-family: 'ChuckFiveRegular';
+	src: url('fonts/chuckfive.eot');
+	src: url('fonts/chuckfive.eot?#iefix') format('embedded-opentype'),
+		 url('fonts/chuckfive.woff') format('woff'),
+		 url('fonts/chuckfive.ttf') format('truetype'),
+		 url('fonts/chuckfive.svg#ChuckFiveRegular') format('svg');
+}
+```
+
+### Weight Sytle
+
+```css
+.credits{
+	font-weight: bold; /*normal;*/
+	font-style: italic; /*normal oblique(angled normal)*/
+}
+```
+
+### Upper LowerCase
+```css
+h1{text-transform: uppercase;}
+h2{text-transform: lowercase;}
+h3{text-transform: capitalize;} /*first letter of each word*/
+```
+
+### Underline & Strike
+```css
+.credits{text-decoration: underline;} /*text underline*/
+h1{text-decoration: overline;} /*text overline*/
+h2{text-decoration: line-through;}
+h3{text-decoration: blink;} /*flash animation*/
+a{text-decoration: none;} /*remove any applied decoration*/
+```
+
+### Line height
+leading + font-size
+```css
+p{line-height: 1.4em;}
+```
+
+### Letter & Word spacing
+```css
+.credits{
+	text-transform: uppercase;
+	font-weight: bold;	
+	letter-spacing: .2em;
+	word-spacing: 1em;
+}
+```
+
+### Alignment
+```css
+h1{text-align: left;}
+h2{text-align: center;}
+h3{text-align: right;}
+/*justify: every line in a paragraph except the last line should be set to take up 
+the full width of the containing box */
+p{text-align: justify;}
+
+
+/*used with <img> <em> or <strong>*/
+#six-months{vertical-aligh: text-top;}
+#one-year{vertical-aligh: baseline;}
+#two-years{vertical-aligh: text-bottom;}
+/*other values: sub, super, top, middle, bottom*/
+```
+
+### Indent
+indent the first line of text within an element
+
+```html
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Briard</title>
+		<link href="css/example.css" type="text/css" rel="stylesheet"/>
+	</head>
+	<body>
+		<p class="one">The briard is known as a heart wrapped in fur.</p>
+		<p class="two">The briard is known as a heart wrapped in fur.</p>
+		<p class="three">The briard is known as a heart wrapped in fur.</p>
+		<p class="four">The briard is known as a heart wrapped in fur.</p>
+		<p class="five">The briard is known as a heart wrapped in fur.</p>
+	</body>
+</html>
+```
+
+```css
+h1{
+	background-image: url(image/logo.gif);
+	background-repeat: no-repeat;
+	text-indent: -9999px;
+}
+.credits{
+	text-indent: 20px;
+}
+
+```
+
+### CSS3: Drop Shadow
+three lengths and a color for the drop shadow
+
+```css
+p.one{
+	background-color: #eeeeee;
+	color: #666666;
+	text-shadow: 1px 1px 0px #000000;
+}
+p.two{
+	background-color: #dddddd;
+	color: #666666;
+	text-shadow: 1px 1px 3px #666666;
+}
+
+p.three{
+	background-color: #cccccc;
+	color: #ffffff;
+	text-shadow: 2px 2px 7px #111111;
+}
+p.four{
+	background-color: #bbbbbb;
+	color: #cccccc;
+	text-shadow: -1px -2px #666666;
+}
+p.two{
+	background-color: #aaaaaa;
+	color: #ffffff;
+	text-shadow: -1px -1px #666666;
+}
+```
+
+### First letter or line
+specify different value for the first letter or line of text inside pseudo-elements 
+
+```css
+p.intro:first-letter{
+	font-size: 200%;
+}
+p.intro:first-line{
+	font-weight: bold;
+}
+```
+
+### Styling Links
+```css
+a:link{color: deeppink; text-decoration: none;}
+a:visited{color: black;}
+a:hover{color: deeppink;text-decoration: underline;}
+a:active{color: darkcyan;}
+```
+
+### Responding to users
+```css
+
+```
