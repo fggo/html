@@ -10,7 +10,7 @@
 * [Flash Video Audio] (https://github.com/fggo/html/blob/master/README.md#flash-video-audio)
 * [CSS] (https://github.com/fggo/html/blob/master/README.md#css)
 * [Color] (https://github.com/fggo/html/blob/master/README.md#color)
-* [Text] (https://github.com/fggo/html/blob/master/README.md#text)
+* [Text] (https://github.com/fggo/html/blob/master/README.md#text(css))
 
 ## Structure
 ```html
@@ -1320,7 +1320,7 @@ p{
 ```
 
 
-## Text
+## Text(css)
 
 ### Typeface
 * serif (Georgia, Times, Times New Roman)
