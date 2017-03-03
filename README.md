@@ -15,14 +15,11 @@
 ## Structure
 ```html
 <html>
-	<head> <!--info about page-->
+	<head> <!--page info-->
 		<title>web page title</title>
 	</head>
 	<body> <!--main browser window-->
 		<h1>heading</h1>
-		<p>paragraph</p>
-		
-		<h2>sub-heading</h2>
 		<p>paragraph</p>
 	</body>
 </html>
@@ -31,52 +28,44 @@
 
 ### Bold Italic
 ```html
-<p>
-	<b>bold</b> text
-	<i>italic</i> text
-</p>
+<b>bold</b>
+<i>italic</i>
 ```
 
 ### Superscript Subscript
 ```html
-<p>
-	E = MC<sup>2</sup> 
-	H<sub>2</sub>O
-</p>
+E = MC<sup>2</sup> 
+H<sub>2</sub>O	
 ```
 
 ### White space
+two or more spaces collapse to one
 ```html
-<!--two or more spaces collapse to one-->
-<p>Hello World</p>
 <p>Hello     World</p>
 ```
 
 ### Line breaks
 ```html
-<p>Line One<br/>Line Two<br/>Line Three<br/></p>
+Line One<br/>Line Two<br/>
 ```
 
 ### Horizontal rules
 ```html
 <p>Current Topic</p>
 <hr/>
-<p>Next Topic</p>
 ```
 
 ## Semantic markup
-- text elements that are not intended to affect the structure of web pages
+Text elements that are not intended to affect the structure of web pages
 
 ### Strong
 ```html
-<p>
-	<strong>Warning!</strong> This is a tiger cage.
-</p>
+<strong>Warning!</strong> This is a tiger cage.
 ```
 
 ### Emphasis
+Emphasis that subtly changes the meaning of a sentence
 ```html
-<!--emphasis that subtly changes the meaning of a sentence-->
 <p><em>I</em> think water is empty</p>
 <p>I <em>think</em> water is empty</p>
 <p>I think water is <em>empty</em></p>
@@ -84,12 +73,11 @@
 
 ### Quotation
 ```html
-<!--Block quote-->
 <blockquote cite = "https://en.wikipedia.org/wiki/Floyd_Mayweather_Jr."> 
-	<p>Easy Work.</p> 
+	<p>TMT</p> 
 </blockquote>
 
-<!--Quotation mark: does not work in IE-->
+<!--quotation mark-->
 <q>Fly like a butterfly. Sting like a bee.</q>
 ```
 
@@ -105,19 +93,17 @@
 
 ### Citation
 ```html
-<!--cite-->
 <cite>A Brief History of Time</cite> by Stephen Hawking has sold over ten million copies worldwide.
 ```
 
 ### Definitions
 ```html
-<!--dfn-->
 <dfn>Black hole</dfn> is a region of space from which nothing, not even light, can escape.
 ```
 
 ### Author details
+Address contains contact details
 ```html
-<!--address contains contact details-->
 <address>
 	<p><a href = "mailto:homer@example.org"> homer@example.org</a> </p>
 	<p>742 Evergreen Terrace, Springfield.</p>
@@ -126,12 +112,11 @@
 
 ### Changes to content
 ```html
-<p>It was the <del>worst</del>  <ins>best</ins> decision I'd ever made
-</p>
+<del>worst</del> <ins>best</ins> season.
 
 <!--no longer relevant-->
-<p><s>Price is $200</s></p>
-<p>Now Price is $150</p>
+<s>Price is $200</s><br/>
+   Now Price is $150
 ```
 
 ## Lists
@@ -188,18 +173,15 @@
 ### Absolute and Relative URL
 * Abosolute URL : domain name for a site followed by the path to a specific page
 * Relative URL: link to other pages within the same site
+
 ```html
 <p>Movie Reviews:
 	<ul>
-		<li><a href = "https://www.rottentomatoes.com/"> 
-			Rotten Tomatoes</a></li>
-		<li><a href = "http://www.imdb.com/?ref_=nv_home">
-			IMDB</a></li>
-		<li><a href = "http://www.rogerebert.com/">
-			Roger Ebert</a></li>
+		<li><a href = "https://www.rottentomatoes.com/">Rotten Tomatoes</a></li>
+		<li><a href = "http://www.imdb.com/?ref_=nv_home">IMDB</a></li>
+		<li><a href = "http://www.rogerebert.com/">Roger Ebert</a></li>
 	</ul>
 </p>
-
 <p>
 	<ul>
 		<li><a href = "index.html">Home</a></li>
@@ -211,57 +193,26 @@
 ```
 
 ### Directory structure
-Web servers usually set up to return the index.html file <br/>
-examplearts.com will return examplearts.com/index.html<br/><br/>
-
-root folder contains:
-
-* a file called index.html, homepage
-* folders for movie, music, theatre
-
-each sub-dir contains:
-
-* index.html, homepage for that section
-* reviews.html
-* listings.html except DVD dir
-
-movie dir contains 
-
-* cinema folder
-* DVD folder
+Web servers usually set up to return the index.html file.<br/>
+examplearts.com will return examplearts.com/index.html
 
 ### Relative URL
-```
-when you link to a page on your own website, you do not need to specify the domain name.
-instead you can use relative URLs.
-```
 
-cur dir
 ```html
 <a href = "reviews.html">Reviews</a>
-```
-
-child dir
-```html
 <a href = "music/listings.html">Listings</a>
 <a href = "movies/dvd/reviews.html">Reviews</a>
-```
-
-parent dir
-```html
 <a href = "../index.html">Home</a>
 <a href = "../../index.html">Home</a>
 ```
 
 ### Email Links
 ```html
-<!--mailto:-->
 <a href = "mailto:jon@example.org">Email Jon</a>
 ```
 
-### Open Links in new window
+### Links in new window
 ```html
-<!--target-->
 <a href = "https://www.youtube.com/" target = "_blank">Youtube</a>
 ```
 
@@ -281,7 +232,7 @@ parent dir
 <h2 id = "prologue">Prologue</h2>
 <p>a speech, preface, intro...</p>
 
-<p><a href = "#top">Top</a></p>
+<a href = "#top">Top</a>
 ```
 
 ### Link to different page
@@ -293,11 +244,9 @@ absolute or relative URL, followed by the value of the id attr
 ## Images
 ```html
 <!--src: relative url-->
-<!--alt: desc that shows up if image is broken-->
+<!--alt: description that shows up if image is broken-->
 <!--title: info when mouse cursor hover-->
-<!--height width: size-->
-<!--specify img size to make page load faster -->
-<!--img placement can be changed around paragraph-->
+<!--height: width: specify image size to make page load faster-->
 <p>
 	<img 
 	src = "../Pictures/astronaut.jpg"
@@ -310,8 +259,7 @@ absolute or relative URL, followed by the value of the id attr
 
 ### img align [old code]
 ```html
-'align' attr is no longer used in HTML5.
-new website should use CSS to control alignment of images.
+'align' attr is no longer used in HTML5. Use CSS to control alignment of images
 <!--left, right-->
 <p>
 	<img 
@@ -349,40 +297,32 @@ new website should use CSS to control alignment of images.
 7. PaintShop Pro
 8. Paint.net
 
-### jpeg
-use .jpeg for img with many different colors
-
-### gif png
-use .gif or .png for img with few colors or large areas of the same color
+### Bitmap: jpeg gif png
+* .jpeg for img with many different colors
+* .gif .png for img with few colors or large areas of the same color
 
 ## img dimension
-reduce, increase, change shapes of a img
+reduce, increase, change shapes of an image
 
 ### img resolution
-```html
-img for web should be saved at a resolution of 72 ppi
-bitmap format : JPG, GIF, PNG
-```
+image for web should have a resolution of 72 ppi<br/>
 
 ### Vector img
-differs from bitmap image and resolution-independent<br/>
-commonly created with Adobe Illustrator<br/>
-place points on a gird and draw lines between them and color can be fill in<br/><br/>
-The current method of using vector images for display on websites <br/>
-involves saving bitmap version of the original vector images and using that. <br/>
+Differs from bitmap image and resolution-independent, commonly created with Adobe Illustrator<br/>
+Place points on a gird and draw lines between them and color can be fill in<br/><br/>
 
 ### Animated gifs
-shows several frames of an image in sequence to create simple animations
-due to increasing file sizes, gif is only suitable for simple illustration
+Shows several frames of an image in sequence to create simple animations<br/>
+Due to increasing file sizes, gif is only suitable for simple illustration
 
 ### Transparency
-creating a partially transparent img for web involves selecting one of two formats :
+Creating a partially transparent image for web involves selecting one of two formats :
 * transparent gif : straight edged img
 * png : diagonal, round, semi-opaque, drop-shadow img
 
 
 ### figure figcaption
-To contain both img and caption
+Contains both image and caption:
 ```html
 <figure>
 	<img src = "../../Pictures/astronaut.jpg"  alt = "astronaut standing on the moon">
@@ -419,10 +359,9 @@ To contain both img and caption
 
 ### spanning columns
 ```html
-colspan can be used on <td> or <th>
 <table border =1>
 	<tr>
-		<td colspan ="2">A</td>
+		<th colspan ="2">A</td>
 		<td colspan ="2">B</td>
 	</tr>
 	<tr>
@@ -445,7 +384,7 @@ colspan can be used on <td> or <th>
 ```
 
 ### thead tbody tfoot
-in case of long table, thead tbody tfoot allow header and footer visible allowing scrolls in body
+long table allows thead & tfoot visible while allowing scrolls in tbody.
 ```html
 <table border = "1">
 	<thead>
@@ -474,10 +413,8 @@ in case of long table, thead tbody tfoot allow header and footer visible allowin
 </table>
 ```
 
-### Width & spacing [old code]
+### Table Width & Spacing [old code]
 ```html
-replaced with CSS
-<!--width: table width-->
 <!--cellpadding: space inside each cell-->
 <!--cellspacing: space between each cell-->
 <table width ="400" cellpadding = "10" cellspacing = "5" border = "1">
@@ -496,7 +433,7 @@ replaced with CSS
 </table>
 ```
 
-### Border & background [old code]
+### Table Border & Background [old code]
 ```html
 <table border ="2" bgcolor = "#efefef">
 	<tr>
@@ -520,7 +457,7 @@ replaced with CSS
 ### Form control
 
 ### adding text
-1. text input (single line)
+1. text input
 2. pw input
 3. text area
 
@@ -531,47 +468,33 @@ replaced with CSS
 
 ### how forms work
 1. user fills in a form and press submit btn
-2. name and value pair of each form control is sent to the server
+2. (name, value) pair of each form control is sent to the server
 3. server processes info using lang like PHP, C#, VB.net, Java and stores info in a database.
 4. server creates a new page to send back to the brower based on the info received
 
 ### form structure
 1. action: url for the page on the server receiving submitted info
-2. method : get(action url + form val added at the end)<br/> post(val is sent in what are known as HTTP headers)
-  * get: short forms (such as search boxes)
-  * get: when retrieving data from web server, not sending info that <br/> should be added to or deleted from database
-  * get:  default (when method attr is not used)
-
-  * post: forms that allow users to upload a file
-  * post: long forms
+2. method : [get, post]
+  * get: short forms(e.g. search boxes) to get data from web server, <br/>not sending info that should be added to or deleted from database
+  * post: long forms to upload a file or long forms
   * post: containing sensitive data (pw)
   * post: forms that add or delete info from a database
 3. id: identify the form distinctly from other elements on the page
 
-```html
-<form action = "http://www.example.com/subscribe.php" method = "get">
-	<p>This is where the form controls will appear</p>
-</form>
-```
-
 ### input
 ```html
-<!--name: each form control needs name attr-->
-<!--size: num of char [old forms: CSS]-->
+<!--name: each form control needs name attribute-->
+<!--size: number of char [old forms: CSS]-->
 <form action = "http://www.example.com/login.php" method = "get">
-	<p>username: 
-		<input type = "text" name = "username" size = "15" maxlength = "30" />
-	</p>
-	<p>password: 
-		<input type = "password" name = "password" size = "15" maxlength = "30" />
-	</p>
+	<p>username:<input type = "text" name = "username" size = "15" maxlength = "30" /></p>
+	<p>password:<input type = "password" name = "password" size = "15" maxlength = "30" /></p>
 </form>
 ```
 
 ### textarea
 ```html
 <form action = "http://www.example.com/comments.php" method = "get">
-	<p>What do you think of  this gig</p>
+	<p>What do you think of this gig</p>
 	<textarea name = "comments" cols = "20" rows = "4">Enter your comments</textarea>
 </form>
 ```
@@ -580,8 +503,7 @@ replaced with CSS
 ```html
 <!--checked: which val should be selected when page loads-->
 <form action = "http://www.example.com/profile.php">
-	<p>Please select your favorite genre</p>
-	<br/>
+	<p>Please select your favorite genre</p><br/>
 	<input type = "radio" name = "genre" value = "rock" checked = "checked"/> Rock
 	<input type = "radio" name = "genre" value = "pop"/> Pop
 	<input type = "radio" name = "genre" value = "jazz"/> Jazz
@@ -591,8 +513,7 @@ replaced with CSS
 ### checkbox
 ```html
 <form action = "http://www.example.com/profile.php">
-	<p>Please select your favorite music service(s)</p>
-	<br/>
+	<p>Please select your favorite music service(s)</p><br/>
 	<input type = "checkbox" name = "service" value = "itunes" checked = "checked"/> iTunes
 	<input type = "checkbox" name = "service" value = "lastfm"/> Last.fm
 	<input type = "checkbox" name = "service" value = "spotify"/> Spotify
@@ -606,7 +527,7 @@ replaced with CSS
 <form action = "http://www.example.com/profile.php">
 	<p>What device do you listen to music on?</p>
 	<select name = "devices">
-		<option value = "ipod" selected = "selected">iPod</option>
+		<option value = "iphone" selected = "selected">iPod</option>
 		<option value = "radio">Radio</option>
 		<option value = "computer">Computer</option>
 	</select>
@@ -667,7 +588,8 @@ replaced with CSS
 
 ### labelling form controls
 1. wrap around text and form input 
-2. separate form form and use 'for' to indicate which form to label
+2. separate form and use 'for' to indicate which form to label
+
 ```html
 <label>Age: <input type = "text" name = "age"/></label><br/> 
 
@@ -728,7 +650,7 @@ validate contents of the form before sent to the server. traditionally javascrip
 ```html
 <form action = "http://www.example.org/search.php">
 	<p>Search:</p>
-	<input type = "search" name = "search"/ placeholder = "Enter keyword">
+	<input type = "search" name = "search" placeholder = "Enter keyword"/>
 	<input type = "submit" name = "submit"/>
 </form>
 ```
@@ -736,70 +658,53 @@ validate contents of the form before sent to the server. traditionally javascrip
 ## Extra markup
 
 ### The Evolution of HTML
-HTML4<br/>
-XHTML 1.0 follow the rule of XML<br/>s
-HTML5
+HTML4 XHTML HTML5
 
 ### DOCTYPE
-to tell a browser which version of HTML the page is using and render page correctly<br/>
-HTML5
+Tells a browser which version of HTML the page is using and render page correctly
+
 ```html
+<!--HTML5-->
 <!DOCTYPE html>
-```
-
-HTML4
-```html
+<!--HTML4-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Traditional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-```
-
-Traditional XHTML 1.0
-```html
+<!--Traditional XHTML 1.0-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Traditional//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-traditional.dtd">
-```
-
-Strict XHTML 1.0
-```html
+<!--Strict XHTML 1.0-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-```
-
-XML Declaration
-```html
+<!--XML Declaration-->
 <?xml version = "1.0" ?>
 ```
 
 ### id
 Any HTML elements can carry id attr which uniquely identify themselves. useful in CSS and javascript
 ```html
-<p id = "pullquote">this is a quotation test. this text appearance can be changed by CSS</p>
+<p id = "pullquote">This text appearance can be changed by CSS</p>
 ```
 
 ### class
-unlike id attr, elements can share a class attr. If you would like to indicate that an element belongs <br/> to several classes, you can separate class names with a space. e.g class = "important admittance""
+unlike id attr, elements can share a class attr. If you would like to indicate that an element
+<br/>belongs to several classes, you can separate class names with a space. 
+<br/>e.g. class="important admittance"
+
 ```html
 <p class = "important">this is a public announcement...</p>
-<p>here is additional info</p>
 <p class = "important admittance">Hours: 9-5</p>
 ```
 
 ### Block or inline element
+always appear to start on a new line or always appear to continue on the same line
 
-### Grouping text and elements in a block
-group a set of elements together in one block-level box<br/>
-contents of the div element will start on a new line and no others changes to the page
-```html
-<div id = "header">
-	<img src = "images/logo.gif" alt = "Anish Kapoor"/>
-</div><!--end of header-->
-```
+### Grouping text & elements in a block or inline
+Group a set of elements together in one block-level box. div element will start on a new line
 
-### Grouping text & elements inline
 ```html
-<p>Anish Kapoor won the Turner Prize in 1991 and exhibited at the 
-	<span class = "gallery">Tate Modern</span>
-	gallery in London in 2003.
-</p>
+<!--in a block-->
+<div id = "header"><img src = "images/logo.gif" alt = "Anish Kapoor"/></div>
+<!--inline-->
+<p>Anish Kapoor exhibited at the <span class="gallery">Tate Modern</span>gallery in London</p>
 ```
 
 ### iframe
@@ -811,15 +716,12 @@ iframe is like a window that has been cut into your page where you can see anoth
 ```html
 <iframe 
 	src = "http://maps.google.co.uk/maps?q=moma+new+york&amp;output=embed"
-	width="450"
-	height="350"
-	frameborder="0"
-	scrolling="no">
+	width="450" height="350" frameborder="0" scrolling="no">
 </iframe>
 ```
 
 ### meta
-not visible to users but fulfills a number of purposes such as telling search engines about your page,<br/>who created it, and where or not it is time sensitive.(expire)
+Not visible to users but fulfills a number of purposes such as telling search engines about your page,<br/>who created it, and whether or not it is time sensitive.(expire)
 
 * meta name: property you are setting (e.g. description keywords robots)
 * content: value to give to the property
@@ -830,28 +732,22 @@ not visible to users but fulfills a number of purposes such as telling search en
   * expires: indicate when the page should expire(no longer cached)
 
 ```html
-<!--<!DOCTYPE html>-->
-<!--<html>
-	<head>-->
-		<!--robots indicate whether search engines should add this page to their search results-->
-		<meta name="description" content="An Essay on Installation Art"/>
-		<meta name="keywords" content="instgallation, art, opinion"/>
-		<meta name="robots" content="nofollow"/>
-		<meta http-equiv="author" content="Jon Duckett"/>
-		<meta http-equiv="pragma" content="no-cache"/>
-		<meta http-equiv="expires" content="Fri, 04 Apr 2014 23:59:59 GMT"/>
-	<!--</head>
-	<body>
-	</body>
-</html>-->
+<head><!--robots indicate whether search engines should add this page to their search results-->
+	<meta name="description" content="An Essay on Installation Art"/>
+	<meta name="keywords" content="instgallation, art, opinion"/>
+	<meta name="robots" content="nofollow"/>
+	<meta http-equiv="author" content="Jon Duckett"/>
+	<meta http-equiv="pragma" content="no-cache"/>
+	<meta http-equiv="expires" content="Fri, 04 Apr 2014 23:59:59 GMT"/>
+</head>
 ```
 ### Escape char
 
+
 ## Flash Video Audio
-1. Flash .fla is exported into .swf for use on web pages
+1. Flash (.fla exported into .swf) for use on web pages
 2. HTML5 video audio tag to add video or audio on web pages
 3. YouTube or SoundCloud services
-
 
 ### How Flash works
 Exporting .fla to .swf creates code to embed the flash movie in your page.<br/>
@@ -868,8 +764,7 @@ If it can, scripts will replace div content with .swf
 <html>
 	<head>
 		<title>Adding a Flash Movie</title>
-		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js">
-		</script>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script>
 		<script type="text/javascript">
 			swfobject.embedSWF("test.swf","myContent", "400","300","10.0.0","expressInstall.swf");
 		</script>
@@ -889,18 +784,17 @@ If it can, scripts will replace div content with .swf
 ### Using hosted video services
 
 ### Preparing a flash video for your site
-1. convert your video into FLV format
-2. find an FLV player to play the video (osflv.com longtailvideo.com)
-3. include the player & video in your page
-  * using javascript SWFObject
+1. convert into FLV format
+2. find FLV player to play the video (osflv.com longtailvideo.com)
+3. include the player & video in your page, using javascript SWFObject
 
+### Adding a flash video to your pages
 ```html
 <!DOCTYPE html>
 <html>
 	<head>
 		<title>Adding a Flash Video</title>
-		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js">
-		</script>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script>
 		<script type="text/javascript">
 			var flashvars = {};
 			var params = {movie:"video/puppy.flv"};
@@ -915,9 +809,9 @@ If it can, scripts will replace div content with .swf
 </html>
 ```
 
-
 ### HTML5 : preparing video for your pages
-* Formats H264 in Safari IE, WebM in Android Chrome Firefox Opera
+* You need to supply your video in more than one format for multiple browsers.
+* H264: Safari IE,  WebM: Android Chrome Firefox Opera 
 
 ### HTML5 : adding video to your pages
 * preload: tells browser what to do in page loading [none auto metadata]
@@ -932,8 +826,7 @@ If it can, scripts will replace div content with .swf
 		<title>Adding HTML5 Video</title>
 	</head>
 	<body>
-		<video src="video/puppy.mp4" poster="image/puppy.jpg" width="400" height="300"
-			preload controls loop>
+		<video src="video/puppy.mp4" poster="image/puppy.jpg" width="400" height="300" preload controls loop>
 			<p>A video of a puppy playing in the snow</p>
 		</video>
 	</body>
@@ -941,7 +834,7 @@ If it can, scripts will replace div content with .swf
 ```
 
 ### Multiple video sources
-Similar to ```html<video src="">``` use ```HTML <source>``` to specify multiple video formats
+Use ```<video><source>``` to specify multiple video formats
 
 ```html
 <!DOCTYPE html>
@@ -963,7 +856,7 @@ Ensure users from different browsers. HTML5 further provides playback, adopting 
 telling different parts of a page to change when the video reaches a certain point.
 
 ### Adding audio to web pages
-Similar to video method 1. used a hosted service 2. use Flash 3. use HTML5
+Similar to video 1. hosted service 2. Flash 3. HTML5 video audio tag
 
 ### Adding a flash MP3 player
 ```html
@@ -972,18 +865,12 @@ Similar to video method 1. used a hosted service 2. use Flash 3. use HTML5
 	<head>
 		<title>Adding a Flash MP3 Player</title>
 		<script type="text/javascript"
-			src="http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js">
-		</script>
+			src="http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script>
 		<script type="text/javascript">
 			var flashvars={};
 			var params={mp3:"audio/test-audio.mp3"};
-			swfobject.embedSWF(
-				"flash/player_mp3_1.0.0.swf",
-				"music-player",
-				"200","20",
-				"8.0.0",
-				flashvars, params
-			);
+			swfobject.embedSWF("flash/player_mp3_1.0.0.swf","music-player","200","20","8.0.0",
+				flashvars, params);
 		</script>
 	</head>
 	<body>
@@ -993,7 +880,6 @@ Similar to video method 1. used a hosted service 2. use Flash 3. use HTML5
 	</body>
 </html>
 ```
-
 
 ### HTML5: Adding HTML audio to your pages
 ```html
@@ -1028,23 +914,19 @@ provide multiple audio formats for different browsers
 </html>
 ```
 
-Example: both Flash and HTML5 enabled
+### Example: both Flash and HTML5 enabled
+Ensure users from different browsers
 ```html
 <!DOCTYPE html>
 <html>
 	<head>
 		<title>Flash Video Audio</title>
 		<script type="text/javascript"
-			src="http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js">
-		</script>
+			src="http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script>
 		<script type="text/javascript">
 			var flashvars={};
 			var params={movie:"video/puppy.flv"};
-			swfobject.embedSWF(
-				"flash/osplayer.swf","snow","400","320","8.0.0",
-				flashvars,
-				params
-			);
+			swfobject.embedSWF("flash/osplayer.swf","snow","400","320","8.0.0",flashvars,params);
 		</script>
 	</head>
 	<body>
@@ -1075,12 +957,13 @@ CSS allows you to create rules that control the way that each individual box is 
 	</head>
 	<body>
 		<h1>From Garden to Plate</h1>
-		<p>A <i>potager</i> is a French term fro an ornamental vegetable or kitchen garden...</p>
+		<p>A <i>potager</i> is a French term for an ornamental vegetable or kitchen garden...</p>
 		<h2>What to Plant</h2>
 		<p>Planes are chosen as much for their functionality as for their color and form...</p>
 	</body>
 </html>
 ```
+
 ```css
 /*example.css*/
 body {
@@ -1124,6 +1007,7 @@ target rules to specific elements in an HTML document
 <html>
 	<head>
 		<title>CSS selectors</title>
+		<link href="css/example.css" type="text/css" rel="stylesheet"/>
 	</head>
 	<body>
 		<h1 id="top">Kitchen Garden Calendar</h1>
@@ -1133,17 +1017,9 @@ target rules to specific elements in an HTML document
 			<li><a href="mulch.html">Spring mulch vegetable beds</a></li>
 			<li><a href="potato.html">Plant out early potatoes</a></li>
 			<li><a href="tomato.html">Sow tomato seeds</a></li>
-			<li><a href="beet.html">Sow beet seeds</a></li>
-			<li><a href="zucchini.html">Sow zucchini seeds</a></li>
-			<li><a href="rhubarb.html">Deadhead rhubarb flowers</a></li>
 		</ul>
-		<p class="note">
-			This page was written by <a href="mailto:ivy@example.org">ivy@example.org</a> for
-			<a hef="http://www.example.org">Example</a>
-		</p>
-		<p>
-			<a href="#top">Top of page</a>
-		</p>
+		<p class="note">Contact: <a href="mailto:ivy@example.org">ivy@example.org</a></p>
+		<p><a href="#top">Top of page</a></p>
 	</body>
 </html>
 ```
