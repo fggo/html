@@ -11,6 +11,7 @@
 * [CSS] (https://github.com/fggo/html/blob/master/README.md#css)
 * [Color] (https://github.com/fggo/html/blob/master/README.md#color)
 * [Text] (https://github.com/fggo/html/blob/master/README.md#textcss)
+* [Boxes] (https://github.com/fggo/html/blob/master/README.md#boxes)
 
 ## Structure
 ```html
@@ -1098,7 +1099,7 @@ p{font-size: 75%;}
 ```
 
 ### Inheritance
-body element is inherited by child elements except background color or border properties.<br/>
+body element ```css body{/*css*/}```is inherited by child elements except background color or border properties.<br/>
 one can force a lot of properties to inherit values from their parent elements by using inherit.
 
 ```html
@@ -1119,7 +1120,7 @@ body{
 .page{
 	border: 1px solid #665544;
 	background-color: #efefef;
-	padding: inherit;
+	padding: inherit; /*border property forced to inherit*/
 }
 ```
 
@@ -1161,11 +1162,12 @@ p{
 * Color name
 * Hue
 * Saturation: amount of gray (%)
-* Brightness: amount of black (%)
+* Brightness(Lightness): amount of black (%)
 * Contrast
 
 ### CSS3: Opacity
-use opacity or rgba to specify fourth value, opacity
+use opacity (0.0~1.0) or rgba to specify fourth value, alpha
+
 ```css
 /*use both RGB and RGBA properties for different browsers*/
 p.one{
@@ -1179,10 +1181,10 @@ p.two{
 ```
 
 ### CSS3: HSL & HSLA
-* Hue: (0~360 degree)
+* Hue: colloquial idea of color (0~360 degree)
 * Saturation: amount of gray (%)
 * Lightness: amount of black (%)
-* Alpha: transparency(0~1.0)
+* Alpha: opacity/transparency (0~1.0)
 
 ```css
 body{
@@ -1211,40 +1213,37 @@ p{
 * Stretch(condensed regular extended)
 
 ### Typeface choices
-* Font-Family: installed
-* Font-Face: download, license to use the font must permit its distribution using @font-face
+* font-family: installed
+* @font-face: download, license to use the font must permit its distribution using @font-face
 * Service-Based Font-Face: paid license
 * Images
 * SIFR
 * Cufon
 
 ### Font-Family
-
 ### Font-Size
 
 ### Units of Type size
-* Twelve Pixel Scale
-  * 12px == 75% == .75em
-* Sixteen Pixel Scale
-  * 16px == 100% == 1em
+* Twelve Pixel Scale (12px == 75% == .75em)
+* Sixteen Pixel Scale (16px == 100% == 1em)
 
 ### More font choice @font-face
 @font-face allows a version of the font to be downloaded to the user's computer.<br/>
 It is important that the license for the font permits it to be used in this way.
 
-### Open source fonts
+### Open source or paid fonts
 * fontsquirrel.com
 * fontex.org
 * openfontlibrary.org
+* www.google.com/webfonts
 
-fee charged:
+charged:
 * typekit.com
 * kernest.com
 * fontspring.com
 
-Google provides fonts (instead of @font-face specify link address)
-* www.google.com/webfonts
-
+### Understanding font formats
+The various font formats should appear in your code in this order: 1.eot 2.woff 3. ttf/otf 4.svg
 
 ```css
 @font-face{
@@ -1257,8 +1256,7 @@ Google provides fonts (instead of @font-face specify link address)
 }
 ```
 
-### Weight Sytle
-
+### Font weight and sytle
 ```css
 .credits{
 	font-weight: bold; /*normal;*/
@@ -1283,9 +1281,8 @@ a{text-decoration: none;} /*remove any applied decoration*/
 ```
 
 ### Line height
-leading + font-size
 ```css
-p{line-height: 1.4em;}
+p{line-height: 1.4em;} /*line height = leading + font size*/
 ```
 
 ### Letter & Word spacing
@@ -1300,18 +1297,17 @@ p{line-height: 1.4em;}
 
 ### Alignment
 ```css
+/*justify: every line in a paragraph except the last line should be set to take up 
+the full width of the containing box */
 h1{text-align: left;}
 h2{text-align: center;}
 h3{text-align: right;}
-/*justify: every line in a paragraph except the last line should be set to take up 
-the full width of the containing box */
 p{text-align: justify;}
 
-
 /*used with <img> <em> or <strong>*/
-#six-months{vertical-aligh: text-top;}
-#one-year{vertical-aligh: baseline;}
-#two-years{vertical-aligh: text-bottom;}
+#six-months{vertical-align: text-top;}
+#one-year{vertical-align: baseline;}
+#two-years{vertical-align: text-bottom;}
 /*other values: sub, super, top, middle, bottom*/
 ```
 
@@ -1323,13 +1319,22 @@ indent the first line of text within an element
 <html>
 	<head>
 		<title>Briard</title>
-		<link href="css/example.css" type="text/css" rel="stylesheet"/>
+		<!--<link href="css/example.css" type="text/css" rel="stylesheet"/>-->
+		<style type="text/css">
+			h1 {
+				background-image: url("image/logo(1).gif");
+				background-repeat: no-repeat;
+				text-indent: -9999px;
+				width: 165px;
+				height: 100px;}
+			.credits {
+				text-indent: 20px;}
+		</style>
 	</head>
 	<body>
+		<h1>Briards</h1>
+		<p class="credits">by anonymous</p>
 		<p class="one">The briard is known as a heart wrapped in fur.</p>
-		<p class="two">The briard is known as a heart wrapped in fur.</p>
-		<p class="three">The briard is known as a heart wrapped in fur.</p>
-		<p class="four">The briard is known as a heart wrapped in fur.</p>
 		<p class="five">The briard is known as a heart wrapped in fur.</p>
 	</body>
 </html>
@@ -1337,18 +1342,15 @@ indent the first line of text within an element
 
 ```css
 h1{
-	background-image: url(image/logo.gif);
+	background-image: url("../image/logo.gif");
 	background-repeat: no-repeat;
 	text-indent: -9999px;
 }
-.credits{
-	text-indent: 20px;
-}
-
+.credits{text-indent: 20px;}
 ```
 
 ### CSS3: Drop Shadow
-three lengths and a color for the drop shadow
+three lengths and a color for the drop shadow 1. lr 2. tb 3. amount of blur 4. color
 
 ```css
 p.one{
@@ -1356,23 +1358,7 @@ p.one{
 	color: #666666;
 	text-shadow: 1px 1px 0px #000000;
 }
-p.two{
-	background-color: #dddddd;
-	color: #666666;
-	text-shadow: 1px 1px 3px #666666;
-}
-
-p.three{
-	background-color: #cccccc;
-	color: #ffffff;
-	text-shadow: 2px 2px 7px #111111;
-}
-p.four{
-	background-color: #bbbbbb;
-	color: #cccccc;
-	text-shadow: -1px -2px #666666;
-}
-p.two{
+p.five{
 	background-color: #aaaaaa;
 	color: #ffffff;
 	text-shadow: -1px -1px #666666;
@@ -1383,12 +1369,8 @@ p.two{
 specify different value for the first letter or line of text inside pseudo-elements 
 
 ```css
-p.intro:first-letter{
-	font-size: 200%;
-}
-p.intro:first-line{
-	font-weight: bold;
-}
+p.intro:first-letter{font-size: 200%;}
+p.intro:first-line{font-weight: bold;}
 ```
 
 ### Styling Links
@@ -1400,6 +1382,77 @@ a:active{color: darkcyan;}
 ```
 
 ### Responding to users
-```css
-
+```html
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Hover Active Focus</title>
+		<style type="text/css">
+			input {
+				padding: 6px 12px 6px 12px;
+				border: 1px solid #665544;
+				color: #ffffff;}
+			input.submit:hover {
+				background-color: #665544;}
+			input.submit:active {
+				background-color: chocolate;}
+			input.text {
+				color: #cccccc;}
+			input.text:focus {
+				color:#665544;}
+		</style>
+	</head>
+	<body>
+		<form>
+			<input type="text" class="text" value="Enter email address...">
+			<input type="submit" class="submit">
+		</form>
+	</body>
+</html>
 ```
+
+### Attribute selectors
+set of attribute selectors that allow you to create rules that apply to elements that<br/>
+have an attribute with a specific value.
+
+<table>
+	<tr>
+		<th>SELECTOR</th>
+		<th>MEANING</th>
+		<th>EXAMPLE</th>
+	</tr>
+	<tr>
+		<th>EXISTENCE</th>
+		<td>[]<br/>Matches a specific attribute (whatever its value)</td>
+		<td>p[class]<br/>Targets any &ltp&gt element with an attribute called class</td>
+	</tr>
+	<tr>
+		<th>EQUALITY</th>
+		<td>[=]<br/>Matches a specific attribute with a specific value</td>
+		<td>p[class="dog"]<br/>Targets any &ltp&gt element with an attribute called class whose value is dog</td>
+	</tr>
+	<tr>
+		<th>SPACE</th>
+		<td>[~=]<br/>Matches a specific attr whose value appears in a space-separated list of words</td>
+		<td>p[class~="dog"]<br/>Targets any &ltp&gt element with an attr called class whose value is a list of space-separated words, one of which is dog</td>
+	</tr>
+	<tr>
+		<th>PREFIX</th>
+		<td>[^=]<br/>Matches a specific attr whose value begins with a specific string</td>
+		<td>p[attr^="d"]<br/>Targets any &ltp&gt element with an attr whose value begins with the letter "d"</td>
+	</tr>
+	<tr>
+		<th>SUBSTRING</th>
+		<td>[*=]<br/>Mathces a specific attr whose value contains a specific substring</td>
+		<td>p[attr*="do"]<br/>Targets any &ltp&gt element with an attr whose value contains the letter "do"</td>
+	</tr>
+	<tr>
+		<th>SUFFIX</th>
+		<td>[$=]<br/>Matches a specific attr whose value ends with a specific string</td>
+		<td>p[attr$="g"]<br/>Targets any &ltp&gt element with an attr whose value ends with the letter "g"</td>
+	</tr>
+</table>
+
+### Example
+
+## Boxes
