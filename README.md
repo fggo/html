@@ -12,6 +12,7 @@
 * [Color] (https://github.com/fggo/html/blob/master/README.md#color)
 * [Text] (https://github.com/fggo/html/blob/master/README.md#textcss)
 * [Boxes] (https://github.com/fggo/html/blob/master/README.md#boxes)
+* [Lists, Tables and Forms] (https://github.com/fggo/html/blob/master/README.md#list-table-and-form)
 
 ## Structure
 ```html
@@ -1048,7 +1049,7 @@ target rules to specific elements in an HTML document
 	</tr>
 	<tr>
 		<th>ID</th>
-		<td>Matches an elements whose id attribute has a value that matches the one specified afterthe hash symbol</td>
+		<td>Matches an elements whose id attribute has a value that matches the one specified after the hash symbol</td>
 		<td>#introduction {} <br/>targets element whose id has a value of introduction</td>
 	</tr>
 	<tr>
@@ -1454,5 +1455,416 @@ have an attribute with a specific value.
 </table>
 
 ### Example
-
+```html
+<html>
+	<head>
+		<title>Text</title>
+		<style type="text/css">
+			body {
+				padding: 20px;}
+			h1, h2, h3, a {
+				font-weight: normal;
+				color: #0088dd;
+				margin: 0px;}
+			h1 {
+				font-family: Georgia, Times, serif;
+				font-size: 250%;
+				text-shadow: 2px 2px 3px #666666;
+				padding-bottom: 10px;}
+			h2 {
+				font-family: "Gill Sans", Arial, sans-serif;
+				font-size: 90%;
+				text-transform: uppercase;
+				letter-spacing: 0.2em;}
+			h3 {
+				font-size: 150%;}
+			p {
+				font-family: Arial, Verdana, sans-serif;
+				line-height: 1.4em;
+				color: #665544;}
+			p.intro:first-line {
+				font-weight: bold;}
+			.credits {
+				font-style: italic;	
+				text-align: right;}
+			a {
+				text-decoration: none;}
+			a:hover {
+				text-decoration: underline;}
+		</style>
+	</head>
+	<body>
+		<h1>Briards</h1>
+		<h2>A Heart wrapped in fur</h2>
+		<p class="intro">The <a class="breed" href="http://en.wikipedia.org/wikiBriard">briard</a>, or berger de brie, is a large breed of dog traditionally used as a herder and guardian of sheep.</p>
+		<h3>Breed History</h3>
+		<p>The briard, which is believed to have originated in France, has been bred for centuries to herd and to protect sheep. The breed was used by the French Army as sentries, messengers and to search for wounded soldiers because of its fine sense of hearing. Briards were used in the First World War almost to the point of extinction. Currently the population of briards is slowly recovering. Charlemagne, Napoleon, Thomas Jefferson and Lafayette all owned briards.</p>
+		<p class="credits">by Ivy Duckett</p>
+	</body>
+</html>
+```
 ## Boxes
+
+### box width height
+```html
+<html>
+	<head>
+		<title>Width Height</title>
+		<style type="text/css">
+			body {
+				font-family: Arial, Verdana, sans-serif;
+				color: #111111;}
+			div.box{
+				height:300px;
+				width:300px;
+				background-color: #ee3e80;}
+			p{
+				height:75%;
+				width:75%;
+				background-color: #e1ddda;}
+		</style>
+	</head>
+	<body>
+		<div class="box"><p>The Moog company pioneered the commercial manufacturing</p></div>
+	</body>
+</html>
+```
+
+### Limiting width and height
+width
+
+```css
+body {
+	font-family: Arial, Verdana, sans-serif;
+	color: #111111;}
+th {
+	border-bottom: 1px solid #0088dd; 
+	text-align: left; 
+	color: #0088dd;
+	font-weight: normal;}
+td {
+	min-width: 150px;
+	min-height: 200px;
+	vertical-align: top;
+	line-height: 1.4em;}
+td.description {
+	min-width: 450px;
+	max-width: 650px;
+	text-align: left;
+	padding: 5px;
+	margin: 0px;}
+```
+height (oveflow handling required)
+
+```css
+body {
+	font-family: Arial, Verdana, sans-serif;
+	color: #111111;}
+h2, p {
+	width: 400px;
+	font-size: 90%;
+	line-height: 1.2em;}
+h2 {
+	color: #0088dd;
+	border-bottom: 1px solid #0088dd;}
+p {
+	min-height: 10px;
+	max-height: 70px;}
+```
+
+### Overflowing content
+```css
+body {
+	font-family: Arial, Verdana, sans-serif;
+	color: #111111;
+	font-size: 90%;
+	line-height: 1.2em;
+	width: 200px;}
+h2 {
+	color: #0088dd;
+	border-bottom: 1px solid #0088dd;}
+p {
+	min-height: 30px;
+	max-height: 85px;}
+p.one {
+	overflow: hidden;}
+p.two {
+	overflow: scroll;}
+```
+
+### Border Margin Padding
+
+### White space & Vertical margin
+
+### Border width
+```css
+p.one{border-width:2px;}
+p.two{border-width:thick;} /*thin medium thick*/
+p.three{border-width:1px 4px 12px 4px;} /*top right bottom left*/
+```
+
+### Border style
+```css
+body {
+	font-family: Arial, Verdana, sans-serif;
+	color: #111111;}
+p {
+	width: 250px;
+	border-width: 3px;}
+p.one {border-style: solid;}
+p.two {border-style: dotted;}
+p.three {border-style: dashed;}
+p.four {border-style: double;}
+p.five {border-style: groove;}
+p.six {border-style: ridge;}
+p.seven {border-style: inset;}
+p.eight {border-style: outset;}
+```
+
+### Border color
+```css
+body {
+	font-family: Arial, Verdana, sans-serif;
+	color: #111111;}
+p {
+	border-style: solid; 
+	border-width: 3px;
+	width: 200px;}
+p.one {
+	border-color: #0088dd;}
+p.two {
+	border-color: #bbbbaa #111111 #ee3e80 #0088dd;}
+```
+
+### Border (in shorthand)
+```css
+body {
+	font-family: Arial, Verdana, sans-serif;
+	color: #111111;}
+p {
+	width: 250px;
+	border: 3px dotted #0088dd;}
+```
+
+### Padding
+space between the content of an element and its border
+
+```css
+p{
+	width:275px;
+	border: 2px solid #0088dd;}
+p.example{
+	padding:10px;}
+/*padding-top right bottom left or
+padding: 10px 5px 3px 1px;*/
+```
+
+### Margin
+gap between boxes
+
+```css
+p{
+	width:275px;
+	border: 2px solid #0088dd;}
+p.example{
+	margin:20px;}
+/*margin-top right bottom left or
+margin: 10px 5px 3px 1px;*/
+```
+
+### Centering content 
+set width of the box<br/>
+set left and right margin as 'auto'<br/>
+[old browser] set text-align(inherited):center for the element that the box sits inside<br/>
+
+```css
+body{
+	text-align:center;}
+p{
+	width:300px;
+	padding:50px;
+	border: 20px solid #0088dd;}
+p.example{
+	margin: 10px auto 10px auto;
+	text-align:left;}
+```
+
+### Change inline/block
+```css
+li{display:inline;  /*display: inline  block  inline-block  none*/
+	margin-right:10px;}
+li.coming-soon{display:none;}
+```
+
+### Hiding boxes
+hide but unlike display:none; it leaves a space where the element would have been
+
+```css
+li{display:inline;
+	margin-right:10px;}
+li.comming-soon{visibility:hidden;} /*visiblity: visible*/
+```
+
+### CSS3: border images
+```html
+<html><head>
+		<title>Border Image</title>
+		<style type="text/css">
+			p {
+				width: 197px;
+				height: 54px;
+				border: 11px solid #ffffff;}
+			p.one {
+				-moz-border-image: url("image/dots.gif") 11 11 11 11 stretch;
+				-webkit-border-image: url("image/dots.gif") 11 11 11 11 stretch;
+				border-image: url("image/dots.gif") 11 11 11 11 stretch;}
+			p.two {
+				-moz-border-image: url("image/dots.gif") 11 11 11 11 round;
+				-webkit-border-image: url("image/dots.gif") 11 11 11 11 round;
+				border-image: url("image/dots.gif") 11 11 11 11 round;}
+		</style>
+	</head>
+	<body>
+		<p class="one"></p>
+		<p class="two"></p>
+</body></html>
+```
+
+### CSS3: box shadows
+Horizontal, Vertical Offeset, Blur distance, Spread of shadow. First two & color should me specified.
+
+```css
+p {
+	width: 100px;
+	height: 100px;
+	background-color: #e1ddda;
+	margin: 20px;
+	display: inline-block;}
+p.one { 
+	-moz-box-shadow: -5px -5px #777777; 
+	-webkit-box-shadow: -5px -5px #777777; 
+	box-shadow: -5px -5px #777777;} /*horizontal (negative left) and vertical(negative top)*/
+p.two {
+	-moz-box-shadow: 5px 5px 5px #777777; 
+	-webkit-box-shadow: 5px 5px 5px #777777;
+	box-shadow: 5px 5px 5px #777777;}  
+p.three {
+	-moz-box-shadow: 5px 5px 5px 5px #777777; 
+	-webkit-box-shadow: 5px 5px 5px 5px #777777;
+	box-shadow: 5px 5px 5px 5px #777777;} /*spread of shadow in all directions*/
+p.four {
+	-moz-box-shadow: 0 0 10px #777777; 
+	-webkit-box-shadow: 0 0 10px #777777;
+	box-shadow: 0 0 10px #777777;}
+p.five {
+	-moz-box-shadow: inset 0 0 10px #777777; 
+	-webkit-box-shadow: inset 0 0 10px #777777;
+	box-shadow: inset 0 0 10px #777777;} /*inset: inner shadow*/
+```
+
+### CSS3: rounded corners
+```css
+p {
+	border: 5px solid #ee3e80;
+	padding: 20px;
+	width: 275px;
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;} 
+```
+
+### CSS3: elliptical shapes
+specify horizontal and vertical parts of the rounded corners
+
+```css
+p {
+	border: 5px solid #ee3e80;
+	padding: 10px;
+	width: 100px;
+	height: 100px;
+	display: inline-block;
+	margin: 20px;}
+p.one {
+	border-top-left-radius: 80px 50px;
+	-moz-border-radius-top-left: 80px 50px;
+	-webkit-border-radius-top-left: 80px 50px;}
+p.two {
+	border-radius: 1em 4em 1em 4em / 2em 1em 2em 1em;
+	-moz-border-radius: 1em 4em 1em 4em / 2em 1em 2em 1em;
+	-webkit-border-radius:  1em 4em 1em 4em / 2em 1em 2em 1em;}
+p.three {
+	padding: 0px;
+	border-radius: 100px;
+	-moz-border-radius: 100px;
+	-webkit-border-radius: 100px;}
+```
+
+### Example: boxes
+```html
+<html><head>
+		<title>Boxes</title>
+		<style type="text/css">
+			body {
+				font-size: 80%;
+				font-family: "Courier New", Courier, monospace;
+				letter-spacing: 0.15em;	
+				background-color: #efefef;}
+			#page {
+				max-width: 940px;
+				min-width: 720px;
+				margin: 10px auto 10px auto;
+				padding: 20px;
+				border: 4px double #000;
+				background-color: #ffffff;}
+			#logo {
+				width: 350px;
+				margin: 10px auto 25px auto;}
+			ul {
+				width: 570px;
+				padding: 15px;
+				margin: 0px auto 0px auto;
+				border-top: 2px solid #000;
+				border-bottom: 1px solid #000;
+				text-align: center;}
+			li {
+				display: inline;
+				margin: 0px 3px;}
+			p {
+				text-align: center;
+				width: 600px; 
+				margin: 20px auto 20px auto; 
+				font-weight: normal;}
+			a {
+				color: #000000;
+				text-transform: uppercase;
+				text-decoration: none;
+				padding: 6px 18px 5px 18px;}
+			a:hover, a.on {
+				color: #cc3333;
+				background-color: #ffffff;}
+		</style>
+	</head>
+	<body>
+		<div id="page">
+			<div id="logo">
+				<img src="image/logo.gif" alt="The Analog Specialists">
+			</div>
+			<ul id="navigation">
+				<li><a href="#" class="on">Home</a></li>
+				<li><a href="#">For Sale</a></li>
+				<li><a href="#">Repairs</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+			<p><img src="image/puppy.jpg" alt="Fender Rhodes, Hohner Clavinet, and Wurlitzer EP200"></p>
+			<p>We specialize in the sale and repair of classic keyboards, in particular the Fender Rhodes, Wurlitzer EP200, and Hohner Clavinet.
+			</p>
+		</div>
+</body></html>
+```
+
+## List, Table and Form
+
+### bullet point styles
+
+
