@@ -13,6 +13,9 @@
 * [Text] (https://github.com/fggo/html/blob/master/README.md#textcss)
 * [Boxes] (https://github.com/fggo/html/blob/master/README.md#boxes)
 * [Lists, Tables and Forms] (https://github.com/fggo/html/blob/master/README.md#list-table-and-form)
+* [Layout] (https://github.com/fggo/html/blob/master/README.md#layout)
+* [Images] (https://github.com/fggo/html/blob/master/README.md#images)
+* [HTML5 Layout] (https://github.com/fggo/html/blob/master/README.md#html5-layout)
 
 ## Structure
 ```html
@@ -942,7 +945,6 @@ Ensure users from different browsers
 </html>
 ```
 
-
 ## CSS
 CSS allows you to create rules that control the way that each individual box is presented
 
@@ -1866,5 +1868,1170 @@ p.three {
 ## List, Table and Form
 
 ### bullet point styles
+```css
+ul.one{list-style-type: none;}
+ul.two{list-style-type: disc;}
+ul.three{list-style-type: circle;}
+ul.four{list-style-type: square;}
+
+ol.one{list-style-type: decimal;}
+ol.two{list-style-type: decimal-leading-zero;}
+ol.three{list-style-type: lower-alpha;}
+ol.four{list-style-type: upper-alpha;}
+ol.five{list-style-type: lower-roman;}
+ol.six{list-style-type: upper-roman;}
+```
+
+### image for bullets
+```css
+ul{list-style-image: url(image/logo.gif);}
+li{margin: 10px 0px 0px 0px;}  /*adjust vertical gap between lists*/
+```
+
+### Positioning the marker
+marker sits inside or outside
+
+```css
+ul{width:150px;}
+li{margin: 10px;}
+ul.illuminations{list-style-position:outside;}
+ul.season{list-style-position:inside;}
+```
+
+### list shorthand
+```css
+ul{list-style:inside circle; width:300px;}
+li{margin: 10px 0px 0px 0px;}
+```
+
+### table properties
+```css
+body {
+	font-family: Arial, Verdana, sans-serif;
+	color: #111111;}
+table {
+	width: 600px;}
+th, td {
+	padding: 7px 10px 10px 10px;} /*space between border and its content*/
+th {
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	font-size: 90%;
+	border-bottom: 2px solid #111111;
+	border-top: 1px solid #999;
+	text-align: left;}
+tr.even {
+	background-color: #efefef;}
+tr:hover {
+	background-color: #c3e6e5;}
+.money {
+	text-align: right;}
+```
+
+### border on empty cells
+```css
+td{border: 1px solid #0088dd;
+	padding:15px;}
+table.one{empty-cells:show;}
+table.two{empty-cells:hide;}
+/*inherit: if you have one table nested inside another, the inherit value 
+instructs the table cells to obey the rules of the containing table*/
+```
+
+### gaps between cells
+```css
+td{background-color: #0088dd;
+	pdding:15px;
+	border:2px solid #000000;}
+table.one{border-spacing: 5px 15px;}
+table.two{border-collapse: collapse;} 
+/*separate*/
+```
+
+### Forms: Styling text inputs
+```css
+input {
+	font-size: 120%;
+	color: #5a5854;
+	background-color: #f2f2f2;
+	border: 1px solid #bdbdbd;
+	border-radius: 5px;
+	padding: 5px 5px 5px 30px;
+	background-repeat: no-repeat;
+	background-position: 8px 9px;
+	display: block;
+	margin-bottom: 10px;}
+input:focus, input:hover {
+	background-color: #ffffff;
+	border: 1px solid #b1e1e4;}
+input#email {
+	background-image: url("image/email.png");
+	background-size:20px 20px;}
+input#twitter {
+	background-image: url("image/twitter.png");
+	background-size:20px 20px;}
+input#web {
+	background-image: url("image/web.png");
+	background-size:20px 20px;}
+```
+
+### Forms: Styling submit buttons
+```css
+input {
+	font-size: 120%;
+	color: #5a5854;
+	background-color: #f2f2f2;
+	border: 1px solid #bdbdbd;
+	border-radius: 5px;
+	padding: 5px 10px 5px 10px;
+	background-repeat: no-repeat;
+	background-position: 8px 9px;
+	display: block;
+	margin-bottom: 10px;}
+input#submit {
+	color: #444444;
+	text-shadow: 0px 1px 1px #ffffff;
+	border-bottom: 2px solid #b2b2b2;
+	background-color: #b9e4e3;
+	background: -webkit-gradient(linear, left top, left bottom, from(#beeae9), to(#a8cfce));
+	background: -moz-linear-gradient(top, #beeae9, #a8cfce);
+	background: -o-linear-gradient(top, #beeae9, #a8cfce);
+	background: -ms-linear-gradient(top, #beeae9, #a8cfce);}
+input#submit:hover {
+	color: #333333;
+	border: 1px solid #a4a4a4;
+	border-top: 2px solid #b2b2b2;
+	background-color: #a0dbc4;
+	background: -webkit-gradient(linear, left top, left bottom, from(#a8cfce), to(#beeae9));
+	background: -moz-linear-gradient(top, #a8cfce, #beeae9);
+	background: -o-linear-gradient(top, #a8cfce, #beeae9);
+	background: -ms-linear-gradient(top, #a8cfce, #beeae9);}
+```
+
+### Forms: Styling fieldsets & legends
+```html
+<html><head>
+		<title>Styling Fieldsets and Legends</title>
+		<style type="text/css">
+			* {
+				font-family: Arial, Verdana, sans-serif;
+				color: #665544;}
+			input {
+				border-bottom: 1px dotted #dcdcdc;
+				border-top: none;
+				border-right: none;
+				border-left: none;
+				padding: 5px;
+				width: 280px;
+				margin-bottom: 20px;}
+			input:focus {
+				border: 1px dotted #dcdcdc;
+				outline: none;}
+			input#submit {
+				color: #ffffff;
+				background-color: #665544;
+				border: none;
+				border-radius: 5px;
+				width: 80px;}
+			input#submit:hover {
+				color: #665544;
+				background-color: #efefef;}
+			fieldset {
+				width: 350px;
+				border: 1px solid #dcdcdc;
+				border-radius: 10px;
+				padding: 20px;
+				text-align: right;}
+			legend {
+				background-color: #efefef;
+				border: 1px solid #dcdcdc;
+				border-radius: 10px;
+				padding: 10px 20px;
+				text-align: left;
+				text-transform: uppercase;}
+		</style>
+	</head>
+	<body>
+		<form>
+			<fieldset>
+				<legend>Newsletter</legend>
+				<label for="name">Name: </label><input type="text" id="name">
+				<label for="email">Email: </label><input type="text" id="email">
+				<input type="submit" value="Subscribe" id="submit">
+			</fieldset>
+		</form>	
+</body></html>
+```
+
+### Forms: Aligning form controls PROBLEM
+forms are not aligned to the left without css
+
+### Forms: Aligning form controls SOLUTION
+set form width and align to the left
+```html
+<html><head>
+		<title>Aligning Form Controls - Solution</title>
+		<style type="text/css">
+			body {
+				font-family: Arial, Verdana, sans-serif;}
+			div {
+				border-bottom: 1px solid #efefef;
+				margin: 10px;
+				padding-bottom: 10px;
+				width: 260px;}
+			.title {
+				float: left;
+				width: 100px;
+				text-align: right;
+				padding-right: 10px;}
+			.submit {
+				text-align: right;}
+		</style>
+	</head>
+	<body>
+		<form action="example.php" method="post">
+			<div>
+				<label for="name" class="title">Name:</label>
+				<input type="text" id="name" name="name">
+			</div>
+			<div>
+				<label for="email" class="title">Email:</label>
+				<input type="email" id="email" name="email">
+			</div>
+			<div class="radio-buttons">
+				<span class="title">Gender:</span>
+				<input type="radio" name="gender" id="male" value="M">
+				<label for="male">M</label>
+				<input type="radio" name="gender" id="female" value="F">
+				<label for="female">F</label><br>
+			</div>
+			<div class="submit">
+				<input type="submit" value="Register" id="submit">
+			</div>
+		</form>
+</body></html>
+```
+
+### Cursor styles
+```html
+<!--auto crosshair default pointer move text wait help url("cursor.gif")-->
+<html><head>
+		<style type="text/css">  a{cursor:move;}  </style>
+	</head>
+	<body>
+		<a href="http://www.whitmanarchive.org">Walt Whitman</a>
+</body></html>
+```
+
+### Web developer toolbar
+<a href="www.chrispederick.com/work/web-developer">web developer tool</a>
+
+### Example
+```html
+<html><head>
+		<title>Lists, Tables and Forms</title>
+		<style type="text/css">
+			body {
+				font-family: Arial, Verdana, sans-serif;
+				font-size: 90%;
+				color: #666666;
+				background-color: #f8f8f8;}
+			li {
+				list-style-image: url("image/icon-plus.png");
+				line-height: 1.6em;}
+			table {
+				border-spacing: 0px;}
+			th, td {
+				padding: 5px 30px 5px 10px;
+				border-spacing: 0px;
+				font-size: 90%;
+				margin: 0px;}
+			th, td {
+				text-align: left;
+				background-color: #e0e9f0;
+				border-top: 1px solid #f1f8fe;
+				border-bottom: 1px solid #cbd2d8;
+				border-right: 1px solid #cbd2d8;}
+			tr.head th {
+				color: #fff;
+				background-color: #90b4d6;
+				border-bottom: 2px solid #547ca0;
+				border-right: 1px solid #749abe;
+				border-top: 1px solid #90b4d6;
+				text-align: center;
+				text-shadow: -1px -1px 1px #666666;
+				letter-spacing: 0.15em;}
+			td {
+				text-shadow: 1px 1px 1px #ffffff;}
+			tr.even td, tr.even th {
+				background-color: #e8eff5;}
+			tr.head th:first-child {
+				-webkit-border-top-left-radius: 5px;
+				-moz-border-radius-topleft: 5px;
+				border-top-left-radius: 5px;}
+			tr.head th:last-child {
+				-webkit-border-top-right-radius: 5px;
+				-moz-border-radius-topright: 5px;
+				border-top-right-radius: 5px;}
+			fieldset {
+				width: 310px;
+				margin-top: 20px;
+				border: 1px solid #d6d6d6;
+				background-color: #ffffff;
+				line-height: 1.6em;}
+			legend {
+				font-style: italic;
+				color: #666666;}
+			input[type="text"] {
+				width: 120px;
+				border: 1px solid #d6d6d6;
+				padding: 2px; q
+				outline: none;}
+			input[type="text"]:focus,
+			input[type="text"]:hover {
+				background-color: #d0e2f0;
+				border: 1px solid #999999;}
+			input[type="submit"] {
+				border: 1px solid #006633;
+				background-color: #009966;
+				color: #ffffff;
+				border-radius: 5px;
+				padding: 5px;
+				margin-top: 10px;}
+			input[type="submit"]:hover {
+				border: 1px solid #006633;
+				background-color: #00cc33;
+				color: #ffffff;
+				cursor: pointer;}
+			.title {
+				float: left;
+				width: 160px;
+				clear: left;}
+			.submit {
+				width: 310px;
+				text-align: right;}
+		</style>
+	</head>
+	<body>
+		<h1>Poetry Workshops</h1>
+		<p>We will be conducting a number of poetry workshops and symposiums throughout the year.</p>
+		<p>Please note that the following events are free to members:</p>
+		<ul>
+			<li>A Poetic Perspective</li>
+			<li>Walt Whitman at War</li>
+			<li>Found Poems and Outsider Poetry</li>
+		</ul>
+		<table>
+			<tbody><tr class="head">
+				<th></th>
+				<th>New York</th>
+				<th>Chicago</th>
+				<th>San Francisco</th>
+			</tr>
+			<tr>
+				<th>A Poetic Perspective</th>
+				<td>Sat, 4 Feb 2012<br>11am - 2pm</td>
+				<td>Sat, 3 Mar 2012<br>11am - 2pm</td>
+				<td>Sat, 17 Mar 2012<br>11am - 2pm</td>
+			</tr>
+			<tr class="even">
+				<th>Walt Whitman at War</th>
+				<td>Sat, 7 Apr 2012<br>11am - 1pm</td>
+				<td>Sat, 5 May 2012<br>11am - 1pm</td>
+				<td>Sat, 19 May 2012<br>11am - 1pm</td>
+			</tr>
+			<tr>
+				<th>Found Poems &amp; Outsider Poetry</th>
+				<td>Sat, 9 Jun 2012<br>11am - 2pm</td>
+				<td>Sat, 7 Jul 2012<br>11am - 2pm</td>
+				<td>Sat, 21 Jul 2012<br>11am - 2pm</td>
+			</tr>
+			<tr class="even">
+				<th>Natural Death: An Exploration</th>
+				<td>Sat, 4 Aug 2012<br>11am - 4pm</td>
+				<td>Sat, 8 Sep 2012<br>11am - 4pm</td>
+				<td>Sat, 15 Sep 2012<br>11am - 4pm</td>
+			</tr>
+		</tbody></table>
+		<form action="http://www.example.com/form.php" method="get">
+			<fieldset>
+				<legend>Register your interest</legend>
+				<p><label class="title" for="name">Your name:</label>
+					 <input type="text" name="name" id="name"><br>
+					 <label class="title" for="email">Your email:</label>
+					 <input type="text" name="email" id="email"></p>
+				<p><label for="location" class="title">Your closest center:</label>
+					 <select name="location" id="location">
+						 <option value="ny">New York</option>
+						 <option value="il">Chicago</option>
+						 <option value="ca">San Francisco</option>
+					 </select></p>
+				<span class="title">Are you a member?</span>
+				<label><input type="radio" name="member" value="yes"> Yes</label>
+				<label><input type="radio" name="member" value="no"> No</label>
+			</fieldset>
+ 	    <div class="submit"><input type="submit" value="Register"></div>
+		</form>
+</body></html>
+```
+
+## Layout
+
+### Normal flow
+```css
+/*position: static;*/
+body{
+	width:750px;
+	font-family: Arial,Verdana, sans-serif;
+	color: #665544;}
+h1{
+	background-color: #efefef;
+	padding:10px;}
+p{width: 450px;}
+```
+
+### Relavtive positioning
+```css
+p.example{
+	position:relatvie; /*relative to normal flow*/
+	top:10px;
+	left:100px;}
+```
+
+### Absolute positioning
+```css
+h1{position: absolute;
+	top:0px; left: 500px; width:250px;}
+```
+
+### Fixed positioning
+```css
+/*visible while scrolling*/
+h1{position:fixed;
+	top:0px; left: 500px; padding: 10px; margin:0px; width:100%;
+	background-color: #efefef;}
+```
+
+### Overlapping elements
+```css
+/*higher z-index(stacking context), closer element is to the front*/
+h1{z-index:10;}
+```
+
+###Floating elements
+normal flow element is placed as far to the left or right of the containing element as possible
+
+```css
+body {
+	width: 750px;
+	font-family: Arial, Verdana, sans-serif;
+	color: #665544;}
+blockquote {
+	float: right; /*both float and width need to be specified*/
+	width: 275px;
+
+	font-size: 130%;
+	font-style: italic;
+	font-family: Georgia, Times, serif;
+	margin: 0px 0px 10px 10px;
+	padding: 10px;
+	border-top: 1px solid #665544;
+	border-bottom: 1px solid #665544;}
+```
+
+### Using Float to place elements side-by-side
+Fourth paragraph is located below third due to short height of third paragraph. <br/>
+Setting the height of the paragraphs is rarely suited to real world designs: use 'clear' property.
+```html
+<html><head>
+		<title>Using Float to Place Elements Side-by-Side</title>
+		<style type="text/css">
+			body {
+				width: 750px;
+				font-family: Arial, Verdana, sans-serif;
+				color: #665544;}
+			p {
+				width: 230px;
+				float: left;
+				margin: 5px;
+				padding: 5px;
+				background-color: #efefef;}
+		</style>
+	</head>
+	<body>
+		<h1>The Evolution of the Bicycle</h1>
+		<div>
+			<p>In 1817 Baron von Drais invented a walking machine that would help him get around the royal gardens faster.</p>
+			<p>The device know as the Draisienne (or "hobby horse") was made of wood, and propelled by pushing your feet on the ground in a gliding movement.</p>
+			<p>It was not seen as suitable for any place other than a well maintained pathway. </p>
+			<p>In 1865, the velocipede (meaning "fast foot") attached pedals to the front wheel, but its wooden structure made it extremely uncomfortable. </p>
+			<p>In 1870 the first all-metal machine appeared. The pedals were attached directly to the front wheel.</p>
+			<p>Solid rubber tires and the long spokes of the large front wheel provided a much smoother ride than its predecessor.</p>
+		</div>
+</body></html>
+```
+
+### Clearing Floats
+```html
+<p class="clear" id="fourth">In 1865, the velocipede (meaning "fast foot") attached pedals to the front wheel, but its wooden structure made it extremely uncomfortable. </p>
+```
+```css
+/*left or right side of the box should not touch any other elements 
+appearing in the same containing element*/
+.clear{clear: left;} 
+.clear{clear: right;}
+.clear{clear: both;}/*neither of both sides will touch*/
+.clear{clear: none;}/*elements can touch either side*/
+```
+
+### Parents of Floated elements: PROBLEM
+```css
+/*If a containing element only contains floated elements, some browsers treat it as 0px tall*/
+div{border: 1px solid #665544;}
+```
+
+### Parents of Floated elements: SOLUTION
+```css
+div {border: 1px solid #665544;
+	overflow: auto;
+	width: 100%;}
+```
+
+### Creating multi-column layouts with Floats
+div to represent each column
+
+```html
+<html><head>
+		<title>Three Column Layout</title>
+		<style type="text/css">
+			body {
+				width: 960px;
+				font-family: Arial, Verdana, sans-serif;
+				color: #665544;}
+			.column1of3, .column2of3, .column3of3 {
+				width: 300px; /*column width*/
+				float: left; /*position column next to each other*/
+				margin: 10px;} /*creates a gap between the columns*/
+		</style>
+	</head>
+	<body>
+		<h1>The Evolution of the Bicycle</h1>
+		<div class="column1of3">
+			<h3>The First Bicycle</h3>
+			<p>In 1817 Baron von Drais invented a walking machine that would help him get around the royal gardens faster: two same-size in-line wheels, the front one steerable, mounted in a frame upon which you straddled. The device was propelled by pushing your feet against the ground, thus rolling yourself and the device forward in a sort of gliding walk.</p>
+			<p>The machine became known as the Draisienne (or "hobby horse"). It was made entirely of wood. This enjoyed a short lived popularity as a fad, not being practical for transportation in any other place than a well maintained pathway such as in a park or garden.</p>
+		</div>
+		<div class="column2of3">
+			<h3>Further Innovations</h3>
+			<p>The next appearance of a two-wheeled riding machine was in 1865, when pedals were applied directly to the front wheel. This machine was known as the velocipede (meaning "fast foot") as well as the "bone shaker," since its wooden structure combined with the cobblestone roads of the day made for an extremely uncomfortable ride. They also became a fad and indoor riding academies, similar to roller rinks, could be found in large cities.</p>
+			<p>In 1870 the first all-metal machine appeared. (Prior to this, metallurgy was not advanced enough to provide metal which was strong enough to make small, light parts out of.) The pedals were attached directly to the front wheel with no freewheeling mechanism. Solid rubber tires and the long spokes of the large front wheel provided a much smoother ride than its predecessor.</p>
+		</div>
+		<div class="column3of3">
+			<h3>Bicycle Timeline</h3>
+			<ul>
+				<li>1817: Draisienne</li>
+				<li>1865: Velocipede</li>
+				<li>1870: High-wheel bicycle</li>
+				<li>1876: High-wheel safety</li>
+				<li>1885: Hard-tired safety</li>
+				<li>1888: Pneumatic safety</li>
+			</ul>
+		</div>
+</body></html>
+```
+
+### Screen size and resolution
+higher resolution smaller texts
+
+### Fixed width layouts
+fixed size regardless of browser window size
+
+```css
+* {
+	font-family: Arial, Verdana, sans-serif;
+	color: #665544;
+	text-align: center;}
+body {
+	width: 960px;
+	margin: 0 auto;}
+#content {
+	overflow: auto;
+	height: 100%;}
+#nav, #feature, #footer {
+	background-color: #efefef;
+	padding: 10px;
+	margin: 10px;}
+.column1, .column2, .column3 {
+	background-color: #efefef;
+	width: 300px;
+	float: left;
+	margin: 10px;}
+li {
+	display: inline;
+	padding: 5px;}
+```
+
+### Liquid layouts
+stretch and contract as browser window size changes
+
+```css
+* {
+	font-family: Arial, Verdana, sans-serif;
+	color: #665544;
+	text-align: center;}
+body {
+	width: 90%;
+	margin: 0 auto;}
+#content {
+	overflow: auto;}
+#nav, #feature, #footer {
+	margin: 1%;}
+.column1, .column2, .column3 {
+	width: 31.3%;
+	float: left;
+	margin: 1%;}
+.column3 {
+	margin-right: 0%;}
+li {
+	display: inline;
+	padding: 0.5em;}
+#nav, #footer {
+	background-color: #efefef;
+	padding: 0.5em 0;}
+#feature, .article {
+	height: 10em;
+	margin-bottom: 1em;
+	background-color: #efefef;}
+```
+
+### Layout Grids
+960 pixel grid
+
+### CSS Framework
+framework code provide code for common tasks in your project. e.g. 960 grid system (framwork)
+
+### A Grid-based Layout using 960.gs framwork
+* 960\_12\_col.css classes
+* 		container_12 class: container for the whole page and indicate 12-column grid
+*		clearfix class: inform browser height of the containing box (all floating elements)
+*		grid_12 class: to create a twelve-column wide block
+*		grid_4 class: to create a four-column wide block
+
+```html
+<html><head>
+		<title>Grid Layout</title>
+		<link href="css/960_12_col.css" type="text/css" rel="stylesheet"/>
+		<style> /*since layout was set by 960.gs, specify additional fonts and colors*/
+			* {
+				font-family: Arial, Verdana, sans-serif;
+				color: #665544;
+				text-align: center;}
+			#nav, #feature, .article, #footer {
+				background-color: #efefef;
+				margin-top: 20px;
+				padding: 10px 0px 5px 0px;}
+			#feature, .article {
+				height: 100px;}
+			li {
+				display: inline;
+				padding: 5px;}
+		</style>
+	</head>
+	<body>
+		<div class="container_12 clearfix">
+			<div id="header" class="grid_12">
+				<h1>Logo</h1>
+				<div id="nav">
+					<ul>
+						<li><a href="">Home</a></li>
+						<li><a href="">Products</a></li>
+						<li><a href="">Services</a></li>
+						<li><a href="">About</a></li>
+						<li><a href="">Contact</a></li>
+					</ul>
+				</div>
+			</div>
+			<div id="feature" class="grid_12">
+				<p>Feature</p>
+			</div>
+			<div class="article grid_4">
+				<p>Column One</p>
+			</div>
+			<div class="article grid_4">
+				<p>Column Two</p>
+			</div>
+			<div class="article grid_4">
+				<p>Column Three</p>
+			</div>
+			<div id="footer" class="grid_12">
+				<p>© Copyright 2011</p>
+			</div>
+		</div><!-- .container_12 -->
+</body></html>
+```
+
+### Multiple style sheets
+modular approach, split up CSS style rules into separate style sheets(fonts, layout, colors)
+
+1. @import
+
+```html
+<html><head>
+		<title>Multiple Style Sheets - Import</title>
+		<link rel="stylesheet" type="text/css" href="css/styles.css">
+	</head>
+	<body>
+		<div id="page">
+			<h1>Central Park Bike Hire</h1>
+			<p class="intro">Rent a bicycle to ride around Central Park:</p>
+			<table>
+				<tbody><tr class="head">
+					<th></th>
+					<th>Per hour</th>
+					<th>Per day</th></tr>
+				<tr>
+					<th>Cruiser</th>
+					<td>$9</td>
+					<td>$45</td>
+				</tr>
+				<tr>
+					<th>21 Speed</th>
+					<td>$15</td>
+					<td>$50</td>
+				</tr>
+			</tbody></table>
+			<h2>Where and When</h2>
+			<h3>Loeb Boathouse</h3>
+			<p>From April to November bicycles are available on first come first serve basis for riding in Central Park.</p>
+			<h2>Deposits</h2>
+			<h3>Cash or credit card</h3>
+			<p>A $200 deposit is required for the hire of any of our bicycles.</p>
+		</div>
+</body></html>
+```
+
+```css
+/* styles.css */
+@import url("tables.css");
+@import url("typography.css");
+body {
+	color: #666666;
+	background-color: #f8f8f8;
+	text-align: center;}
+#page {
+	width: 600px;
+	text-align: left;
+	margin-left: auto;
+	margin-right: auto;
+	border: 1px solid #d6d6d6;
+	padding: 20px;}
+h3 {
+	color: #547ca0;}
+```
+
+2. link
+last link has precedence
+
+```html
+<head>
+		<title>Multiple Style Sheets - Link</title>
+		<link rel="stylesheet" type="text/css" href="css/site.css">
+		<link rel="stylesheet" type="text/css" href="css/tables.css">
+		<link rel="stylesheet" type="text/css" href="css/typography.css">
+</head>
+```
+
+### Example
+```html
+<html><head>
+		<title>Layout</title>
+		<link rel="stylesheet" type="text/css" href="css/960_12_col.css">
+		<style type="text/css">
+			@font-face {
+				font-family: 'QuicksandBook';
+				src: url('fonts/Quicksand_Book-webfont.eot');
+				src: url('fonts/Quicksand_Book-webfont.eot?#iefix') format('embedded-opentype'),
+					url('fonts/Quicksand_Book-webfont.woff') format('woff'),
+					url('fonts/Quicksand_Book-webfont.ttf') format('truetype'),
+					url('fonts/Quicksand_Book-webfont.svg#QuicksandBook') format('svg');
+				font-weight: normal;
+				font-style: normal;}
+			body {
+				color: #ffffff;
+				background: #413f3b url("images/bg.jpg");
+				font-family: Georgia, "Times New Roman", Times, serif;
+				font-size: 90%;
+				margin: 0px;
+				text-align: center;}
+			a {
+				color: #b5c1ad;
+				text-decoration: none;}
+			a:hover {
+				color: #ffffff;}
+			.header {
+				background-image: url("images/bg-header.jpg");
+				padding: 0px 0px 0px 0px;
+				height: 100px;
+				position: fixed;
+				top: 0px;
+				width: 100%;
+				z-index: 50;}
+			.nav {
+				float: right;
+				font-family: QuicksandBook, Helvetica, Arial, sans-serif;
+				padding: 45px 0px 0px 0px;
+				text-align: right;}
+			.wrapper {
+				width: 960px;
+				margin: 0px auto;
+				background-image: url("images/bg-triangle.png");
+				background-repeat: no-repeat;
+				background-position: 0px 0px;
+				text-align: left;}
+			.logo {
+				margin-bottom: 20px;}
+			h1, h2 {
+				font-family: QuicksandBook, Helvetica, Arial, sans-serif;
+				font-weight: normal;
+				text-transform: uppercase;}
+			h1 {
+				font-size: 240%;
+				margin-top: 140px;}
+			.date {
+				font-family: Arial, Helvetica, sans-serif;
+				font-size: 75%;
+				color: #b5c1ad;}
+			.intro {
+				clear: left;
+				font-size: 90%;
+				line-height: 1.4em;}
+			.main-story {
+				background-image: url("images/triangles.png");
+				background-repeat: no-repeat;
+				background-position: 122px 142px;
+				height: 570px;}
+			.more-articles {
+				border-top: 1px solid #ffffff;
+				padding: 10px;}
+			.more-articles p {
+				border-bottom: 1px solid #807c72;
+				padding: 5px 0px 15px 0px;
+				font-size: 80%;}
+			.more-articles p:last-child {
+				border-bottom: none;}
+			.footer {
+				clear: both;
+				background: rgba(0, 0, 0, 0.2);
+				padding: 5px 10px;}
+			.footer p {
+				font-family: Helvetica, Arial, sans-serif;
+				font-size: 75%;
+				text-align: right;}
+			.footer a {
+				color: #807c72;}
+		</style>
+	</head>
+	<body>
+		<div class="header">
+			<div class="container_12">
+				<div class="grid_5">
+					<img src="images/logo.png" alt="Pedal Faster - The modern bicycle magazine" width="216" height="37" class="logo">
+					<img src="images/header-triangle.png" alt="" width="116" height="100">
+				</div>
+				<div class="nav grid_7">
+					<a href="">home</a> / <a href="">news</a> / <a href="">archives</a> / <a href="">about</a> / <a href="">contact</a>
+				</div>
+			</div>
+		</div>
+		<div class="wrapper">
+			<div class="main-story container_12">
+				<div class="grid_6 push_6">
+					<h1><a href="">Fixed Gear Forever</a></h1>
+				</div>
+				<div class="intro grid_3 push_9">
+					<p class="date">16 APRIL 2011</p>
+					<p>The veloheld combines minimalist design with superb quality. Devoid of excessive graphics and gear shift components, the veloheld product range delights us with its beauty and simplicity. The black and white (yin and yang?) bicycles feature a short wheelbase, a single gear and a narrow handlebar... All you need to explore the city streets.</p>
+					<p>For those who want to create their bike themselves, the veloheld frames come in three sizes and two colours and are the perfect starting point. <a href="">Continue reading...</a></p>
+				</div>
+			</div><!-- .main-story -->
+			<div class="more-articles container_12">
+				<h2 class="grid_12"><a href="">More Articles</a></h2>
+				<div class="grid_3">
+					<img src="images/more1.jpg" alt="The road ahead" width="220" height="125">
+					<p><a href="">On the Road: From the fixed gear fanatic's point of view</a></p>
+					<p><a href="">Brand History: Pashley Cycles - hand-built in England</a></p>
+					<p><a href="">Frame Wars: Innovations in cycle manufacture and repair</a></p>
+				</div>
+				<div class="grid_3">
+					<img src="images/more2.jpg" alt="Sketchbook" width="220" height="125">
+					<p><a href="">Touring Diary: A sketchbook in your basket</a></p>
+					<p><a href="">Top Ten Newcomers for 2012: A peek at what's to come</a></p>
+					<p><a href="">InnerTube: The best cycling videos on the web</a></p>
+				</div>
+				<div class="grid_3">
+					<img src="images/more3.jpg" alt="Repair shop sign" width="220" height="125">
+					<p><a href="">Product Review: All baskets were not created equal</a></p>
+					<p><a href="">Going Public: Out &amp; about with the founder of Public</a></p>
+					<p><a href="">Cycle Lane Defence: Know your rights</a></p>
+				</div>
+				<div class="grid_3">
+					<img src="images/more4.jpg" alt="Schwinn Spitfire" width="220" height="125">
+					<p><a href="">Bicycle Hall of Fame: The 1958 Schwinn Spitfire</a></p>
+					<p><a href="">Reader Survey: Share your thoughts with us!</a></p>
+					<p><a href="">Chain Gang: The evolution of the humble bike chain</a></p>
+				</div>
+			</div><!-- .more-articles -->
+		</div><!-- .wrapper -->
+		<div class="footer clearfix">
+			<div class="container_12">
+				<p class="grid_12"><a href="">Legal Information</a> | <a href="">Privacy Policy</a> | <a href="">Copyright © Pedal Faster 2011</a></p>
+			</div>
+		</div>
+</body></html>
+```
+
+## Images
+
+### Controlling sizes of images in CSS
+```html
+<img src="images/magnolia-large.jpg" class="large" alt="Magnolia"/>
+```
+```css
+img.large{width: 500px; height:500px;}
+```
+
+### Align images using CSS
+```html
+<img src="images/mag.jpg" alt="Magnolia" class="align-left medium"/>
+<img src="images/mag.jpg" alt="Magnolia" class="align-right medium"/>
+```
+```css
+img.align-left{
+	float:left;
+	margin-right:10px;}
+img.align-right{
+	float:right;
+	margin-left:10px;}
+img.medium{width:250px; height:250px;}
+```
+
+### Centering images using CSS
+```html
+<p><img src="images/mag.jpg" alt="Magnolia" class="align-center medium"/>Magnolia.</p>
+```
+```css
+img.align-center {
+	display: block;
+	margin: 0px auto;}
+img.medium {
+	width: 250px;
+	height: 250px;}
+```
+
+### Background images
+```css
+body{background-image: url("images/pattern.gif");} /*for body*/
+p{background-image: url("images/pattern.gif");} /*for element*/
+```
+
+### Repeating images
+```css
+body {
+	background-image: url("images/header.gif");
+	background-repeat: repeat-x; /*repeat-x  repeat-y  no-repeat*/
+	color: #665544;
+	padding: 20px;}
+h1 {
+	color: white;}
+```
+
+### Attach images
+```css
+body {
+	background-image: url("images/tulip.gif");
+	background-repeat: no-repeat;
+	background-attachment: fixed; /*fixed  scroll*/
+	color: #665544;
+	padding: 20px;}
+```
+
+### Background position
+```css
+body{
+	background-image:url("images/tulip.gif");
+	background-repeat: no-repeat;
+	background-position: center top;/*9 by 9 grid: left top, left center, left bottom, etc...*/
+	/*background-position: 50% 0%;  same as 'center top'*/} 
+```
+
+### Shorthand
+in the following order:
+
+1. background-color
+2. background-image
+3. background-repeat
+4. background-attachment
+5. background-position
+
+```css
+body{
+	background: #ffffff url("images/tulip.gif") no-repeat top right;}
+```
+
+### image rollovers & sprites
+a link or button that changes to a second style when a user moves their mouse over it<br/> and a third style when clicked(activated): background changes. But sprite requires only one.
+
+
+### CSS3: gradients
+```html
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Gradient</title>
+		<style type="text/css">
+			#gradient {
+				/* fallback color */
+				background-color: #66cccc;
+				/* fallback image */
+				background-image: url("images/fallback-image.png"); 
+				background-image: -moz-linear-gradient(#336666, #66cccc);/* Firefox 3.6+ */
+				background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#66cccc), to(#336666));/* Safari 4+, Chrome 1+ */
+				background-image: -webkit-linear-gradient(#336666, #66cccc);/* Safari, Chrome*/ 
+				background-image: -o-linear-gradient(#336666, #66cccc);/* Opera 11.10+ */
+   				height: 150px;
+				width: 300px;}
+		</style>
+	</head>
+	<body>
+		<div id="gradient">
+		</div>
+	</body>
+</html>
+```
+
+### Example
+```html
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Images</title>
+		<style type="text/css">
+			body {
+				color: #665544;
+				background-color: #d4d0c6;
+				background-image: url("images/backdrop.gif");
+				font-family: Georgia, "Times New Roman", serif;
+				text-align: center;}
+			.wrapper {
+				width: 720px;
+				margin: 0px auto;}
+			.header {
+				margin: 40px 0px 20px 0px;}
+			.entry {
+				width: 220px;
+				float: left;
+				margin: 10px;
+				height: 198px;
+				background-image: url("images/shadow.png");
+				background-repeat: no-repeat;
+				background-position: bottom;}
+			figure {
+				display: block;
+				width: 202px;
+				height: 170px;
+				background-color: #e7e3d8;
+				margin: 0;
+				padding: 9px;
+				text-align: left;}
+			figure img {
+				width: 200px;
+				height: 150px;
+				border: 1px solid #d6d6d6;}
+			figcaption {
+				background-image: url("images/icon.png");
+				padding-left: 20px;
+				background-repeat: no-repeat;}
+		</style>
+	</head>
+	<body>
+		<div class="wrapper">
+			<div class="header">
+				<img src="images/title.gif" alt="Galerie Botanique" width="456" height="122" />
+				<p>Here is a selection of antique botanical prints held in our collection.</p>
+			</div>
+			<div class="entry">
+				<figure><img src="images/print-01.jpg" alt="Helianthus" />
+					<figcaption>Helianthus</figcaption>
+				</figure>
+			</div>
+			<div class="entry">
+				<figure><img src="images/print-02.jpg" alt="Passiflora" />
+					<figcaption>Passiflora</figcaption>
+				</figure>
+			</div>
+			<div class="entry">
+				<figure><img src="images/print-03.jpg" alt="Nyctocalos" />
+					<figcaption>Nyctocalos</figcaption>
+				</figure>
+			</div>
+			<div class="entry">
+				<figure><img src="images/print-04.jpg" alt="Polianthes" />
+					<figcaption>Polianthes</figcaption>
+				</figure>
+			</div>
+			<div class="entry">
+				<figure><img src="images/print-05.jpg" alt="Ficus" />
+					<figcaption>Ficus</figcaption>
+				</figure>
+			</div>
+			<div class="entry">
+				<figure><img src="images/print-06.jpg" alt="Dendrobium" />
+					<figcaption>Dendrobium</figcaption>
+				</figure>
+			</div>
+		</div>
+	</body>
+</html>
+```
+
+## HTML5 Layout
+
+### Traditional HTML layouts
+use &ltdiv&gt for each main section in a page
+
+### New HTML5 layout elements
+* &ltheader&gt &ltfooter&gt
+* &ltnav&gt
+* &ltarticle&gt
+* &ltaside&gt
+* &ltsection&gt
+* &lthgroup&gt
+* &ltfigure&gt &ltfigcaption&gt
+* &ltdiv&gt
+
+### Header Footer
+1. for top or bottom of the page
+2. for individual &ltarticle&gt or &ltsection&gt
+  - each article(e.g. blog post) might contain header(title, date) and footer(sns share links)
+  
+```html
+<header>
+	<h1>Yoko's Kitchen</h1>
+	<nav>
+		<ul></ul>
+	</nav>
+</header>
+<!--other html codes here-->
+<footer>&copy; 2011 Yoko's Kitchen</footer>
+```
+
+
+### Linking around block-level elements
+
+### Helping older browsers understand
+
+### Example with links
+
+### Example
 
 
