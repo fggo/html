@@ -2999,21 +2999,21 @@ a link or button that changes to a second style when a user moves their mouse ov
 ## HTML5 Layout
 
 ### Traditional HTML layouts
-use &ltdiv&gt for each main section in a page
+use \<div\> for each main section in a page
 
 ### New HTML5 layout elements
-* &ltheader&gt &ltfooter&gt
-* &ltnav&gt
-* &ltarticle&gt
-* &ltaside&gt
-* &ltsection&gt
-* &lthgroup&gt
-* &ltfigure&gt &ltfigcaption&gt
-* &ltdiv&gt
+* \<header\> \<footer\>
+* \<nav\>
+* \<article\>
+* \<aside\>
+* \<section\>
+* \<hgroup\>
+* \<figure\> \<figcaption\>
+* \<div\>
 
 #### HTML5: Header Footer
 1. for top or bottom of the page
-2. for individual &ltarticle&gt or &ltsection&gt
+2. for individual \<article\> or \<section\>
   - each article(e.g. blog post) might contain header(title, date) and footer(sns share links)
 
 ```html
@@ -3041,7 +3041,7 @@ use &ltdiv&gt for each main section in a page
 ```
 
 #### HTML5: Articles
-The &ltarticle&gt is a container for any section of a page that could stand alone<br/>
+The \<article\> is a container for any section of a page that could stand alone<br/>
 indepenent piece of content such as article, blog entry, comment, forum post
 
 ```html
@@ -3095,7 +3095,7 @@ outside an article, container for content related to the entire page. e.g. links
 #### HTML5: Sections
 groups related contents together. each section would have its own heading.<br/>
 to split up long articles into sections.<br/> 
-Not for wrapper which can be rather done by &ltdiv&gt
+Not for wrapper which can be rather done by \<div\>
 
 ```html
 <section class="popular-recipes">
@@ -3133,7 +3133,7 @@ image, video, graph, diagram, code samples, text support for main body of an art
 ```
 
 #### HTML5: div
-Revisit. However, the &ltdiv&gt element will remain an important way to group together <br/>
+Revisit. However, the \<div\> element will remain an important way to group together <br/>
 related elements, because you should not be using these new elements that you have just met <br/>
 for purposes other than those explicitly stated.
 
