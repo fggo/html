@@ -1070,7 +1070,7 @@ target rules to specific elements in an HTML document
 	<tr>
 		<th>Adjacent Sibling</th>
 		<td>Matches an element that is the next sibling of another</td>
-		<td>hl+p {} <br/>targets the first &ltp&gt element after any &lth1&gt element (but not other &ltp&gt elements)</td>
+		<td>h1+p {} <br/>targets the first &ltp&gt element after any &lth1&gt element (but not other &ltp&gt elements)</td>
 	</tr>
 	<tr>
 		<th>General Sibling</th>
