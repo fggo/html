@@ -1,4 +1,4 @@
-* [Structure] (#structure)
+* [Structure](#structure)
 * [Text] (https://github.com/fggo/html/blob/master/README.md#text)
 * [Semantic Markup] (https://github.com/fggo/html/blob/master/README.md#semantic-markup)
 * [Lists] (https://github.com/fggo/html/blob/master/README.md#lists)
