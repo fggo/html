@@ -1,4 +1,4 @@
-* [Structure] (https://github.com/fggo/html/blob/master/README.md#structure)
+[Structure] (README.md#structure)
 * [Text] (https://github.com/fggo/html/blob/master/README.md#text)
 * [Semantic Markup] (https://github.com/fggo/html/blob/master/README.md#semantic-markup)
 * [Lists] (https://github.com/fggo/html/blob/master/README.md#lists)
@@ -344,6 +344,7 @@ Contains both image and caption:
 ## Table
 
 ### table heading
+```html
 <!--th: heading for row or col-->
 <table border =1>
 	<tr>
@@ -362,7 +363,7 @@ Contains both image and caption:
 		<td>$675</td>
 	</tr>
 </table>
-
+```
 
 ### spanning columns
 ```html
