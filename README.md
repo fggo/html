@@ -31,135 +31,102 @@
 	</body>
 </html>
 ```
-## Text
 
-### Bold Italic
+## Text
 ```html
+<!--Bold Italic-->
 <b>bold</b>
 <i>italic</i>
-```
 
-### Superscript Subscript
-```html
-E = MC<sup>2</sup> 
-H<sub>2</sub>O	
-```
+<!--Superscript Subscript-->
+E = MC<sup>2</sup>
+H<sub>2</sub>O
 
-### White space
-two or more spaces collapse to one
-```html
+<!--White space: two or more spaces collapse to one-->
 <p>Hello     World</p>
-```
 
-### Line breaks
-```html
+<!--Line Breaks-->
 Line One<br/>Line Two<br/>
-```
 
-### Horizontal rules
-```html
+<!--Horizontal rules-->
 <p>Current Topic</p>
 <hr/>
 ```
 
 ## Semantic markup
-Text elements that are not intended to affect the structure of web pages
+- Text elements that are not intended to affect the structure of web pages
 
-### Strong
 ```html
+<!--Strong-->
 <strong>Warning!</strong> This is a tiger cage.
-```
 
-### Emphasis
-Emphasis that subtly changes the meaning of a sentence
-```html
+<!--Emphasis that subtly changes the meaning of a sentence-->
 <p><em>I</em> think water is empty</p>
 <p>I <em>think</em> water is empty</p>
 <p>I think water is <em>empty</em></p>
-```
 
-### Quotation
-```html
-<blockquote cite = "https://en.wikipedia.org/wiki/Floyd_Mayweather_Jr."> 
-	<p>TMT</p> 
+<!--Block quote-->
+<blockquote cite = "https://en.wikipedia.org/wiki/Floyd_Mayweather_Jr.">
+	<p>TMT</p>
 </blockquote>
 
-<!--quotation mark-->
+<!--Quotation mark-->
 <q>Fly like a butterfly. Sting like a bee.</q>
-```
 
-### Abbreviation
-```html
+<!--Abbreviation-->
 <abbr title = "Professor">Prof</abbr> will discuss the topic.
-```
 
-### Acronym
-```html
+<!--Acronym-->
 <acronym title = "President Of The United States">POTUS</acronym> is flying.
-```
 
-### Citation
-```html
-<cite>A Brief History of Time</cite> by Stephen Hawking has sold over ten million copies worldwide.
-```
+<!--Citation-->
+<cite>A Brief History of Time</cite> by Stephen Hawking has sold over ten million copies.
 
-### Definitions
-```html
+<!--Definitions-->
 <dfn>Black hole</dfn> is a region of space from which nothing, not even light, can escape.
-```
 
-### Author details
-Address contains contact details
-```html
+<!--Author details: Address contains contact details-->
 <address>
 	<p><a href = "mailto:homer@example.org"> homer@example.org</a> </p>
 	<p>742 Evergreen Terrace, Springfield.</p>
 </address>
-```
 
-### Changes to content
-```html
+<!--Changes to content-->
 <del>worst</del> <ins>best</ins> season.
 
-<!--no longer relevant-->
+<!--No longer relevant-->
 <s>Price is $200</s><br/>
    Now Price is $150
 ```
 
 ## Lists
 
-### Ordered Lists
 ```html
+<!--Ordered Lists-->
 <ol>
 	<li>Buy Kaby Lake CPU</li>
 	<li>Buy 512GB SSD</li>
 	<li>Buy U2414H monitor</li>
 </ol>
-```
 
-### Unordered Lists
-```html
+<!--Unordered Lists-->
 <ul>
 	<li>melon</li>
 	<li>water</li>
 	<li>egg</li>
 	<li>beef</li>
 </ul>
-```
 
-### Definition Lists
-```html
+<!--Definition Lists-->
 <dl>
 	<dt>Bread</dt>
-	<dd>Bread is a staple food prepared from a dough of flour and water, usually by baking.</dd>
+	<dd>Bread is a staple food prepared from a dough of flour and water.</dd>
 
 	<dt>Coffee</dt>
 	<dd>Coffee is a brewed drink prepared from roasted coffee beans.</dd>
 </dl>
-```
 
-### Nested Lists
-```html
+<!--Nested Lists-->
 <ul>
 	<li>Mathematics</li>
 	<li>English</li>
@@ -200,11 +167,9 @@ Address contains contact details
 ```
 
 ### Directory structure
-Web servers usually set up to return the index.html file.<br/>
-examplearts.com will return examplearts.com/index.html
+main homepage index.html; examplearts.com returns examplearts.com/index.html
 
 ### Relative URL
-
 ```html
 <a href = "reviews.html">Reviews</a>
 <a href = "music/listings.html">Listings</a>
@@ -213,18 +178,14 @@ examplearts.com will return examplearts.com/index.html
 <a href = "../../index.html">Home</a>
 ```
 
-### Email Links
 ```html
+<!--Email Links-->
 <a href = "mailto:jon@example.org">Email Jon</a>
-```
 
-### Links in new window
-```html
+<!--Links in new window-->
 <a href = "https://www.youtube.com/" target = "_blank">Youtube</a>
-```
 
-### Link to same page
-```html
+<!--Link to same page-->
 <h1 id = "top">Film-Making Terms</h1>
 <a href = "#arc_short">Arc shot</a>
 <a href = "#interlude">Interlude</a>
@@ -240,10 +201,8 @@ examplearts.com will return examplearts.com/index.html
 <p>a speech, preface, intro...</p>
 
 <a href = "#top">Top</a>
-```
 
-### Link to different page
-```html
+<!--Link to different page-->
 absolute or relative URL, followed by the value of the id attr
 <a href = "http:/www.htmlandcssbookcom/#bottom">book</a>
 ```
@@ -255,7 +214,7 @@ absolute or relative URL, followed by the value of the id attr
 <!--title: info when mouse cursor hover-->
 <!--height: width: specify image size to make page load faster-->
 <p>
-	<img 
+	<img
 	src = "../Pictures/astronaut.jpg"
 	alt ="NASA astronaut lands on moon for the first time in human history"
 	title = "Astronaut"
@@ -267,26 +226,11 @@ absolute or relative URL, followed by the value of the id attr
 ### img align [old code]
 ```html
 'align' attr is no longer used in HTML5. Use CSS to control alignment of images
-<!--left, right-->
+<!--left, right, top, middle, bottom (first line)-->
 <p>
-	<img 
+	<img
 	src = "work.jpg" alt ="stretches before workout" title = "work" height = "100" width = "150"
 	align = "left">Working out is essential for people who works on the desk daily.
-	<img 
-	src = "work.jpg" alt ="stretches before workout" title = "work" height = "100" width = "150"
-	align = "right">Working out is essential for people who works on the desk daily.
-</p>
-<!--top, middle, bottom (first line)-->
-<p>
-	<img 
-	src = "puma.jpg" alt ="in nature" title = "puma" height = "100" width = "180"
-	align = "top">Puma is a big cat.
-	<img 
-	src = "puma.jpg" alt ="in nature" title = "puma" height = "100" width = "180"
-	align = "middle">Puma is a big cat.
-	<img 
-	src = "puma.jpg" alt ="puma in nature" title = "puma" height = "100" width = "180"
-	align = "bottom">Puma is a big cat.
 </p>
 ```
 
@@ -316,7 +260,7 @@ image for web should have a resolution of 72 ppi<br/>
 
 ### Vector img
 Differs from bitmap image and resolution-independent, commonly created with Adobe Illustrator<br/>
-Place points on a gird and draw lines between them and color can be fill in<br/><br/>
+Place points on a gird and draw lines between them and color can be fill in
 
 ### Animated gifs
 Shows several frames of an image in sequence to create simple animations<br/>
@@ -483,16 +427,16 @@ long table allows thead & tfoot visible while allowing scrolls in tbody.
 ### form structure
 1. action: url for the page on the server receiving submitted info
 2. method : [get, post]
-  * get: short forms(e.g. search boxes) to get data from web server, <br/>not sending info that should be added to or deleted from database
-  * post: long forms to upload a file or long forms
-  * post: containing sensitive data (pw)
+  * get: short forms(e.g. search boxes) to get data from web server
+  * get: does not send info that should be added to or deleted from database
+  * post: long forms to upload a file, might contain sensitive data (pw)
   * post: forms that add or delete info from a database
 3. id: identify the form distinctly from other elements on the page
 
 ### input
 ```html
-<!--name: each form control needs name attribute-->
-<!--size: number of char [old forms: CSS]-->
+<!--name: server needs to know which form control each data was entered into-->
+<!--size: number of char [old forms; now controlled in CSS]-->
 <form action = "http://www.example.com/login.php" method = "get">
 	<p>username:<input type = "text" name = "username" size = "15" maxlength = "30" /></p>
 	<p>password:<input type = "password" name = "password" size = "15" maxlength = "30" /></p>
@@ -580,7 +524,7 @@ long table allows thead & tfoot visible while allowing scrolls in tbody.
 <form action = "http://www.example.com/subscribe.php">
 	<p>subscribe to our email list:</p>
 	<input type = "text" name = "email"/>
-	<input type = "image" src = "image/subscribe.png" width = "100" height ="20"/>
+	<input type = "image" src = "images/subscribe.png" width = "100" height ="20"/>
 </form>
 ```
 
@@ -589,17 +533,17 @@ long table allows thead & tfoot visible while allowing scrolls in tbody.
 <!--input hidden: allow page authors to add val to forms users can't see-->
 <!--author might use hidden field to indicate which page the user was on when submitting a form-->
 <form action = "http://www.example.com/add.php">
-	<button><img src = "image/add.gif" alt = "add" width = "10" height = "10"/>Add</button>
+	<button><img src = "images/add.gif" alt = "add" width = "10" height = "10"/>Add</button>
 	<input type = "hidden" name = "bookmark" value = "lyrics"/>
 </form>
 ```
 
 ### labelling form controls
-1. wrap around text and form input 
+1. wrap around text and form input
 2. separate form and use 'for' to indicate which form to label
 
 ```html
-<label>Age: <input type = "text" name = "age"/></label><br/> 
+<label>Age: <input type = "text" name = "age"/></label><br/>
 
 Gender:
 <input id = "female" type = "radio" name = "gender" value = "f">
@@ -619,7 +563,7 @@ Gender:
 ```
 
 ### HTML5: form validation
-validate contents of the form before sent to the server. traditionally javascript 
+validate contents of the form before sent to the server. traditionally javascript
 ```html
 <form action = "http://www.example.com/login/" method = "post">
 	<label for "username">Username:</label>
@@ -693,24 +637,21 @@ Any HTML elements can carry id attr which uniquely identify themselves. useful i
 ```
 
 ### class
-unlike id attr, elements can share a class attr. If you would like to indicate that an element
-<br/>belongs to several classes, you can separate class names with a space. 
-<br/>e.g. class="important admittance"
-
+elements can share a single or multiple classes.
 ```html
 <p class = "important">this is a public announcement...</p>
-<p class = "important admittance">Hours: 9-5</p>
+<p class = "important admittance">Hours: 9-5</p> <!--element can share multiple classes-->
 ```
 
 ### Block or inline element
 always appear to start on a new line or always appear to continue on the same line
 
 ### Grouping text & elements in a block or inline
-Group a set of elements together in one block-level box. div element will start on a new line
-
 ```html
-<!--in a block-->
-<div id = "header"><img src = "images/logo.gif" alt = "Anish Kapoor"/></div>
+<!--in a block; div element will start in a new line-->
+<div id = "header">
+	<img src = "images/logo.gif" alt = "Anish Kapoor"/>
+</div>
 <!--inline-->
 <p>Anish Kapoor exhibited at the <span class="gallery">Tate Modern</span>gallery in London</p>
 ```
@@ -722,7 +663,7 @@ iframe is like a window that has been cut into your page where you can see anoth
 * seamless (html5) for iframe where scrollbars are not desired
 
 ```html
-<iframe 
+<iframe
 	src = "http://maps.google.co.uk/maps?q=moma+new+york&amp;output=embed"
 	width="450" height="350" frameborder="0" scrolling="no">
 </iframe>
@@ -731,13 +672,17 @@ iframe is like a window that has been cut into your page where you can see anoth
 ### meta
 Not visible to users but fulfills a number of purposes such as telling search engines about your page,<br/>who created it, and whether or not it is time sensitive.(expire)
 
-* meta name: property you are setting (e.g. description keywords robots)
-* content: value to give to the property
-  * robots-noindex: page should not be added
-  * robots-nofollow: should be added to search engine results but not any pages that it links to
-* meta http-equiv
-  * pragma: prevents browser from caching the page
-  * expires: indicate when the page should expire(no longer cached)
+* name: property you are setting
+  - description: to show site description by search engines
+  - keywords: separated by comma, no effect in indexing search
+  - robots: indicates whether search engines should add this page to their search result or not
+  - robots (noindex): page should not be added
+  - robots (nofollow): should be added to search engine results but not any pages that it links to
+* content: pairs with http-equiv
+* http-equiv
+  - author: defines author of the page
+  - pragma: prevents browser from caching the page
+  - expires: indicate when the page should expire(no longer cached)
 
 ```html
 <head><!--robots indicate whether search engines should add this page to their search results-->
@@ -749,8 +694,8 @@ Not visible to users but fulfills a number of purposes such as telling search en
 	<meta http-equiv="expires" content="Fri, 04 Apr 2014 23:59:59 GMT"/>
 </head>
 ```
-### Escape char
 
+### Escape char
 
 ## Flash Video Audio
 1. Flash (.fla exported into .swf) for use on web pages
@@ -819,7 +764,7 @@ If it can, scripts will replace div content with .swf
 
 ### HTML5 : preparing video for your pages
 * You need to supply your video in more than one format for multiple browsers.
-* H264: Safari IE,  WebM: Android Chrome Firefox Opera 
+* H264: Safari IE,  WebM: Android Chrome Firefox Opera
 
 ### HTML5 : adding video to your pages
 * preload: tells browser what to do in page loading [none auto metadata]
@@ -834,7 +779,7 @@ If it can, scripts will replace div content with .swf
 		<title>Adding HTML5 Video</title>
 	</head>
 	<body>
-		<video src="video/puppy.mp4" poster="image/puppy.jpg" width="400" height="300" preload controls loop>
+		<video src="video/puppy.mp4" poster="images/puppy.jpg" width="400" height="300" preload controls loop>
 			<p>A video of a puppy playing in the snow</p>
 		</video>
 	</body>
@@ -842,7 +787,7 @@ If it can, scripts will replace div content with .swf
 ```
 
 ### Multiple video sources
-Use ```<video><source>``` to specify multiple video formats
+Specify more than one video formats for different kinds of browsers.
 
 ```html
 <!DOCTYPE html>
@@ -851,10 +796,11 @@ Use ```<video><source>``` to specify multiple video formats
 		<title>Multiple video sources</title>
 	</head>
 	<body>
-		<video poster="image/puppy.jpg" width="400" hiehgt="320" preload controls loop>
-		<source src="video/puppy.mp4" type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"'/>
-		<source src="video/puppy.webm" type='video/webm;codecs="vp8, vorbis"'/>
-		<p>A video of a puppy playing in the snow</p>
+		<video poster="images/puppy.jpg" width="400" hiehgt="320" preload controls loop>
+			<source src="video/puppy.mp4" type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"'/>
+			<source src="video/puppy.webm" type='video/webm;codecs="vp8, vorbis"'/>
+			<p>A video of a puppy playing in the snow</p>
+		</video>
 	</body>
 </html>
 ```
@@ -928,22 +874,27 @@ Ensure users from different browsers
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Flash Video Audio</title>
-		<script type="text/javascript"
-			src="http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script>
+		<title>Flash, Video and Audio</title>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script>
 		<script type="text/javascript">
-			var flashvars={};
-			var params={movie:"video/puppy.flv"};
-			swfobject.embedSWF("flash/osplayer.swf","snow","400","320","8.0.0",flashvars,params);
+			var flashvars = {};
+			var params = {movie: "../video/puppy.flv"};
+			swfobject.embedSWF("flash/osplayer.swf", "snow", "400", "320", "8.0.0", flashvars, params);
 		</script>
+		<style type="text/css" media="screen">#snow {visibility:hidden}</style>
 	</head>
 	<body>
-		<video poster="image/puppy.jpg" width="400" height="320" controls="controls">
-		<source src="video/puppy.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'/>
-		<source src="video/puppy.webm" type='video/webm; codecs="vp8, vorbis"'/>
-		<div id="snow">
-			<p>This browser does not support our video formats.</p>
-		</div>
+		<video poster="images/puppy.jpg" width="400" height="320" controls="controls">
+			<source src="video/puppy.mp4" type="video/mp4;codecs=&quot;avc1.42E01E, mp4a.40.2&quot;"/>
+			<source src="video/puppy.webm" type="video/webm;codecs=&quot;vp8, vorbis&quot;"/>
+			<object type="application/x-shockwave-flash" data="flash/osplayer.swf" width="400" height="320" id="snow" style="visibility: visible;">
+				<param name="flashvars" value="movie=../video/puppy.flv">
+			</object>
+			<div id="snow">
+				<p>You cannot see this video of a puppy playing in the snow because this browser
+				does not support our video formats.</p>
+			</div>
+		</video>
 	</body>
 </html>
 ```
@@ -954,27 +905,23 @@ CSS allows you to create rules that control the way that each individual box is 
 1. selector
 2. declaration {property: value}
 
+### Using external CSS
 ```html
 <!--example.html-->
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Introducing CSS</title>
+		<title>Using External CSS</title>
 		<link href="css/example.css" type="text/css" rel="stylesheet"/>
 	</head>
 	<body>
-		<h1>From Garden to Plate</h1>
-		<p>A <i>potager</i> is a French term for an ornamental vegetable or kitchen garden...</p>
-		<h2>What to Plant</h2>
-		<p>Planes are chosen as much for their functionality as for their color and form...</p>
 	</body>
 </html>
 ```
 
 ```css
 /*example.css*/
-body {
-	font-family: Arial, Verdana, sans-serif;
+body {font-family: Arial, Verdana, sans-serif;
 	background-color: rgb(185,179,175);}
 h1,h2 {
 	color: #ee3e80;}
@@ -987,22 +934,15 @@ p {
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Introducing CSS</title>
+		<title>Using Internal CSS</title>
 		<style type="text/css">
-			body {
-				font-family: Arial, Verdana, sans-serif;
+			body {font-family: Arial, Verdana, sans-serif;
 				background-color: rgb(185,179,175);}
-			h1,h2 {
-				color: #ee3e80;}
-			p {
-				color: #665544}
+			h1,h2 {color: #ee3e80;}
+			p {color: #665544}
 		</style>
 	</head>
 	<body>
-		<h1>From Garden to Plate</h1>
-		<p>A <i>potager</i> is a French term fro an ornamental vegetable or kitchen garden...</p>
-		<h2>What to Plant</h2>
-		<p>Planes are chosen as much for their functionality as for their color and form...</p>
 	</body>
 </html>
 ```
@@ -1105,19 +1045,17 @@ p{font-size: 75%;}
 ```
 
 ### Inheritance
-body element ```css body{/*css*/}```is inherited by child elements except background color or border properties.<br/>
-one can force a lot of properties to inherit values from their parent elements by using inherit.
+```css body{/*css*/}```is inherited by child elements except background-color or border properties.<br/>
+Use 'inherit' to force properties to inherit values from their parent elements  
 
 ```html
 <div class="page">
 	<h1>Potatoes</h1>
 	<p>There are dozens of different potato varieties.</p>
-	<p>They are usually described as early, second early and maincrop potatoes.</p>
 </div>
 ```
 
 ```css
-/*div class will inherit body element padding property*/
 body{
 	font-family: Arial, Verdana, sans-serif;
 	color: #665544;
@@ -1142,29 +1080,22 @@ body{
 * Color names
 
 ```css
-h1{
-	color: DarkCyan;}
-h2{
-	color: #ee3e80;}
-p{
-	color: rgb(100,100,90);}
+h1{color: DarkCyan;}
+h2{color: #ee3e80;}
+p{color: rgb(100,100,90);}
 ```
 
 ### Background color
 ```css
-body{
-	background-color: rgb(200,200,200);}
-h1{
-	background-color: DarkCyan;}
-h2{
-	background-color: #ee3e80;}
-p{
-	background-color: white;}
+body{background-color: rgb(200,200,200);}
+h1{background-color: DarkCyan;}
+h2{background-color: #ee3e80;}
+p{background-color: white;}
 ```
 
 ### Understanding color
 * RGB value
-* HEX code
+* HEX codec
 * Color name
 * Hue
 * Saturation: amount of gray (%)
@@ -1178,12 +1109,10 @@ use opacity (0.0~1.0) or rgba to specify fourth value, alpha
 /*use both RGB and RGBA properties for different browsers*/
 p.one{
 	background-color: rgb(0,0,0);
-	opacity:0.5;
-}
+	opacity:0.5;}
 p.two{
 	background-color: rgb(0,0,0);
-	background-color: rgba(0,0,0, 0.5);
-}
+	background-color: rgba(0,0,0, 0.5);}
 ```
 
 ### CSS3: HSL & HSLA
@@ -1195,14 +1124,11 @@ p.two{
 ```css
 body{
 	background-color: #C8C8C8;
-	background-color: hsl(0,0%,78%);
-}
+	background-color: hsl(0,0%,78%);}
 p{
 	background-color: #ffffff;
-	background-color: hsla(0,100%,100%,0.5);
-}
+	background-color: hsla(0,100%,100%,0.5);}
 ```
-
 
 ## Text(css)
 
@@ -1213,7 +1139,7 @@ p{
 * cursive (Comic Sans MS, Monotype Corsiva)
 * fantasy (Impact, Haettenschweiler)
 
-### Weight Style stretches
+### Weight, Style, Stretch
 * Weight(light medium bold black)
 * Style(normal italic oblique)
 * Stretch(condensed regular extended)
@@ -1226,8 +1152,7 @@ p{
 * SIFR
 * Cufon
 
-### Font-Family
-### Font-Size
+### Font-Family, Font-Size
 
 ### Units of Type size
 * Twelve Pixel Scale (12px == 75% == .75em)
@@ -1249,7 +1174,7 @@ charged:
 * fontspring.com
 
 ### Understanding font formats
-The various font formats should appear in your code in this order: 1.eot 2.woff 3. ttf/otf 4.svg
+font formats should appear in your code in this order: 1.eot 2.woff 3. ttf/otf 4.svg
 
 ```css
 @font-face{
@@ -1258,11 +1183,10 @@ The various font formats should appear in your code in this order: 1.eot 2.woff 
 	src: url('fonts/chuckfive.eot?#iefix') format('embedded-opentype'),
 		 url('fonts/chuckfive.woff') format('woff'),
 		 url('fonts/chuckfive.ttf') format('truetype'),
-		 url('fonts/chuckfive.svg#ChuckFiveRegular') format('svg');
-}
+		 url('fonts/chuckfive.svg#ChuckFiveRegular') format('svg');}
 ```
 
-### Font weight and sytle
+### Font weight, Font sytle
 ```css
 .credits{
 	font-weight: bold; /*normal;*/
@@ -1286,7 +1210,7 @@ h3{text-decoration: blink;} /*flash animation*/
 a{text-decoration: none;} /*remove any applied decoration*/
 ```
 
-### Line height
+### Line Height
 ```css
 p{line-height: 1.4em;} /*line height = leading + font size*/
 ```
@@ -1295,7 +1219,7 @@ p{line-height: 1.4em;} /*line height = leading + font size*/
 ```css
 .credits{
 	text-transform: uppercase;
-	font-weight: bold;	
+	font-weight: bold;
 	letter-spacing: .2em;
 	word-spacing: 1em;
 }
@@ -1303,18 +1227,31 @@ p{line-height: 1.4em;} /*line height = leading + font size*/
 
 ### Alignment
 ```css
-/*justify: every line in a paragraph except the last line should be set to take up 
+/*justify: every line in a paragraph except the last line should be set to take up
 the full width of the containing box */
 h1{text-align: left;}
 h2{text-align: center;}
 h3{text-align: right;}
 p{text-align: justify;}
+```
 
-/*used with <img> <em> or <strong>*/
-#six-months{vertical-align: text-top;}
-#one-year{vertical-align: baseline;}
-#two-years{vertical-align: text-bottom;}
-/*other values: sub, super, top, middle, bottom*/
+```html
+<!--Vertical Alignment is used with inline elements like <img> <em> <strong>
+values it can take: sub, super, top, middle, bottom-->
+<html><head>
+		<title>Vertical Align</title>
+		<style type="text/css">
+			#six-months {vertical-align: text-top;}
+			#one-year {vertical-align: baseline;}
+			#two-years {vertical-align: text-bottom;}
+		</style>
+	</head>
+	<body>
+		<h1>Briard Life Stages</h1>
+		<p><img src="images/6-month.gif" width="50" height="50" alt="6 months" id="6-month">6-month</p>
+		<p><img src="images/1-year.gif" width="50" height="50" alt="1 year" id="1-year">1-year</p>
+		<p><img src="images/2-year.gif" width="50" height="50" alt="2 years" id="2-year">2-year</p>
+</body></html>
 ```
 
 ### Indent
@@ -1328,7 +1265,7 @@ indent the first line of text within an element
 		<!--<link href="css/example.css" type="text/css" rel="stylesheet"/>-->
 		<style type="text/css">
 			h1 {
-				background-image: url("image/logo(1).gif");
+				background-image: url("images/logo.gif");
 				background-repeat: no-repeat;
 				text-indent: -9999px;
 				width: 165px;
@@ -1339,40 +1276,42 @@ indent the first line of text within an element
 	</head>
 	<body>
 		<h1>Briards</h1>
-		<p class="credits">by anonymous</p>
-		<p class="one">The briard is known as a heart wrapped in fur.</p>
-		<p class="five">The briard is known as a heart wrapped in fur.</p>
+		<p class="credits">by Ivy Duckett</p>
 	</body>
 </html>
 ```
 
-```css
-h1{
-	background-image: url("../image/logo.gif");
-	background-repeat: no-repeat;
-	text-indent: -9999px;
-}
-.credits{text-indent: 20px;}
-```
-
 ### CSS3: Drop Shadow
-three lengths and a color for the drop shadow 1. lr 2. tb 3. amount of blur 4. color
+text-shadow: h-shadow v-shadow blur-radius color|none|initial|inherit;
 
 ```css
-p.one{
+* {	/* offset-x | offset-y | blur-radius | color */
+	text-shadow: 1px 1px 2px black;
+
+	/* color | offset-x | offset-y | blur-radius */
+	text-shadow: #CCC 1px 0 10px;
+
+	/* offset-x | offset-y | color */
+	text-shadow: 5px 5px #558ABB;
+
+	/* color | offset-x | offset-y */
+	text-shadow: white 2px 5px;
+
+	/* offset-x | offset-y
+	/* Use defaults for color and blur-radius */
+	text-shadow: 5px 10px;
+
+	/* Global values */
+	text-shadow: inherit;
+	text-shadow: initial;
+	text-shadow: unset;
+
 	background-color: #eeeeee;
-	color: #666666;
-	text-shadow: 1px 1px 0px #000000;
-}
-p.five{
-	background-color: #aaaaaa;
-	color: #ffffff;
-	text-shadow: -1px -1px #666666;
-}
+	color: #666666;}
 ```
 
-### First letter or line
-specify different value for the first letter or line of text inside pseudo-elements 
+### First letter or First line
+specify different value for the first letter or line of text inside pseudo-elements
 
 ```css
 p.intro:first-letter{font-size: 200%;}
@@ -1430,7 +1369,8 @@ have an attribute with a specific value.
 	<tr>
 		<th>EXISTENCE</th>
 		<td>[]<br/>Matches a specific attribute (whatever its value)</td>
-		<td>p[class]<br/>Targets any &ltp&gt element with an attribute called class</td>
+		<td>p[class]<br/>Targets any &ltp&gt element with an attribute called class<br/>
+		span[lang]<br/> Targets any &ltspan&gt element with an attribute called lang</td>
 	</tr>
 	<tr>
 		<th>EQUALITY</th>
@@ -1490,7 +1430,7 @@ have an attribute with a specific value.
 			p.intro:first-line {
 				font-weight: bold;}
 			.credits {
-				font-style: italic;	
+				font-style: italic;
 				text-align: right;}
 			a {
 				text-decoration: none;}
@@ -1510,7 +1450,7 @@ have an attribute with a specific value.
 ```
 ## Boxes
 
-### box width height
+### width height
 ```html
 <html>
 	<head>
@@ -1536,15 +1476,15 @@ have an attribute with a specific value.
 ```
 
 ### Limiting width and height
-width
 
 ```css
+/*width*/
 body {
 	font-family: Arial, Verdana, sans-serif;
 	color: #111111;}
 th {
-	border-bottom: 1px solid #0088dd; 
-	text-align: left; 
+	border-bottom: 1px solid #0088dd;
+	text-align: left;
 	color: #0088dd;
 	font-weight: normal;}
 td {
@@ -1559,9 +1499,9 @@ td.description {
 	padding: 5px;
 	margin: 0px;}
 ```
-height (oveflow handling required)
 
 ```css
+/*height (oveflow handling required)*/
 body {
 	font-family: Arial, Verdana, sans-serif;
 	color: #111111;}
@@ -1598,17 +1538,20 @@ p.two {
 ```
 
 ### Border Margin Padding
+margin is a gap between borders of two adjacent boxes. <br/>
+padding is the space between border and its content inside.
 
 ### White space & Vertical margin
+use padding & margin
 
-### Border width
+### Border Width
 ```css
 p.one{border-width:2px;}
 p.two{border-width:thick;} /*thin medium thick*/
 p.three{border-width:1px 4px 12px 4px;} /*top right bottom left*/
 ```
 
-### Border style
+### Border Style
 ```css
 body {
 	font-family: Arial, Verdana, sans-serif;
@@ -1626,13 +1569,13 @@ p.seven {border-style: inset;}
 p.eight {border-style: outset;}
 ```
 
-### Border color
+### Border Color
 ```css
 body {
 	font-family: Arial, Verdana, sans-serif;
 	color: #111111;}
 p {
-	border-style: solid; 
+	border-style: solid;
 	border-width: 3px;
 	width: 200px;}
 p.one {
@@ -1677,10 +1620,14 @@ p.example{
 margin: 10px 5px 3px 1px;*/
 ```
 
-### Centering content 
-set width of the box<br/>
-set left and right margin as 'auto'<br/>
-[old browser] set text-align(inherited):center for the element that the box sits inside<br/>
+### Centering Content
+set the following properties:
+
+1. width of the box
+2. margin left and right as 'auto'
+
+[old browser]
+- text-align: center for the element that the box sits inside (inherited by child elements)
 
 ```css
 body{
@@ -1694,7 +1641,7 @@ p.example{
 	text-align:left;}
 ```
 
-### Change inline/block
+### Change Inline/Block
 ```css
 li{display:inline;  /*display: inline  block  inline-block  none*/
 	margin-right:10px;}
@@ -1710,7 +1657,7 @@ li{display:inline;
 li.comming-soon{visibility:hidden;} /*visiblity: visible*/
 ```
 
-### CSS3: border images
+### CSS3: Border Images
 ```html
 <html><head>
 		<title>Border Image</title>
@@ -1720,13 +1667,13 @@ li.comming-soon{visibility:hidden;} /*visiblity: visible*/
 				height: 54px;
 				border: 11px solid #ffffff;}
 			p.one {
-				-moz-border-image: url("image/dots.gif") 11 11 11 11 stretch;
-				-webkit-border-image: url("image/dots.gif") 11 11 11 11 stretch;
-				border-image: url("image/dots.gif") 11 11 11 11 stretch;}
+				-moz-border-image: url("images/dots.gif") 11 11 11 11 stretch;
+				-webkit-border-image: url("images/dots.gif") 11 11 11 11 stretch;
+				border-image: url("images/dots.gif") 11 11 11 11 stretch;}
 			p.two {
-				-moz-border-image: url("image/dots.gif") 11 11 11 11 round;
-				-webkit-border-image: url("image/dots.gif") 11 11 11 11 round;
-				border-image: url("image/dots.gif") 11 11 11 11 round;}
+				-moz-border-image: url("images/dots.gif") 11 11 11 11 round;
+				-webkit-border-image: url("images/dots.gif") 11 11 11 11 round;
+				border-image: url("images/dots.gif") 11 11 11 11 round;}
 		</style>
 	</head>
 	<body>
@@ -1735,7 +1682,7 @@ li.comming-soon{visibility:hidden;} /*visiblity: visible*/
 </body></html>
 ```
 
-### CSS3: box shadows
+### CSS3: Box Shadows
 Horizontal, Vertical Offeset, Blur distance, Spread of shadow. First two & color should me specified.
 
 ```css
@@ -1745,29 +1692,29 @@ p {
 	background-color: #e1ddda;
 	margin: 20px;
 	display: inline-block;}
-p.one { 
-	-moz-box-shadow: -5px -5px #777777; 
-	-webkit-box-shadow: -5px -5px #777777; 
+p.one {
+	-moz-box-shadow: -5px -5px #777777;
+	-webkit-box-shadow: -5px -5px #777777;
 	box-shadow: -5px -5px #777777;} /*horizontal (negative left) and vertical(negative top)*/
 p.two {
-	-moz-box-shadow: 5px 5px 5px #777777; 
+	-moz-box-shadow: 5px 5px 5px #777777;
 	-webkit-box-shadow: 5px 5px 5px #777777;
 	box-shadow: 5px 5px 5px #777777;}  
 p.three {
-	-moz-box-shadow: 5px 5px 5px 5px #777777; 
+	-moz-box-shadow: 5px 5px 5px 5px #777777;
 	-webkit-box-shadow: 5px 5px 5px 5px #777777;
 	box-shadow: 5px 5px 5px 5px #777777;} /*spread of shadow in all directions*/
 p.four {
-	-moz-box-shadow: 0 0 10px #777777; 
+	-moz-box-shadow: 0 0 10px #777777;
 	-webkit-box-shadow: 0 0 10px #777777;
 	box-shadow: 0 0 10px #777777;}
 p.five {
-	-moz-box-shadow: inset 0 0 10px #777777; 
+	-moz-box-shadow: inset 0 0 10px #777777;
 	-webkit-box-shadow: inset 0 0 10px #777777;
 	box-shadow: inset 0 0 10px #777777;} /*inset: inner shadow*/
 ```
 
-### CSS3: rounded corners
+### CSS3: Rounded Corners
 ```css
 p {
 	border: 5px solid #ee3e80;
@@ -1775,10 +1722,10 @@ p {
 	width: 275px;
 	border-radius: 10px;
 	-moz-border-radius: 10px;
-	-webkit-border-radius: 10px;} 
+	-webkit-border-radius: 10px;}
 ```
 
-### CSS3: elliptical shapes
+### CSS3: Elliptical Shapes
 specify horizontal and vertical parts of the rounded corners
 
 ```css
@@ -1804,7 +1751,7 @@ p.three {
 	-webkit-border-radius: 100px;}
 ```
 
-### Example: boxes
+### Example
 ```html
 <html><head>
 		<title>Boxes</title>
@@ -1812,7 +1759,7 @@ p.three {
 			body {
 				font-size: 80%;
 				font-family: "Courier New", Courier, monospace;
-				letter-spacing: 0.15em;	
+				letter-spacing: 0.15em;
 				background-color: #efefef;}
 			#page {
 				max-width: 940px;
@@ -1836,8 +1783,8 @@ p.three {
 				margin: 0px 3px;}
 			p {
 				text-align: center;
-				width: 600px; 
-				margin: 20px auto 20px auto; 
+				width: 600px;
+				margin: 20px auto 20px auto;
 				font-weight: normal;}
 			a {
 				color: #000000;
@@ -1852,7 +1799,7 @@ p.three {
 	<body>
 		<div id="page">
 			<div id="logo">
-				<img src="image/logo.gif" alt="The Analog Specialists">
+				<img src="images/logo.gif" alt="The Analog Specialists">
 			</div>
 			<ul id="navigation">
 				<li><a href="#" class="on">Home</a></li>
@@ -1861,7 +1808,7 @@ p.three {
 				<li><a href="#">About</a></li>
 				<li><a href="#">Contact</a></li>
 			</ul>
-			<p><img src="image/puppy.jpg" alt="Fender Rhodes, Hohner Clavinet, and Wurlitzer EP200"></p>
+			<p><img src="images/puppy.jpg" alt="Fender Rhodes, Hohner Clavinet, and Wurlitzer EP200"></p>
 			<p>We specialize in the sale and repair of classic keyboards, in particular the Fender Rhodes, Wurlitzer EP200, and Hohner Clavinet.
 			</p>
 		</div>
@@ -1870,52 +1817,44 @@ p.three {
 
 ## List, Table and Form
 
-### bullet point styles
+### List
 ```css
-ul.one{list-style-type: none;}
-ul.two{list-style-type: disc;}
-ul.three{list-style-type: circle;}
-ul.four{list-style-type: square;}
+/*List: bullet point styles*/
+ul{list-style-type: none;}
+ul{list-style-type: disc;}
+ul{list-style-type: circle;}
+ul{list-style-type: square;}
 
-ol.one{list-style-type: decimal;}
-ol.two{list-style-type: decimal-leading-zero;}
-ol.three{list-style-type: lower-alpha;}
-ol.four{list-style-type: upper-alpha;}
-ol.five{list-style-type: lower-roman;}
-ol.six{list-style-type: upper-roman;}
-```
+ol{list-style-type: decimal;}
+ol{list-style-type: decimal-leading-zero;}
+ol{list-style-type: lower-alpha;}
+ol{list-style-type: upper-alpha;}
+ol{list-style-type: lower-roman;}
+ol{list-style-type: upper-roman;}
 
-### image for bullets
-```css
-ul{list-style-image: url(image/logo.gif);}
-li{margin: 10px 0px 0px 0px;}  /*adjust vertical gap between lists*/
-```
+/*List: image for bullets*/
+ul{list-style-image: url(images/logo.gif);}
+li{margin: 10px 0px 0px 0px;}  /*vertical gap in lists*/
 
-### Positioning the marker
-marker sits inside or outside
-
-```css
+/*List: positioning the marker
+marker sits inside or outside(default) of the box containing the points*/
 ul{width:150px;}
 li{margin: 10px;}
-ul.illuminations{list-style-position:outside;}
+ul.illum{list-style-position:outside;}
 ul.season{list-style-position:inside;}
-```
 
-### list shorthand
-```css
+/*List: shorthand*/
 ul{list-style:inside circle; width:300px;}
 li{margin: 10px 0px 0px 0px;}
 ```
 
-### table properties
+### Table
 ```css
-body {
-	font-family: Arial, Verdana, sans-serif;
-	color: #111111;}
+/*Table properties*/
 table {
 	width: 600px;}
 th, td {
-	padding: 7px 10px 10px 10px;} /*space between border and its content*/
+	padding: 7px 10px 10px 10px;}
 th {
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
@@ -1929,30 +1868,26 @@ tr:hover {
 	background-color: #c3e6e5;}
 .money {
 	text-align: right;}
-```
 
-### border on empty cells
-```css
+/*Table: border on empty cells*/
 td{border: 1px solid #0088dd;
 	padding:15px;}
 table.one{empty-cells:show;}
 table.two{empty-cells:hide;}
-/*inherit: if you have one table nested inside another, the inherit value 
-instructs the table cells to obey the rules of the containing table*/
-```
+table.three{empty-cells:inherit;} /*table cells to obey the rules of the containing table*/
 
-### gaps between cells
-```css
+/*Table: gaps between cells*/
 td{background-color: #0088dd;
 	pdding:15px;
 	border:2px solid #000000;}
 table.one{border-spacing: 5px 15px;}
-table.two{border-collapse: collapse;} 
-/*separate*/
+table.two{border-collapse: collapse;}
+table.two{border-collapse: separate;} /*borders are detached from each other*/
 ```
 
-### Forms: Styling text inputs
+### Forms
 ```css
+/*Forms: Styling text inputs*/
 input {
 	font-size: 120%;
 	color: #5a5854;
@@ -1968,18 +1903,16 @@ input:focus, input:hover {
 	background-color: #ffffff;
 	border: 1px solid #b1e1e4;}
 input#email {
-	background-image: url("image/email.png");
+	background-image: url("images/email.png");
 	background-size:20px 20px;}
 input#twitter {
-	background-image: url("image/twitter.png");
+	background-image: url("images/twitter.png");
 	background-size:20px 20px;}
 input#web {
-	background-image: url("image/web.png");
+	background-image: url("images/web.png");
 	background-size:20px 20px;}
-```
 
-### Forms: Styling submit buttons
-```css
+/*Forms: styling submit buttons*/
 input {
 	font-size: 120%;
 	color: #5a5854;
@@ -2011,8 +1944,8 @@ input#submit:hover {
 	background: -ms-linear-gradient(top, #a8cfce, #beeae9);}
 ```
 
-### Forms: Styling fieldsets & legends
 ```html
+<!--Forms: Styling fieldsets & legends-->
 <html><head>
 		<title>Styling Fieldsets and Legends</title>
 		<style type="text/css">
@@ -2062,16 +1995,12 @@ input#submit:hover {
 				<label for="email">Email: </label><input type="text" id="email">
 				<input type="submit" value="Subscribe" id="submit">
 			</fieldset>
-		</form>	
+		</form>
 </body></html>
-```
 
-### Forms: Aligning form controls PROBLEM
-forms are not aligned to the left without css
 
-### Forms: Aligning form controls SOLUTION
-set form width and align to the left
-```html
+<!--Forms: Aligning form controls PROBLEM & SOLUTION
+	forms are not aligned to the left without css : set form width and align left-->
 <html><head>
 		<title>Aligning Form Controls - Solution</title>
 		<style type="text/css">
@@ -2140,7 +2069,7 @@ set form width and align to the left
 				color: #666666;
 				background-color: #f8f8f8;}
 			li {
-				list-style-image: url("image/icon-plus.png");
+				list-style-image: url("images/icon-plus.png");
 				line-height: 1.6em;}
 			table {
 				border-spacing: 0px;}
@@ -2293,7 +2222,14 @@ h1{
 p{width: 450px;}
 ```
 
+there are :
+* Relative positioning
+* Absolute positioning
+* Fixed positioning
+
 ### Relavtive positioning
+moves an element in relation to where it would have been in normal flow
+
 ```css
 p.example{
 	position:relatvie; /*relative to normal flow*/
@@ -2302,27 +2238,54 @@ p.example{
 ```
 
 ### Absolute positioning
+taken out of normal flow and no longer affects the positon of other elements on the page<br>
+box offset specify where the elements should appear in relation to its containing element
+
 ```css
-h1{position: absolute;
-	top:0px; left: 500px; width:250px;}
+h1{
+	position: absolute;
+	top:0px;
+	left: 500px;
+	width:250px;}
 ```
 
 ### Fixed positioning
+type of absolute positioning in relation to the browser window.<br>
+it stays in the same exact place when a user scrolls down the page
+
 ```css
 /*visible while scrolling*/
-h1{position:fixed;
-	top:0px; left: 500px; padding: 10px; margin:0px; width:100%;
+h1{
+	position:fixed;
+	top:0px;
+	left: 500px;
+	padding: 10px;
+	margin:0px;
+	width:100%;
 	background-color: #efefef;}
 ```
 
 ### Overlapping elements
 ```css
 /*higher z-index(stacking context), closer element is to the front*/
-h1{z-index:10;}
+h1{
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	margin: 0px;
+	padding: 10px;
+	width: 100%;
+	background-color: #efefef;
+	z-index: 10;}
+p{
+	position: relative;
+	top: 70px;
+	left: 70px;}
 ```
 
-###Floating elements
-normal flow element is placed as far to the left or right of the containing element as possible
+### Floating elements
+The float property allows you to take an element in normal flow and place it as far to the<br>
+left or right of the containing element as possible
 
 ```css
 body {
@@ -2343,10 +2306,11 @@ blockquote {
 ```
 
 ### Using Float to place elements side-by-side
-Fourth paragraph is located below third due to short height of third paragraph. <br/>
-Setting the height of the paragraphs is rarely suited to real world designs: use 'clear' property.
+Fourth paragraph is located below third due to short height of third paragraph.
+
 ```html
-<html><head>
+<html>
+	<head>
 		<title>Using Float to Place Elements Side-by-Side</title>
 		<style type="text/css">
 			body {
@@ -2371,30 +2335,68 @@ Setting the height of the paragraphs is rarely suited to real world designs: use
 			<p>In 1870 the first all-metal machine appeared. The pedals were attached directly to the front wheel.</p>
 			<p>Solid rubber tires and the long spokes of the large front wheel provided a much smoother ride than its predecessor.</p>
 		</div>
-</body></html>
+	</body>
+</html>
 ```
 
+Setting the height of the paragraphs (as the height of the highest) is rarely suited to <br>
+real world designs: use 'clear' property!
+
 ### Clearing Floats
-```html
-<p class="clear" id="fourth">In 1865, the velocipede (meaning "fast foot") attached pedals to the front wheel, but its wooden structure made it extremely uncomfortable. </p>
-```
 ```css
-/*left or right side of the box should not touch any other elements 
+/*left or right side of the box should not touch any other elements
 appearing in the same containing element*/
-.clear{clear: left;} 
+.clear{clear: left;}
 .clear{clear: right;}
-.clear{clear: both;}/*neither of both sides will touch*/
-.clear{clear: none;}/*elements can touch either side*/
+
+/*neither of both sides will touch*/
+.clear{clear: both;}
+
+/*elements can touch either side*/
+.clear{clear: none;}
+```
+
+```html
+<html>
+	<head>
+		<title>Clear</title>
+		<style type="text/css">
+			body {
+				width: 750px;
+				font-family: Arial, Verdana, sans-serif;
+				color: #665544;}
+			p {
+				width: 230px;
+				float: left;
+				margin: 5px;
+				padding: 5px;
+				background-color: #efefef;}
+			.clear {
+				clear: left;}
+		</style>
+	</head>
+	<body>
+		<h1>The Evolution of the Bicycle</h1>
+		<p>In 1817 Baron von Drais invented a walking machine that would help him get around the royal gardens faster.</p>
+		<p>The device know as the Draisienne (or "hobby horse") was made of wood, and propelled by pushing your feet on the ground in a gliding movement.</p>
+		<p>It was not seen as suitable for any place other than a well maintained pathway. </p>
+		<p class="clear">In 1865, the velocipede (meaning "fast foot") attached pedals to the front wheel, but its wooden structure made it extremely uncomfortable.</p>
+		<p>In 1870 the first all-metal machine appeared. The pedals were attached directly to the front wheel.
+		</p><p>Solid rubber tires and the long spokes of the large front wheel provided a much smoother ride than its predecessor.</p>
+	</body>
+</html>
 ```
 
 ### Parents of Floated elements: PROBLEM
 ```css
-/*If a containing element only contains floated elements, some browsers treat it as 0px tall*/
+/*If a containing element (div, containing p) only contains floated elements,
+some browsers treat it as 0px tall resulting in collapsed border*/
 div{border: 1px solid #665544;}
 ```
 
 ### Parents of Floated elements: SOLUTION
 ```css
+/*1. overflow: auto; 2. width:100%;*/
 div {border: 1px solid #665544;
 	overflow: auto;
 	width: 100%;}
@@ -2412,8 +2414,8 @@ div to represent each column
 				font-family: Arial, Verdana, sans-serif;
 				color: #665544;}
 			.column1of3, .column2of3, .column3of3 {
-				width: 300px; /*column width*/
 				float: left; /*position column next to each other*/
+				width: 300px; /*column width*/
 				margin: 10px;} /*creates a gap between the columns*/
 		</style>
 	</head>
@@ -2516,7 +2518,7 @@ framework code provide code for common tasks in your project. e.g. 960 grid syst
 ### A Grid-based Layout using 960.gs framwork
 * 960\_12\_col.css classes
 * 		container_12 class: container for the whole page and indicate 12-column grid
-*		clearfix class: inform browser height of the containing box (all floating elements)
+*		clearfix class: inform browser height of the containing box since all floating elements
 *		grid_12 class: to create a twelve-column wide block
 *		grid_4 class: to create a four-column wide block
 
@@ -2524,7 +2526,7 @@ framework code provide code for common tasks in your project. e.g. 960 grid syst
 <html><head>
 		<title>Grid Layout</title>
 		<link href="css/960_12_col.css" type="text/css" rel="stylesheet"/>
-		<style> /*since layout was set by 960.gs, specify additional fonts and colors*/
+		<style>
 			* {
 				font-family: Arial, Verdana, sans-serif;
 				color: #665544;
@@ -2576,9 +2578,8 @@ framework code provide code for common tasks in your project. e.g. 960 grid syst
 ### Multiple style sheets
 modular approach, split up CSS style rules into separate style sheets(fonts, layout, colors)
 
-1. @import
-
 ```html
+<!--1. @import-->
 <html><head>
 		<title>Multiple Style Sheets - Import</title>
 		<link rel="stylesheet" type="text/css" href="css/styles.css">
@@ -2632,10 +2633,8 @@ h3 {
 	color: #547ca0;}
 ```
 
-2. link
-last link has precedence
-
 ```html
+<!--2. link: the last link will take precedence over previous links-->
 <head>
 		<title>Multiple Style Sheets - Link</title>
 		<link rel="stylesheet" type="text/css" href="css/site.css">
@@ -2795,7 +2794,7 @@ last link has precedence
 
 ## Images
 
-### Controlling sizes of images in CSS
+### Sizes of images
 ```html
 <img src="images/magnolia-large.jpg" class="large" alt="Magnolia"/>
 ```
@@ -2833,8 +2832,10 @@ img.medium {
 
 ### Background images
 ```css
-body{background-image: url("images/pattern.gif");} /*for body*/
-p{background-image: url("images/pattern.gif");} /*for element*/
+body{
+	background-image: url("images/pattern.gif");} /*for body*/
+p{
+	background-image: url("images/pattern.gif");} /*for element*/
 ```
 
 ### Repeating images
@@ -2853,7 +2854,7 @@ h1 {
 body {
 	background-image: url("images/tulip.gif");
 	background-repeat: no-repeat;
-	background-attachment: fixed; /*fixed  scroll*/
+	background-attachment: fixed; /*fixed or scroll*/
 	color: #665544;
 	padding: 20px;}
 ```
@@ -2864,10 +2865,10 @@ body{
 	background-image:url("images/tulip.gif");
 	background-repeat: no-repeat;
 	background-position: center top;/*9 by 9 grid: left top, left center, left bottom, etc...*/
-	/*background-position: 50% 0%;  same as 'center top'*/} 
+	/*background-position: 50% 0%;  same as 'center top'*/}
 ```
 
-### Shorthand
+### Background Shorthand
 in the following order:
 
 1. background-color
@@ -2884,6 +2885,37 @@ body{
 ### image rollovers & sprites
 a link or button that changes to a second style when a user moves their mouse over it<br/> and a third style when clicked(activated): background changes. But sprite requires only one.
 
+```html
+<html><head>
+		<title>Image Rollovers and Sprites</title>
+		<style type="text/css">
+			a.button {
+				height: 36px;
+				background-image: url("images/button-sprite.jpg");
+				text-indent: -9999px;
+				display: inline-block;}
+			a#add-to-basket {
+				width: 174px;
+				background-position: 0px 0px;}
+			a#framing-options {
+				width: 210px;
+				background-position: -175px 0px;}
+			a#add-to-basket:hover {
+				background-position: 0px -40px;}
+			a#framing-options:hover {
+				background-position: -175px -40px;}
+			a#add-to-basket:active {
+				background-position: 0px -80px;}
+			a#framing-options:active {
+				background-position: -175px -80px;}
+		</style>
+	</head>
+	<body>
+		<a class="button" id="add-to-basket">Add to basket</a>
+		<a class="button" id="framing-options">Framing options</a>
+
+</body></html>
+```
 
 ### CSS3: gradients
 ```html
@@ -2896,11 +2928,15 @@ a link or button that changes to a second style when a user moves their mouse ov
 				/* fallback color */
 				background-color: #66cccc;
 				/* fallback image */
-				background-image: url("images/fallback-image.png"); 
-				background-image: -moz-linear-gradient(#336666, #66cccc);/* Firefox 3.6+ */
-				background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#66cccc), to(#336666));/* Safari 4+, Chrome 1+ */
-				background-image: -webkit-linear-gradient(#336666, #66cccc);/* Safari, Chrome*/ 
-				background-image: -o-linear-gradient(#336666, #66cccc);/* Opera 11.10+ */
+				background-image: url("images/fallback-image.png");
+				/* Firefox 3.6+ */
+				background-image: -moz-linear-gradient(#336666, #66cccc);
+				/* Safari 4+, Chrome 1+ */
+				background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#66cccc), to(#336666));
+				/* Safari 5.1+, Chrome 10+ */
+				background-image: -webkit-linear-gradient(#336666, #66cccc);
+				/* Opera 11.10+ */
+				background-image: -o-linear-gradient(#336666, #66cccc);
    				height: 150px;
 				width: 300px;}
 		</style>
@@ -3094,8 +3130,8 @@ outside an article, container for content related to the entire page. e.g. links
 ```
 
 #### HTML5: Sections
-groups related contents together. each section would have its own heading.<br/>
-to split up long articles into sections.<br/> 
+it groups related contents together. each section would have its own heading.<br/>
+to split up long articles into sections.<br/>
 Not for wrapper which can be rather done by \<div\>
 
 ```html
@@ -3361,7 +3397,3 @@ FTP allows you to transfer files across the internet from you pc to web server. 
 
 * FTP applications: FileZilla FireFTP CuteFTP SmartFTP Transmit<br/>
 * Third party tools: blogs(wordpress tumblr posterous), e-commerce(shopify bigcartel magento) email newsletter(campaignmonitor mailchimp) sns sharing btn(addthis addtoany)
-
-
-
-
