@@ -715,18 +715,15 @@ If it can, scripts will replace div content with .swf
 ```html
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Adding a Flash Movie</title>
-		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script>
-		<script type="text/javascript">
-			swfobject.embedSWF("test.swf","myContent", "400","300","10.0.0","expressInstall.swf");
-		</script>
-	</head>
-	<body>
-		<div id="myContent">
-			<p>My content test</p>
-		</div>
-	</body>
+<head>
+	<title>Adding a Flash Movie</title>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script>
+	<script type="text/javascript">swfobject.embedSWF("flash/bird.swf", "bird", "400", "300", "8.0.0");</script>
+	<style type="text/css" media="screen">#bird {visibility:hidden}</style>
+</head>
+<body>
+	<object id="bird" type="application/x-shockwave-flash" data="flash/bird.swf" style="visibility: visible;" height="300" width="400"></object>
+</body>
 </html>
 ```
 
@@ -745,20 +742,20 @@ If it can, scripts will replace div content with .swf
 ```html
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Adding a Flash Video</title>
-		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script>
-		<script type="text/javascript">
-			var flashvars = {};
-			var params = {movie:"video/puppy.flv"};
-			swfobject.embedSWF("flash/osplayer.swf","snow", "400","320","8.0.0",flashvars,params);
-		</script>
-	</head>
-	<body>
-		<div id="snow">
-			<p>A video of a puppy playing in the snow</p>
-		</div>
-	</body>
+<head>
+	<title>Adding a Flash Video</title>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script>
+	<script type="text/javascript">
+		var flashvars = {};
+		var params = {movie:"video/puppy.flv"};
+		swfobject.embedSWF("flash/osplayer.swf","snow", "400","320","8.0.0",flashvars,params);
+	</script>
+</head>
+<body>
+	<div id="snow">
+		<p>A video of a puppy playing in the snow</p>
+	</div>
+</body>
 </html>
 ```
 
@@ -887,9 +884,6 @@ Ensure users from different browsers
 		<video poster="images/puppy.jpg" width="400" height="320" controls="controls">
 			<source src="video/puppy.mp4" type="video/mp4;codecs=&quot;avc1.42E01E, mp4a.40.2&quot;"/>
 			<source src="video/puppy.webm" type="video/webm;codecs=&quot;vp8, vorbis&quot;"/>
-			<object type="application/x-shockwave-flash" data="flash/osplayer.swf" width="400" height="320" id="snow" style="visibility: visible;">
-				<param name="flashvars" value="movie=../video/puppy.flv">
-			</object>
 			<div id="snow">
 				<p>You cannot see this video of a puppy playing in the snow because this browser
 				does not support our video formats.</p>
@@ -1448,9 +1442,10 @@ have an attribute with a specific value.
 	</body>
 </html>
 ```
+
 ## Boxes
 
-### width height
+### width Height
 ```html
 <html>
 	<head>
@@ -1476,7 +1471,6 @@ have an attribute with a specific value.
 ```
 
 ### Limiting width and height
-
 ```css
 /*width*/
 body {
@@ -3048,7 +3042,7 @@ use \<div\> for each main section in a page
 * \<figure\> \<figcaption\>
 * \<div\>
 
-#### HTML5: Header Footer
+#### Header Footer (HTML5)
 1. for top or bottom of the page
 2. for individual \<article\> or \<section\>
   - each article(e.g. blog post) might contain header(title, date) and footer(sns share links)
@@ -3064,20 +3058,17 @@ use \<div\> for each main section in a page
 <footer>&copy; 2011 Yoko's Kitchen</footer>
 ```
 
-#### HTML5: Navigation
+#### Navigation (HTML5)
 ```html
 <nav>
 	<ul>
 		<li><a href="" class="current">home</a></li>
 		<li><a href="">classes</a></li>
-		<li><a href="">catering</a></li>
-		<li><a href="">about</a></li>
-		<li><a href="">contact</a></li>
 	</ul>
 </nav>
 ```
 
-#### HTML5: Articles
+#### Article (HTML5)
 The \<article\> is a container for any section of a page that could stand alone<br/>
 indepenent piece of content such as article, blog entry, comment, forum post
 
@@ -3106,7 +3097,7 @@ indepenent piece of content such as article, blog entry, comment, forum post
 </article>
 ```
 
-#### HTML5: Asides
+#### Aside (HTML5)
 inside an article, it might contain info related to the article. e.g. pullquote, glossary<br/>
 outside an article, container for content related to the entire page. e.g. links, other posts
 
@@ -3129,10 +3120,9 @@ outside an article, container for content related to the entire page. e.g. links
 </aside>
 ```
 
-#### HTML5: Sections
-it groups related contents together. each section would have its own heading.<br/>
-to split up long articles into sections.<br/>
-Not for wrapper which can be rather done by \<div\>
+#### Section (HTML5)
+groups related contents together. each section would have its own heading.<br/>
+split up long articles into sections. section is not for wrapper (rather done by \<div\>)
 
 ```html
 <section class="popular-recipes">
@@ -3151,7 +3141,7 @@ Not for wrapper which can be rather done by \<div\>
 </section>
 ```
 
-#### HTML5: Heading Groups
+#### Heading Group (HTML5)
 ```html
 <hgroup>
 	<h2>Japanese Vegetarian</h2>
@@ -3159,7 +3149,7 @@ Not for wrapper which can be rather done by \<div\>
 </hgroup>
 ```
 
-#### HTML5: Figures
+#### Figure (HTML5)
 image, video, graph, diagram, code samples, text support for main body of an article
 
 ```html
@@ -3169,8 +3159,8 @@ image, video, graph, diagram, code samples, text support for main body of an art
 </figure>
 ```
 
-#### HTML5: div
-Revisit. However, the \<div\> element will remain an important way to group together <br/>
+#### div (HTML5)
+Revisited but \<div\> element will remain an important way to group together <br/>
 related elements, because you should not be using these new elements that you have just met <br/>
 for purposes other than those explicitly stated.
 
@@ -3204,9 +3194,19 @@ for purposes other than those explicitly stated.
 ```
 
 ### Helping older browsers understand
+Older browsers that do not know the new HTML5 elements will automatically treat them as<br>
+inline elements. Therefore, to help older browsers, you should include the line of CSS<br>
+on the left which states which new elements should be rendered as block-level elements.
+
 ```css
-header, section, footer, aside, nav, article, figure{display: block;}
+header, section, footer, aside, nav, article, figure{
+	display: block;}
 ```
+
+Also, IE9 was the first version of Internet Explorer to allow CSS  rules to be<br>
+associated with these new HTML5 layout elements. In order to style these elements<br>
+using earlier versions of IE, you need to use a simple JavaScript known as<br>
+the HTML5 shiv or HTML5 shim.
 
 ```html
 <!--[if lt IE 9]>
@@ -3327,32 +3327,28 @@ header, section, footer, aside, nav, article, figure{display: block;}
 				</nav>
 			</header>
 			<section class="courses">
-				<a href="introduction.html">
-					<article>
-						<figure>
-							<img src="images/bok-choi.jpg" alt="Bok Choi" />
-							<figcaption>Bok Choi</figcaption>
-						</figure>
-						<hgroup>
-							<h2>Japanese Vegetarian</h2>
-							<h3>Five week course in London</h3>
-						</hgroup>
-						<p>A five week introduction to traditional Japanese vegetarian meals, teaching you a selection of rice and noodle dishes.</p>
-					</article>
-				</a>
-				<a href="sauces.html">
-					<article>
-						<figure>
-							<img src="images/teriyaki.jpg" alt="Teriyaki sauce" />
-							<figcaption>Teriyaki Sauce</figcaption>
-						</figure>
-						<hgroup>
-							<h2>Sauces Masterclass</h2>
-							<h3>One day workshop</h3>
-						</hgroup>
-						<p>An intensive one-day course looking at how to create the most delicious sauces for use in a range of Japanese cookery.</p>
-					</article>
-				</a>    
+				<article>
+					<figure>
+						<img src="images/bok-choi.jpg" alt="Bok Choi">
+						<figcaption>Bok Choi</figcaption>
+					</figure>
+					<hgroup>
+						<h2>Japanese Vegetarian</h2>
+						<h3>Five week course in London</h3>
+					</hgroup>
+					<p>A five week introduction to traditional Japanese vegetarian meals, teaching you a selection of rice and noodle dishes.</p>
+				</article>    
+				<article>
+					<figure>
+						<img src="images/teriyaki.jpg" alt="Teriyaki sauce">
+						<figcaption>Teriyaki Sauce</figcaption>
+					</figure>
+					<hgroup>
+						<h2>Sauces Masterclass</h2>
+						<h3>One day workshop</h3>
+					</hgroup>
+					<p>An intensive one-day course looking at how to create the most delicious sauces for use in a range of Japanese cookery.</p>
+				</article>    
 			</section>
 			<aside>
 				<section class="popular-recipes">
@@ -3364,14 +3360,14 @@ header, section, footer, aside, nav, article, figure{display: block;}
 				</section>
 				<section class="contact-details">
 					<h2>Contact</h2>
-					<p>Yoko's Kitchen<br />
-						27 Redchurch Street<br />
-						Shoreditch<br />
+					<p>Yoko's Kitchen<br>
+						27 Redchurch Street<br>
+						Shoreditch<br>
 						London E2 7DP</p>
 				</section>
 			</aside>
 			<footer>
-				&copy; 2011 Yoko's Kitchen
+				© 2011 Yoko's Kitchen
 			</footer>
 		</div><!-- .wrapper -->
 	</body>
