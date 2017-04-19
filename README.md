@@ -256,15 +256,13 @@ absolute or relative URL, followed by the value of the id attr
 reduce, increase, change shapes of an image
 
 ### img resolution
-image for web should have a resolution of 72 ppi<br/>
+image for web should have a resolution of 72 ppi
 
 ### Vector img
-Differs from bitmap image and resolution-independent, commonly created with Adobe Illustrator<br/>
-Place points on a gird and draw lines between them and color can be fill in
+Differs from bitmap image and resolution-independent, commonly created with Adobe Illustrator. Place points on a gird and draw lines between them and color can be fill in
 
 ### Animated gifs
-Shows several frames of an image in sequence to create simple animations<br/>
-Due to increasing file sizes, gif is only suitable for simple illustration
+Shows several frames of an image in sequence to create simple animations. Due to increasing file sizes, gif is only suitable for simple illustration
 
 ### Transparency
 Creating a partially transparent image for web involves selecting one of two formats :
@@ -670,7 +668,7 @@ iframe is like a window that has been cut into your page where you can see anoth
 ```
 
 ### meta
-Not visible to users but fulfills a number of purposes such as telling search engines about your page,<br/>who created it, and whether or not it is time sensitive.(expire)
+Not visible to users but fulfills a number of purposes such as telling search engines about your page, who created it, and whether or not it is time sensitive.(expire)
 
 * name: property you are setting
   - description: to show site description by search engines
@@ -703,15 +701,13 @@ Not visible to users but fulfills a number of purposes such as telling search en
 3. YouTube or SoundCloud services
 
 ### How Flash works
-Exporting .fla to .swf creates code to embed the flash movie in your page.<br/>
+Exporting .fla to .swf creates code to embed the flash movie in your page.
 
 ### Use of Flash
-Fewer websites use Flash since JavaScript lib(script.aculo.us JQuery) made it easy to create animation<br/>
-Browsers are switching to HTML5 video audio tags
+Fewer websites use Flash since JavaScript lib(script.aculo.us JQuery) made it easy to create animation. Browsers are switching to HTML5 video audio tags
 
 ### Adding a Flash Movie
-SWFObject checks if user's browser is capable of playing Flash. <br/>
-If it can, scripts will replace div content with .swf
+SWFObject checks if user's browser is capable of playing Flash. If it can, scripts will replace div content with .swf.
 ```html
 <!DOCTYPE html>
 <html>
@@ -803,8 +799,7 @@ Specify more than one video formats for different kinds of browsers.
 ```
 
 ### HTML5: combining flash & HTML5 video
-Ensure users from different browsers. HTML5 further provides playback, adopting different sized screens or<br/>
-telling different parts of a page to change when the video reaches a certain point.
+Ensure users from different browsers. HTML5 further provides playback, adopting different sized screens or telling different parts of a page to change when the video reaches a certain point.
 
 ### Adding audio to web pages
 Similar to video 1. hosted service 2. Flash 3. HTML5 video audio tag
@@ -1039,9 +1034,7 @@ p{font-size: 75%;}
 ```
 
 ### Inheritance
-```css body{/*css*/}```is inherited by child elements except background-color or border properties.<br/>
-Use 'inherit' to force properties to inherit values from their parent elements  
-
+body{} is inherited by child elements except background-color or border properties. Use 'inherit' to force properties to inherit values from their parent elements  
 ```html
 <div class="page">
 	<h1>Potatoes</h1>
@@ -1153,8 +1146,7 @@ p{
 * Sixteen Pixel Scale (16px == 100% == 1em)
 
 ### More font choice @font-face
-@font-face allows a version of the font to be downloaded to the user's computer.<br/>
-It is important that the license for the font permits it to be used in this way.
+@font-face allows a version of the font to be downloaded to the user's computer. It is important that the license for the font permits it to be used in this way.
 
 ### Open source or paid fonts
 * fontsquirrel.com
@@ -1351,8 +1343,7 @@ a:active{color: darkcyan;}
 ```
 
 ### Attribute selectors
-set of attribute selectors that allow you to create rules that apply to elements that<br/>
-have an attribute with a specific value.
+set of attribute selectors that allow you to create rules that apply to elements that have an attribute with a specific value.
 
 <table>
 	<tr>
@@ -1636,8 +1627,7 @@ p.example{
 ```
 
 ### Change Inline/Block
-'inline-block' causes a block-level element to flow like an inline element,<br>
-while retaining other features of a block-level element.
+'inline-block' causes a block-level element to flow like an inline element, while retaining other features of a block-level element.
 ```css
 li{display:inline;  /*display: inline  block  inline-block  none*/
 	margin-right:10px;}
@@ -1645,7 +1635,7 @@ li.coming-soon{display:none;}
 ```
 
 ### Hiding boxes
-hide but unlike display:none; it leaves a space where the element would have been
+hide but unlike display:none; it leaves a space where the element would have been.
 
 ```css
 li{display:inline;
@@ -2234,8 +2224,7 @@ p.example{
 ```
 
 ### Absolute positioning
-taken out of normal flow and no longer affects the positon of other elements on the page<br>
-box offset specify where the elements should appear in relation to its containing element
+taken out of normal flow and no longer affects the positon of other elements on the page box offset specify where the elements should appear in relation to its containing element
 
 ```css
 h1{
@@ -2246,8 +2235,7 @@ h1{
 ```
 
 ### Fixed positioning
-type of absolute positioning in relation to the browser window.<br>
-it stays in the same exact place when a user scrolls down the page
+type of absolute positioning in relation to the browser window. It stays in the same exact place when a user scrolls down the page
 
 ```css
 /*visible while scrolling*/
@@ -2280,8 +2268,7 @@ p{
 ```
 
 ### Floating elements
-The float property allows you to take an element in normal flow and place it as far to the<br>
-left or right of the containing element as possible
+The float property allows you to take an element in normal flow and place it as far to the left or right of the containing element as possible
 
 ```css
 body {
@@ -2335,8 +2322,7 @@ Fourth paragraph is located below third due to short height of third paragraph.
 </html>
 ```
 
-Setting the height of the paragraphs (as the height of the highest) is rarely suited to <br>
-real world designs: use 'clear' property!
+Setting the height of the paragraphs (as the height of the highest) is rarely suited to real world designs: use 'clear' property!
 
 ### Clearing Floats
 ```css
@@ -2799,9 +2785,7 @@ img.large{
 ```
 
 ### Align images using CSS
-float property can be used to move an element to the left or right of its containing block,<br>
-allowing text to flow around it. Rather than using the \<img\> element's align attribute,<br>
-web page authors are increasingly using the float property to align images.<br>
+float property can be used to move an element to the left or right of its containing block, allowing text to flow around it. Rather than using the \<img\> element's align attribute, web page authors are increasingly using the float property to align images.
 
 ```html
 <img class="align-left medium" src="images/mag.jpg" alt="Magnolia"/>
@@ -2823,9 +2807,8 @@ img.medium{
 ```
 
 ### Centering images using CSS
-By default, images are inline elements. This means that they flow within the surrounding text.<br>
-In order to center an image, it should be turned into a block-level element using the display<br>
-property with a value of block 
+By default, images are inline elements. This means that they flow within the surrounding text. In order to center an image, it should be turned into a block-level element using the display property with a value of block.
+
 ```html
 <p><img src="images/mag.jpg" alt="Magnolia" class="align-center medium"/>Magnolia.</p>
 ```
@@ -2860,8 +2843,7 @@ h1 {
 ```
 
 ### Attach images
-The background-attachment property specifies whether a background image should stay in<br>
-one position or move as the user scrolls up and down the page. 
+The background-attachment property specifies whether a background image should stay in one position or move as the user scrolls up and down the page. 
 ```css
 body {
 	background-image: url("images/tulip.gif");
@@ -2895,9 +2877,7 @@ body{
 ```
 
 ### image rollovers & sprites
-a link or button that changes to a second style when a user moves their mouse<br>
-over it(rollover) and a third style when clicked(activated). When a single image<br>
-is used for several different parts of an interface, it is known as a sprite.
+a link or button that changes to a second style when a user moves their mouse over it(rollover) and a third style when clicked(activated). When a single image is used for several different parts of an interface, it is known as a sprite.
 
 ```html
 <html><head>
@@ -3064,52 +3044,28 @@ use \<div\> for each main section in a page
 
 #### Header Footer (HTML5)
 First, top and bottom of the page
-Second, Each individual \<article\> and \<section\> element can also have its own \<header\> and \<footer\><br>
-elements to hold the header or footer information for that section within the page. For example,<br>
-on a page with several blog posts, each individual post can be thought of as a separate section.<br>
-The \<header\> element can therefore be used to contain the title and date of each individual post,<br>
-and the \<footer\> might contain links to share the article on social networking sites.
+Second, Each individual \<article\> and \<section\> element can also have its own \<header\> and \<footer\> elements to hold the header or footer information for that section within the page. For example, on a page with several blog posts, each individual post can be thought of as a separate section. The \<header\> element can therefore be used to contain the title and date of each individual post, and the \<footer\> might contain links to share the article on social networking sites.
 
 #### Navigation (HTML5)
-The \<nav\> element is used to contain the major navigational blocks on the site such as the<br>
-primary site navigation.
+The \<nav\> element is used to contain the major navigational blocks on the site such as the primary site navigation.
 
 #### Article (HTML5)
-The \<article\> is a container for any section of a page that could stand alone<br>
-indepenent piece of content such as article, blog entry, comment, forum post<br>
-If a page contains several articles (or even summaries), each individual article would live<br>
-inside its own \<article\> element. The \<article\> elements can even be nested inside each other.<br>
-For example, a blog post might live inside one \<article\> element and each comment on the article <br>
-could live inside its own child \<article\> element.
+The \<article\> is a container for any section of a page that could stand alone indepenent piece of content such as article, blog entry, comment, forum post. If a page contains several articles (or even summaries), each individual article would live inside its own \<article\> element. The \<article\> elements can even be nested inside each other. For example, a blog post might live inside one \<article\> element and each comment on the article could live inside its own child \<article\> element.
 
 #### Aside (HTML5)
-The \<aside\> element has two purposes, depending on whether it is inside an \<article\> element or not.<br>
-Inside an article, it might contain info related to the article. e.g. pullquote, glossary<br>
-Outside an article, container for content related to the entire page. e.g. links, other posts, searchbox, tweets
+The \<aside\> element has two purposes, depending on whether it is inside an \<article\> element or not. Inside an article, it might contain info related to the article. e.g. pullquote, glossary. Outside an article, container for content related to the entire page. e.g. links, other posts, searchbox, tweets.
 
 #### Section (HTML5)
-Groups related contents together and each section(e.g. latest news, top products, newsletter sign up)<br>
-would have its own heading. It may contain several distinct \<article\> elements that have a<br>
-common theme or purpose. Alternatively, if you have a page with a long article, split up into sections.<br>
-The \<section\> element should not be used as a wrapper for the entire page. A containing element for <br>
-the entire page, is still best left to the \<div\> element.
+Groups related contents together and each section(e.g. latest news, top products, newsletter sign up) would have its own heading. It may contain several distinct \<article\> elements that have a common theme or purpose. Alternatively, if you have a page with a long article, split up into sections. The \<section\> element should not be used as a wrapper for the entire page. A containing element for the entire page, is still best left to the \<div\> element.
 
 #### Heading Group (HTML5)
-The purpose of the \<hgroup\> element is to group together a set of one or more \<h1\> through \<h6\><br>
-elements so that they are treated as one single heading.
+The purpose of the \<hgroup\> element is to group together a set of one or more \<h1\> through \<h6\> elements so that they are treated as one single heading.
 
 #### Figure (HTML5)
-\<figure\> can be used to contain any content that is referenced from the main flow of an article <br>
-(not just images) <br>
-e.g. image, video, graph, diagram, code samples, text support for main body of an article<br>
-The article should still make sense if the content of the \<figure\> element were moved to <br>
-another part of the page or even a differnt page. For this reason, it should only be used when <br>
-the content simply references the element (and not for something that is absolutely integral <br>
-to the flow of a page)
+\<figure\> can be used to contain any content that is referenced from the main flow of an article (not just images) e.g. image, video, graph, diagram, code samples, text support for main body of an article. The article should still make sense if the content of the \<figure\> element were moved to another part of the page or even a differnt page. For this reason, it should only be used when the content simply references the element (and not for something that is absolutely integral to the flow of a page)
 
 #### div (HTML5)
-\<div\> element will remain an important way to group together related elements, because you should not <br>
-be using these new elements that you have just met for purposes other than those explicitly stated.
+\<div\> element will remain an important way to group together related elements, because you should not be using these new elements that you have just met for purposes other than those explicitly stated.
 
 ```html
 <div class="wrapper">
@@ -3128,19 +3084,14 @@ be using these new elements that you have just met for purposes other than those
 ```
 
 ### Helping older browsers understand
-Older browsers that do not know the new HTML5 elements will automatically treat them as<br>
-inline elements. Therefore, to help older browsers, you should include the line of CSS<br>
-on the left which states which new elements should be rendered as block-level elements.
+Older browsers that do not know the new HTML5 elements will automatically treat them as inline elements. Therefore, to help older browsers, you should include the line of CSS on the left which states which new elements should be rendered as block-level elements.
 
 ```css
 header, section, footer, aside, nav, article, figure{
 	display: block;}
 ```
 
-Also, IE9 was the first version of Internet Explorer to allow CSS  rules to be<br>
-associated with these new HTML5 layout elements. In order to style these elements<br>
-using earlier versions of IE, you need to use a simple JavaScript known as<br>
-the HTML5 shiv or HTML5 shim.
+Also, IE9 was the first version of Internet Explorer to allow CSS  rules to be associated with these new HTML5 layout elements. In order to style these elements using earlier versions of IE, you need to use a simple JavaScript known as the HTML5 shiv or HTML5 shim.
 
 ```html
 <!--[if lt IE 9]>
@@ -3323,7 +3274,7 @@ so that people can see your site, you need to upload it to a web server.
 * check the review of the hosting companies
 
 ### FTP & Third party tools
-FTP allows you to transfer files across the internet from you pc to web server. e.g. ftp://mydomain.com<br/>
+FTP allows you to transfer files across the internet from you pc to web server. e.g. ftp://mydomain.com
 
-* FTP applications: FileZilla FireFTP CuteFTP SmartFTP Transmit<br/>
+* FTP applications: FileZilla FireFTP CuteFTP SmartFTP Transmit
 * Third party tools: blogs(wordpress tumblr posterous), e-commerce(shopify bigcartel magento) email newsletter(campaignmonitor mailchimp) sns sharing btn(addthis addtoany)
