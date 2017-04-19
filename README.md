@@ -1636,6 +1636,8 @@ p.example{
 ```
 
 ### Change Inline/Block
+'inline-block' causes a block-level element to flow like an inline element,<br>
+while retaining other features of a block-level element.
 ```css
 li{display:inline;  /*display: inline  block  inline-block  none*/
 	margin-right:10px;}
@@ -2789,39 +2791,53 @@ h3 {
 ## Images
 
 ### Sizes of images
-```html
-<img src="images/magnolia-large.jpg" class="large" alt="Magnolia"/>
-```
 ```css
-img.large{width: 500px; height:500px;}
+img.large{
+	width: 500px;
+	height:500px;
+}
 ```
 
 ### Align images using CSS
+float property can be used to move an element to the left or right of its containing block,<br>
+allowing text to flow around it. Rather than using the \<img\> element's align attribute,<br>
+web page authors are increasingly using the float property to align images.<br>
+
 ```html
-<img src="images/mag.jpg" alt="Magnolia" class="align-left medium"/>
-<img src="images/mag.jpg" alt="Magnolia" class="align-right medium"/>
+<img class="align-left medium" src="images/mag.jpg" alt="Magnolia"/>
+<img class="align-right medium" src="images/mag.jpg" alt="Magnolia"/>
 ```
 ```css
 img.align-left{
 	float:left;
-	margin-right:10px;}
+	margin-right:10px;
+}
 img.align-right{
 	float:right;
-	margin-left:10px;}
-img.medium{width:250px; height:250px;}
+	margin-left:10px;
+}
+img.medium{
+	width:250px;
+	height:250px;
+}
 ```
 
 ### Centering images using CSS
+By default, images are inline elements. This means that they flow within the surrounding text.<br>
+In order to center an image, it should be turned into a block-level element using the display<br>
+property with a value of block 
 ```html
 <p><img src="images/mag.jpg" alt="Magnolia" class="align-center medium"/>Magnolia.</p>
 ```
 ```css
 img.align-center {
 	display: block;
-	margin: 0px auto;}
+	margin: 0px auto;
+}
 img.medium {
 	width: 250px;
-	height: 250px;}
+	height: 250px;
+}
 ```
 
 ### Background images
@@ -2844,6 +2860,8 @@ h1 {
 ```
 
 ### Attach images
+The background-attachment property specifies whether a background image should stay in<br>
+one position or move as the user scrolls up and down the page. 
 ```css
 body {
 	background-image: url("images/tulip.gif");
@@ -2858,13 +2876,13 @@ body {
 body{
 	background-image:url("images/tulip.gif");
 	background-repeat: no-repeat;
-	background-position: center top;/*9 by 9 grid: left top, left center, left bottom, etc...*/
-	/*background-position: 50% 0%;  same as 'center top'*/}
+	background-position: center top;
+	/*[9 by 9] left top, left center, left bottom, etc...*/
+	/*background-position: 50% 0%; same as 'center top'*/
+	/*background-position: 0px 0px;*/}
 ```
 
 ### Background Shorthand
-in the following order:
-
 1. background-color
 2. background-image
 3. background-repeat
@@ -2877,7 +2895,9 @@ body{
 ```
 
 ### image rollovers & sprites
-a link or button that changes to a second style when a user moves their mouse over it<br/> and a third style when clicked(activated): background changes. But sprite requires only one.
+a link or button that changes to a second style when a user moves their mouse<br>
+over it(rollover) and a third style when clicked(activated). When a single image<br>
+is used for several different parts of an interface, it is known as a sprite.
 
 ```html
 <html><head>
@@ -3043,153 +3063,67 @@ use \<div\> for each main section in a page
 * \<div\>
 
 #### Header Footer (HTML5)
-1. for top or bottom of the page
-2. for individual \<article\> or \<section\>
-  - each article(e.g. blog post) might contain header(title, date) and footer(sns share links)
-
-```html
-<header>
-	<h1>Yoko's Kitchen</h1>
-	<nav>
-		<ul></ul>
-	</nav>
-</header>
-<!--other html codes here-->
-<footer>&copy; 2011 Yoko's Kitchen</footer>
-```
+First, top and bottom of the page
+Second, Each individual \<article\> and \<section\> element can also have its own \<header\> and \<footer\><br>
+elements to hold the header or footer information for that section within the page. For example,<br>
+on a page with several blog posts, each individual post can be thought of as a separate section.<br>
+The \<header\> element can therefore be used to contain the title and date of each individual post,<br>
+and the \<footer\> might contain links to share the article on social networking sites.
 
 #### Navigation (HTML5)
-```html
-<nav>
-	<ul>
-		<li><a href="" class="current">home</a></li>
-		<li><a href="">classes</a></li>
-	</ul>
-</nav>
-```
+The \<nav\> element is used to contain the major navigational blocks on the site such as the<br>
+primary site navigation.
 
 #### Article (HTML5)
-The \<article\> is a container for any section of a page that could stand alone<br/>
-indepenent piece of content such as article, blog entry, comment, forum post
-
-```html
-<article>
-	<figure>
-		<img src="images/bok-choi.jpg" alt="Bok Choi" />
-		<figcaption>Bok Choi</figcaption>
-	</figure>
-	<hgroup>
-		<h2>Japanese Vegetarian</h2>
-		<h3>Five week course in London</h3>
-	</hgroup>
-	<p>A five week introduction to traditional Japanese vegetarian meals, teaching you a selection of rice and noodle dishes.</p>
-</article>
-<article>
-	<figure>
-		<img src="images/teriyaki.jpg" alt="Teriyaki sauce" />
-		<figcaption>Teriyaki Sauce</figcaption>
-	</figure>
-	<hgroup>
-		<h2>Sauces Masterclass</h2>
-		<h3>One day workshop</h3>
-	</hgroup>
-	<p>An intensive one-day course looking at how to create the most delicious sauces for use in a range of Japanese cookery.</p>
-</article>
-```
+The \<article\> is a container for any section of a page that could stand alone<br>
+indepenent piece of content such as article, blog entry, comment, forum post<br>
+If a page contains several articles (or even summaries), each individual article would live<br>
+inside its own \<article\> element. The \<article\> elements can even be nested inside each other.<br>
+For example, a blog post might live inside one \<article\> element and each comment on the article <br>
+could live inside its own child \<article\> element.
 
 #### Aside (HTML5)
-inside an article, it might contain info related to the article. e.g. pullquote, glossary<br/>
-outside an article, container for content related to the entire page. e.g. links, other posts
-
-```html
-<aside>
-	<section class="popular-recipes">
-		<h2>Popular Recipes</h2>
-		<a href="">Yakitori (grilled chicken)</a>
-		<a href="">Tsukune (minced chicken patties)</a>
-		<a href="">Okonomiyaki (savory pancakes)</a>
-		<a href="">Mizutaki (chicken stew)</a>
-	</section>
-	<section class="contact-details">
-		<h2>Contact</h2>
-		<p>Yoko's Kitchen<br />
-			27 Redchurch Street<br />
-			Shoreditch<br />
-			London E2 7DP</p>
-	</section>
-</aside>
-```
+The \<aside\> element has two purposes, depending on whether it is inside an \<article\> element or not.<br>
+Inside an article, it might contain info related to the article. e.g. pullquote, glossary<br>
+Outside an article, container for content related to the entire page. e.g. links, other posts, searchbox, tweets
 
 #### Section (HTML5)
-groups related contents together. each section would have its own heading.<br/>
-split up long articles into sections. section is not for wrapper (rather done by \<div\>)
-
-```html
-<section class="popular-recipes">
-	<h2>Popular Recipes</h2>
-	<a href="">Yakitori (grilled chicken)</a>
-	<a href="">Tsukune (minced chicken patties)</a>
-	<a href="">Okonomiyaki (savory pancakes)</a>
-	<a href="">Mizutaki (chicken stew)</a>
-</section>
-<section class="contact-details">
-	<h2>Contact</h2>
-	<p>Yoko's Kitchen<br />
-		27 Redchurch Street<br />
-		Shoreditch<br />
-		London E2 7DP</p>
-</section>
-```
+Groups related contents together and each section(e.g. latest news, top products, newsletter sign up)<br>
+would have its own heading. It may contain several distinct \<article\> elements that have a<br>
+common theme or purpose. Alternatively, if you have a page with a long article, split up into sections.<br>
+The \<section\> element should not be used as a wrapper for the entire page. A containing element for <br>
+the entire page, is still best left to the \<div\> element.
 
 #### Heading Group (HTML5)
-```html
-<hgroup>
-	<h2>Japanese Vegetarian</h2>
-	<h3>Five week course in London</h3>
-</hgroup>
-```
+The purpose of the \<hgroup\> element is to group together a set of one or more \<h1\> through \<h6\><br>
+elements so that they are treated as one single heading.
 
 #### Figure (HTML5)
-image, video, graph, diagram, code samples, text support for main body of an article
-
-```html
-<figure>
-	<img src="images/bok-choi.jpg" alt="Bok Choi" />
-	<figcaption>Bok Choi</figcaption>
-</figure>
-```
+\<figure\> can be used to contain any content that is referenced from the main flow of an article <br>
+(not just images) <br>
+e.g. image, video, graph, diagram, code samples, text support for main body of an article<br>
+The article should still make sense if the content of the \<figure\> element were moved to <br>
+another part of the page or even a differnt page. For this reason, it should only be used when <br>
+the content simply references the element (and not for something that is absolutely integral <br>
+to the flow of a page)
 
 #### div (HTML5)
-Revisited but \<div\> element will remain an important way to group together <br/>
-related elements, because you should not be using these new elements that you have just met <br/>
-for purposes other than those explicitly stated.
+\<div\> element will remain an important way to group together related elements, because you should not <br>
+be using these new elements that you have just met for purposes other than those explicitly stated.
 
 ```html
 <div class="wrapper">
-	<header>
-		<h1>Yoko's Kitchen</h1>
-		<nav><!--nav content here--></nav>
-	</header>
-	<section class="courses"><!--section content here-->    </section>
-	<aside><!--aside content here--></aside>
-	<footer><!--footer content here--></footer>
-</div><!-- .wrapper -->
+	<header></header>
+	<section></section>
+	<aside></aside>
+	<footer></footer>
+</div>
 ```
 
-### Linking around block-level elements
+### Linking around block-level elements (HTML5)
 ```html
 <a href="introduction.html">
-	<article>
-		<figure>
-			<img src="images/bok-choi.jpg" alt="Bok Choi" />
-			<figcaption>Bok Choi</figcaption>
-		</figure>
-		<hgroup>
-			<h2>Japanese Vegetarian</h2>
-			<h3>Five week course in London</h3>
-		</hgroup>
-		<p>A five week introduction to traditional Japanese vegetarian meals, teaching you a selection of rice and noodle dishes.</p>
-	</article>
+	<article></article>
 </a>
 ```
 
