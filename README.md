@@ -19,7 +19,7 @@
 * [Process and Design](#process-and-design)
 * [Practical Information](#practical-information)
 
-## Structure
+# Structure
 ```html
 <html>
 	<head> <!--page info-->
@@ -32,7 +32,7 @@
 </html>
 ```
 
-## Text
+# Text
 ```html
 <!--Bold Italic-->
 <b>bold</b>
@@ -53,7 +53,7 @@ Line One<br/>Line Two<br/>
 <hr/>
 ```
 
-## Semantic markup
+# Semantic markup
 - Text elements that are not intended to affect the structure of web pages
 
 ```html
@@ -99,7 +99,7 @@ Line One<br/>Line Two<br/>
    Now Price is $150
 ```
 
-## Lists
+# Lists
 
 ```html
 <!--Ordered Lists-->
@@ -142,9 +142,9 @@ Line One<br/>Line Two<br/>
 </ul>
 ```
 
-## Links
+# Links
 
-### Absolute and Relative URL
+## Absolute and Relative URL
 * Abosolute URL : domain name for a site followed by the path to a specific page
 * Relative URL: link to other pages within the same site
 
@@ -166,10 +166,10 @@ Line One<br/>Line Two<br/>
 </p>
 ```
 
-### Directory structure
+## Directory structure
 main homepage index.html; examplearts.com returns examplearts.com/index.html
 
-### Relative URL
+## Relative URL
 ```html
 <a href = "reviews.html">Reviews</a>
 <a href = "music/listings.html">Listings</a>
@@ -207,7 +207,7 @@ absolute or relative URL, followed by the value of the id attr
 <a href = "http:/www.htmlandcssbookcom/#bottom">book</a>
 ```
 
-## Images
+# Images
 ```html
 <!--src: relative url-->
 <!--alt: description that shows up if image is broken-->
@@ -223,7 +223,7 @@ absolute or relative URL, followed by the value of the id attr
 </p>
 ```
 
-### img align [old code]
+## img align [old code]
 ```html
 'align' attr is no longer used in HTML5. Use CSS to control alignment of images
 <!--left, right, top, middle, bottom (first line)-->
@@ -234,12 +234,12 @@ absolute or relative URL, followed by the value of the id attr
 </p>
 ```
 
-### Rules for creating img
+## Rules for creating img
 1. img in right format (jpeg gif png)
 2. img in right size
 3. img in correct resolution (72 px)
 
-### Tools to edit img
+## Tools to edit img
 1. Adobe Photoshop
 2. GIMP
 4. Blender
@@ -248,29 +248,29 @@ absolute or relative URL, followed by the value of the id attr
 7. PaintShop Pro
 8. Paint.net
 
-### Bitmap: jpeg gif png
+## Bitmap: jpeg gif png
 * .jpeg for img with many different colors
 * .gif .png for img with few colors or large areas of the same color
 
-## img dimension
+# img dimension
 reduce, increase, change shapes of an image
 
-### img resolution
+## img resolution
 image for web should have a resolution of 72 ppi
 
-### Vector img
+## Vector img
 Differs from bitmap image and resolution-independent, commonly created with Adobe Illustrator. Place points on a gird and draw lines between them and color can be fill in
 
-### Animated gifs
+## Animated gifs
 Shows several frames of an image in sequence to create simple animations. Due to increasing file sizes, gif is only suitable for simple illustration
 
-### Transparency
+## Transparency
 Creating a partially transparent image for web involves selecting one of two formats :
 * transparent gif : straight edged img
 * png : diagonal, round, semi-opaque, drop-shadow img
 
 
-### figure figcaption
+## figure figcaption
 Contains both image and caption:
 ```html
 <figure>
@@ -283,9 +283,9 @@ Contains both image and caption:
 </figure>
 ```
 
-## Table
+# Table
 
-### table heading
+## table heading
 ```html
 <!--th: heading for row or col-->
 <table border =1>
@@ -307,7 +307,7 @@ Contains both image and caption:
 </table>
 ```
 
-### spanning columns
+## spanning columns
 ```html
 <table border =1>
 	<tr>
@@ -320,7 +320,7 @@ Contains both image and caption:
 </table>
 ```
 
-### spanning rows
+## spanning rows
 ```html
 <table border = 1>
 	<tr>
@@ -333,7 +333,7 @@ Contains both image and caption:
 </table>
 ```
 
-### thead tbody tfoot
+## thead tbody tfoot
 long table allows thead & tfoot visible while allowing scrolls in tbody.
 ```html
 <table border = "1">
@@ -363,7 +363,7 @@ long table allows thead & tfoot visible while allowing scrolls in tbody.
 </table>
 ```
 
-### Table Width & Spacing [old code]
+## Table Width & Spacing [old code]
 ```html
 <!--cellpadding: space inside each cell-->
 <!--cellspacing: space between each cell-->
@@ -383,7 +383,7 @@ long table allows thead & tfoot visible while allowing scrolls in tbody.
 </table>
 ```
 
-### Table Border & Background [old code]
+## Table Border & Background [old code]
 ```html
 <table border ="2" bgcolor = "#efefef">
 	<tr>
@@ -402,27 +402,27 @@ long table allows thead & tfoot visible while allowing scrolls in tbody.
 
 ```
 
-## Forms
+# Forms
 
-### Form control
+## Form control
 
-### adding text
+## adding text
 1. text input
 2. pw input
 3. text area
 
-### making choices
+## making choices
 1. radio btn
 2. checkboxes
 3. drop-down boxes
 
-### how forms work
+## how forms work
 1. user fills in a form and press submit btn
 2. (name, value) pair of each form control is sent to the server
 3. server processes info using lang like PHP, C#, VB.net, Java and stores info in a database.
 4. server creates a new page to send back to the brower based on the info received
 
-### form structure
+## form structure
 1. action: url for the page on the server receiving submitted info
 2. method : [get, post]
   * get: short forms(e.g. search boxes) to get data from web server
@@ -431,7 +431,7 @@ long table allows thead & tfoot visible while allowing scrolls in tbody.
   * post: forms that add or delete info from a database
 3. id: identify the form distinctly from other elements on the page
 
-### input
+## input
 ```html
 <!--name: server needs to know which form control each data was entered into-->
 <!--size: number of char [old forms; now controlled in CSS]-->
@@ -441,7 +441,7 @@ long table allows thead & tfoot visible while allowing scrolls in tbody.
 </form>
 ```
 
-### textarea
+## textarea
 ```html
 <form action = "http://www.example.com/comments.php" method = "get">
 	<p>What do you think of this gig</p>
@@ -449,7 +449,7 @@ long table allows thead & tfoot visible while allowing scrolls in tbody.
 </form>
 ```
 
-### radio btn
+## radio btn
 ```html
 <!--checked: which val should be selected when page loads-->
 <form action = "http://www.example.com/profile.php">
@@ -460,7 +460,7 @@ long table allows thead & tfoot visible while allowing scrolls in tbody.
 </form>
 ```
 
-### checkbox
+## checkbox
 ```html
 <form action = "http://www.example.com/profile.php">
 	<p>Please select your favorite music service(s)</p><br/>
@@ -470,7 +470,7 @@ long table allows thead & tfoot visible while allowing scrolls in tbody.
 </form>
 ```
 
-### dropdown list box
+## dropdown list box
 ```html
 <!--select: it creates drop down list which allows users to select one val-->
 <!--selected: default selected when page loads. if not used, the first is selected-->
@@ -484,7 +484,7 @@ long table allows thead & tfoot visible while allowing scrolls in tbody.
 </form>
 ```
 
-### multiple select box
+## multiple select box
 ```html
 <form action = "http://www.example.com/profile.php">
 	<p>Play any Instruments? (multi select available)</p>
@@ -497,7 +497,7 @@ long table allows thead & tfoot visible while allowing scrolls in tbody.
 </form>
 ```
 
-### file input box
+## file input box
 ```html
 <form action = "http://www.example.com/upload.php" method = "post">
 	<p>upload your song in mp3 format</p>
@@ -506,7 +506,7 @@ long table allows thead & tfoot visible while allowing scrolls in tbody.
 </form>
 ```
 
-### submit btn
+## submit btn
 ```html
 <!--value: text that appears on the page-->
 <form action = "http://www.example.com/subscribe.php">
@@ -516,7 +516,7 @@ long table allows thead & tfoot visible while allowing scrolls in tbody.
 </form>
 ```
 
-### image btn
+## image btn
 ```html
 <!--alt works as used in <img>-->
 <form action = "http://www.example.com/subscribe.php">
@@ -526,7 +526,7 @@ long table allows thead & tfoot visible while allowing scrolls in tbody.
 </form>
 ```
 
-### button & hidden controls
+## button & hidden controls
 ```html
 <!--input hidden: allow page authors to add val to forms users can't see-->
 <!--author might use hidden field to indicate which page the user was on when submitting a form-->
@@ -536,7 +536,7 @@ long table allows thead & tfoot visible while allowing scrolls in tbody.
 </form>
 ```
 
-### labelling form controls
+## labelling form controls
 1. wrap around text and form input
 2. separate form and use 'for' to indicate which form to label
 
@@ -550,7 +550,7 @@ Gender:
 <label for = "male">Male</label>
 ```
 
-### Grouping form elements
+## Grouping form elements
 ```html
 <fieldset>
 	<legend>Contact details</legend>
@@ -560,7 +560,7 @@ Gender:
 </fieldset>
 ```
 
-### HTML5: form validation
+## HTML5: form validation
 validate contents of the form before sent to the server. traditionally javascript
 ```html
 <form action = "http://www.example.com/login/" method = "post">
@@ -572,7 +572,7 @@ validate contents of the form before sent to the server. traditionally javascrip
 </form>
 ```
 
-### HTML5: date input
+## HTML5: date input
 ```html
 <form action = "http://www.example.com/bookings/" method = "post">
 	<label for = "username">Departure date:</label>
@@ -581,7 +581,7 @@ validate contents of the form before sent to the server. traditionally javascrip
 </form>
 ```
 
-### HTML5: email & url input
+## HTML5: email & url input
 ```html
 <form action = "http://www.example.org/subscribe.php">
 	<p>Please enter your email address:</p>
@@ -596,7 +596,7 @@ validate contents of the form before sent to the server. traditionally javascrip
 </form>
 ```
 
-### HTML5: search input
+## HTML5: search input
 ```html
 <form action = "http://www.example.org/search.php">
 	<p>Search:</p>
@@ -605,12 +605,12 @@ validate contents of the form before sent to the server. traditionally javascrip
 </form>
 ```
 
-## Extra markup
+# Extra markup
 
-### The Evolution of HTML
+## The Evolution of HTML
 HTML4 XHTML HTML5
 
-### DOCTYPE
+## DOCTYPE
 Tells a browser which version of HTML the page is using and render page correctly
 
 ```html
@@ -628,23 +628,23 @@ Tells a browser which version of HTML the page is using and render page correctl
 <?xml version = "1.0" ?>
 ```
 
-### id
+## id
 Any HTML elements can carry id attr which uniquely identify themselves. useful in CSS and javascript
 ```html
 <p id = "pullquote">This text appearance can be changed by CSS</p>
 ```
 
-### class
+## class
 elements can share a single or multiple classes.
 ```html
 <p class = "important">this is a public announcement...</p>
 <p class = "important admittance">Hours: 9-5</p> <!--element can share multiple classes-->
 ```
 
-### Block or inline element
+## Block or inline element
 always appear to start on a new line or always appear to continue on the same line
 
-### Grouping text & elements in a block or inline
+## Grouping text & elements in a block or inline
 ```html
 <!--in a block; div element will start in a new line-->
 <div id = "header">
@@ -654,7 +654,7 @@ always appear to start on a new line or always appear to continue on the same li
 <p>Anish Kapoor exhibited at the <span class="gallery">Tate Modern</span>gallery in London</p>
 ```
 
-### iframe
+## iframe
 iframe is like a window that has been cut into your page where you can see another page.
 * scrolling (html4 xhtml)
 * frameborder (html4 xhtml)
@@ -667,7 +667,7 @@ iframe is like a window that has been cut into your page where you can see anoth
 </iframe>
 ```
 
-### meta
+## meta
 Not visible to users but fulfills a number of purposes such as telling search engines about your page, who created it, and whether or not it is time sensitive.(expire)
 
 * name: property you are setting
@@ -693,20 +693,20 @@ Not visible to users but fulfills a number of purposes such as telling search en
 </head>
 ```
 
-### Escape char
+## Escape char
 
-## Flash Video Audio
+# Flash Video Audio
 1. Flash (.fla exported into .swf) for use on web pages
 2. HTML5 video audio tag to add video or audio on web pages
 3. YouTube or SoundCloud services
 
-### How Flash works
+## How Flash works
 Exporting .fla to .swf creates code to embed the flash movie in your page.
 
-### Use of Flash
+## Use of Flash
 Fewer websites use Flash since JavaScript lib(script.aculo.us JQuery) made it easy to create animation. Browsers are switching to HTML5 video audio tags
 
-### Adding a Flash Movie
+## Adding a Flash Movie
 SWFObject checks if user's browser is capable of playing Flash. If it can, scripts will replace div content with .swf.
 ```html
 <!DOCTYPE html>
@@ -723,18 +723,18 @@ SWFObject checks if user's browser is capable of playing Flash. If it can, scrip
 </html>
 ```
 
-### Understanding video formats and players
+## Understanding video formats and players
 * Flash or HTML5 video can be used
 * encode video formats to WebM or MP4 format
 
-### Using hosted video services
+## Using hosted video services
 
-### Preparing a flash video for your site
+## Preparing a flash video for your site
 1. convert into FLV format
 2. find FLV player to play the video (osflv.com longtailvideo.com)
 3. include the player & video in your page, using javascript SWFObject
 
-### Adding a flash video to your pages
+## Adding a flash video to your pages
 ```html
 <!DOCTYPE html>
 <html>
@@ -755,11 +755,11 @@ SWFObject checks if user's browser is capable of playing Flash. If it can, scrip
 </html>
 ```
 
-### HTML5 : preparing video for your pages
+## HTML5 : preparing video for your pages
 * You need to supply your video in more than one format for multiple browsers.
 * H264: Safari IE,  WebM: Android Chrome Firefox Opera
 
-### HTML5 : adding video to your pages
+## HTML5 : adding video to your pages
 * preload: tells browser what to do in page loading [none auto metadata]
 * controls: browser should apply its own controls for playback
 * autoplay: play automatically
@@ -779,7 +779,7 @@ SWFObject checks if user's browser is capable of playing Flash. If it can, scrip
 </html>
 ```
 
-### Multiple video sources
+## Multiple video sources
 Specify more than one video formats for different kinds of browsers.
 
 ```html
@@ -798,13 +798,13 @@ Specify more than one video formats for different kinds of browsers.
 </html>
 ```
 
-### HTML5: combining flash & HTML5 video
+## HTML5: combining flash & HTML5 video
 Ensure users from different browsers. HTML5 further provides playback, adopting different sized screens or telling different parts of a page to change when the video reaches a certain point.
 
-### Adding audio to web pages
+## Adding audio to web pages
 Similar to video 1. hosted service 2. Flash 3. HTML5 video audio tag
 
-### Adding a flash MP3 player
+## Adding a flash MP3 player
 ```html
 <!DOCTYPE html>
 <html>
@@ -827,7 +827,7 @@ Similar to video 1. hosted service 2. Flash 3. HTML5 video audio tag
 </html>
 ```
 
-### HTML5: Adding HTML audio to your pages
+## HTML5: Adding HTML audio to your pages
 ```html
 <!DOCTYPE html>
 <html>
@@ -842,7 +842,7 @@ Similar to video 1. hosted service 2. Flash 3. HTML5 video audio tag
 </html>
 ```
 
-### HTML5: Multiple audio sources
+## HTML5: Multiple audio sources
 provide multiple audio formats for different browsers
 ```html
 <!DOCTYPE html>
@@ -860,7 +860,7 @@ provide multiple audio formats for different browsers
 </html>
 ```
 
-### Example: both Flash and HTML5 enabled
+## Example: both Flash and HTML5 enabled
 Ensure users from different browsers
 ```html
 <!DOCTYPE html>
@@ -888,13 +888,13 @@ Ensure users from different browsers
 </html>
 ```
 
-## CSS
+# CSS
 CSS allows you to create rules that control the way that each individual box is presented
 
 1. selector
 2. declaration {property: value}
 
-### Using external CSS
+## Using external CSS
 ```html
 <!--example.html-->
 <!DOCTYPE html>
@@ -918,7 +918,7 @@ p {
 	color: #665544}
 ```
 
-### Using internal CSS
+## Using internal CSS
 ```html
 <!DOCTYPE html>
 <html>
@@ -936,7 +936,7 @@ p {
 </html>
 ```
 
-### CSS selectors
+## CSS selectors
 target rules to specific elements in an HTML document
 ```html
 <!DOCTYPE html>
@@ -1008,7 +1008,7 @@ target rules to specific elements in an HTML document
 	</tr>
 </table>
 
-### How CSS rules cascade
+## How CSS rules cascade
 If there are two or more rules that apply to the same element, it is important to understand which will take precedence.
 
 * Last Rule
@@ -1033,7 +1033,7 @@ p#intro{font-size: 100%}
 p{font-size: 75%;}
 ```
 
-### Inheritance
+## Inheritance
 body{} is inherited by child elements except background-color or border properties. Use 'inherit' to force properties to inherit values from their parent elements  
 ```html
 <div class="page">
@@ -1055,13 +1055,13 @@ body{
 }
 ```
 
-### Test in multiple browsers and fix bugs
+## Test in multiple browsers and fix bugs
 * PositionIsEverything.net
 * QuirksMode.org
 
-## Color
+# Color
 
-### Foreground color
+## Foreground color
 * RGB values (red, green, blue)
 * HEX codes
 * Color names
@@ -1072,7 +1072,7 @@ h2{color: #ee3e80;}
 p{color: rgb(100,100,90);}
 ```
 
-### Background color
+## Background color
 ```css
 body{background-color: rgb(200,200,200);}
 h1{background-color: DarkCyan;}
@@ -1080,7 +1080,7 @@ h2{background-color: #ee3e80;}
 p{background-color: white;}
 ```
 
-### Understanding color
+## Understanding color
 * RGB value
 * HEX codec
 * Color name
@@ -1089,7 +1089,7 @@ p{background-color: white;}
 * Brightness(Lightness): amount of black (%)
 * Contrast
 
-### CSS3: Opacity
+## CSS3: Opacity
 use opacity (0.0~1.0) or rgba to specify fourth value, alpha
 
 ```css
@@ -1102,7 +1102,7 @@ p.two{
 	background-color: rgba(0,0,0, 0.5);}
 ```
 
-### CSS3: HSL & HSLA
+## CSS3: HSL & HSLA
 * Hue: colloquial idea of color (0~360 degree)
 * Saturation: amount of gray (%)
 * Lightness: amount of black (%)
@@ -1117,21 +1117,21 @@ p{
 	background-color: hsla(0,100%,100%,0.5);}
 ```
 
-## Text(css)
+# Text(css)
 
-### Typeface
+## Typeface
 * serif (Georgia, Times, Times New Roman)
 * sans-serif (Arial, Verdana, Helvetica)
 * monospace (Courier, Courier New)
 * cursive (Comic Sans MS, Monotype Corsiva)
 * fantasy (Impact, Haettenschweiler)
 
-### Weight, Style, Stretch
+## Weight, Style, Stretch
 * Weight(light medium bold black)
 * Style(normal italic oblique)
 * Stretch(condensed regular extended)
 
-### Typeface choices
+## Typeface choices
 * font-family: installed
 * @font-face: download, license to use the font must permit its distribution using @font-face
 * Service-Based Font-Face: paid license
@@ -1139,16 +1139,16 @@ p{
 * SIFR
 * Cufon
 
-### Font-Family, Font-Size
+## Font-Family, Font-Size
 
-### Units of Type size
+## Units of Type size
 * Twelve Pixel Scale (12px == 75% == .75em)
 * Sixteen Pixel Scale (16px == 100% == 1em)
 
-### More font choice @font-face
+## More font choice @font-face
 @font-face allows a version of the font to be downloaded to the user's computer. It is important that the license for the font permits it to be used in this way.
 
-### Open source or paid fonts
+## Open source or paid fonts
 * fontsquirrel.com
 * fontex.org
 * openfontlibrary.org
@@ -1159,7 +1159,7 @@ charged:
 * kernest.com
 * fontspring.com
 
-### Understanding font formats
+## Understanding font formats
 font formats should appear in your code in this order: 1.eot 2.woff 3. ttf/otf 4.svg
 
 ```css
@@ -1172,7 +1172,7 @@ font formats should appear in your code in this order: 1.eot 2.woff 3. ttf/otf 4
 		 url('fonts/chuckfive.svg#ChuckFiveRegular') format('svg');}
 ```
 
-### Font weight, Font sytle
+## Font weight, Font sytle
 ```css
 .credits{
 	font-weight: bold; /*normal;*/
@@ -1180,14 +1180,14 @@ font formats should appear in your code in this order: 1.eot 2.woff 3. ttf/otf 4
 }
 ```
 
-### Upper LowerCase
+## Upper LowerCase
 ```css
 h1{text-transform: uppercase;}
 h2{text-transform: lowercase;}
 h3{text-transform: capitalize;} /*first letter of each word*/
 ```
 
-### Underline & Strike
+## Underline & Strike
 ```css
 .credits{text-decoration: underline;} /*text underline*/
 h1{text-decoration: overline;} /*text overline*/
@@ -1196,12 +1196,12 @@ h3{text-decoration: blink;} /*flash animation*/
 a{text-decoration: none;} /*remove any applied decoration*/
 ```
 
-### Line Height
+## Line Height
 ```css
 p{line-height: 1.4em;} /*line height = leading + font size*/
 ```
 
-### Letter & Word spacing
+## Letter & Word spacing
 ```css
 .credits{
 	text-transform: uppercase;
@@ -1211,7 +1211,7 @@ p{line-height: 1.4em;} /*line height = leading + font size*/
 }
 ```
 
-### Alignment
+## Alignment
 ```css
 /*justify: every line in a paragraph except the last line should be set to take up
 the full width of the containing box */
@@ -1240,7 +1240,7 @@ values it can take: sub, super, top, middle, bottom-->
 </body></html>
 ```
 
-### Indent
+## Indent
 indent the first line of text within an element
 
 ```html
@@ -1267,7 +1267,7 @@ indent the first line of text within an element
 </html>
 ```
 
-### CSS3: Drop Shadow
+## CSS3: Drop Shadow
 text-shadow: h-shadow v-shadow blur-radius color|none|initial|inherit;
 
 ```css
@@ -1296,7 +1296,7 @@ text-shadow: h-shadow v-shadow blur-radius color|none|initial|inherit;
 	color: #666666;}
 ```
 
-### First letter or First line
+## First letter or First line
 specify different value for the first letter or line of text inside pseudo-elements
 
 ```css
@@ -1304,7 +1304,7 @@ p.intro:first-letter{font-size: 200%;}
 p.intro:first-line{font-weight: bold;}
 ```
 
-### Styling Links
+## Styling Links
 ```css
 a:link{color: deeppink; text-decoration: none;}
 a:visited{color: black;}
@@ -1312,7 +1312,7 @@ a:hover{color: deeppink;text-decoration: underline;}
 a:active{color: darkcyan;}
 ```
 
-### Responding to users
+## Responding to users
 ```html
 <!DOCTYPE html>
 <html>
@@ -1342,7 +1342,7 @@ a:active{color: darkcyan;}
 </html>
 ```
 
-### Attribute selectors
+## Attribute selectors
 set of attribute selectors that allow you to create rules that apply to elements that have an attribute with a specific value.
 
 <table>
@@ -1384,7 +1384,7 @@ set of attribute selectors that allow you to create rules that apply to elements
 	</tr>
 </table>
 
-### Example
+## Example
 ```html
 <html>
 	<head>
@@ -1434,9 +1434,9 @@ set of attribute selectors that allow you to create rules that apply to elements
 </html>
 ```
 
-## Boxes
+# Boxes
 
-### width Height
+## width Height
 ```html
 <html>
 	<head>
@@ -1461,7 +1461,7 @@ set of attribute selectors that allow you to create rules that apply to elements
 </html>
 ```
 
-### Limiting width and height
+## Limiting width and height
 ```css
 /*width*/
 body {
@@ -1502,7 +1502,7 @@ p {
 	max-height: 70px;}
 ```
 
-### Overflowing content
+## Overflowing content
 ```css
 body {
 	font-family: Arial, Verdana, sans-serif;
@@ -1522,21 +1522,21 @@ p.two {
 	overflow: scroll;}
 ```
 
-### Border Margin Padding
+## Border Margin Padding
 margin is a gap between borders of two adjacent boxes. <br/>
 padding is the space between border and its content inside.
 
-### White space & Vertical margin
+## White space & Vertical margin
 use padding & margin
 
-### Border Width
+## Border Width
 ```css
 p.one{border-width:2px;}
 p.two{border-width:thick;} /*thin medium thick*/
 p.three{border-width:1px 4px 12px 4px;} /*top right bottom left*/
 ```
 
-### Border Style
+## Border Style
 ```css
 body {
 	font-family: Arial, Verdana, sans-serif;
@@ -1554,7 +1554,7 @@ p.seven {border-style: inset;}
 p.eight {border-style: outset;}
 ```
 
-### Border Color
+## Border Color
 ```css
 body {
 	font-family: Arial, Verdana, sans-serif;
@@ -1569,7 +1569,7 @@ p.two {
 	border-color: #bbbbaa #111111 #ee3e80 #0088dd;}
 ```
 
-### Border (in shorthand)
+## Border (in shorthand)
 ```css
 body {
 	font-family: Arial, Verdana, sans-serif;
@@ -1579,7 +1579,7 @@ p {
 	border: 3px dotted #0088dd;}
 ```
 
-### Padding
+## Padding
 space between the content of an element and its border
 
 ```css
@@ -1592,7 +1592,7 @@ p.example{
 padding: 10px 5px 3px 1px;*/
 ```
 
-### Margin
+## Margin
 gap between boxes
 
 ```css
@@ -1605,7 +1605,7 @@ p.example{
 margin: 10px 5px 3px 1px;*/
 ```
 
-### Centering Content
+## Centering Content
 set the following properties:
 
 1. width of the box
@@ -1626,7 +1626,7 @@ p.example{
 	text-align:left;}
 ```
 
-### Change Inline/Block
+## Change Inline/Block
 'inline-block' causes a block-level element to flow like an inline element, while retaining other features of a block-level element.
 ```css
 li{display:inline;  /*display: inline  block  inline-block  none*/
@@ -1634,7 +1634,7 @@ li{display:inline;  /*display: inline  block  inline-block  none*/
 li.coming-soon{display:none;}
 ```
 
-### Hiding boxes
+## Hiding boxes
 hide but unlike display:none; it leaves a space where the element would have been.
 
 ```css
@@ -1643,7 +1643,7 @@ li{display:inline;
 li.comming-soon{visibility:hidden;} /*visiblity: visible*/
 ```
 
-### CSS3: Border Images
+## CSS3: Border Images
 ```html
 <html><head>
 		<title>Border Image</title>
@@ -1668,7 +1668,7 @@ li.comming-soon{visibility:hidden;} /*visiblity: visible*/
 </body></html>
 ```
 
-### CSS3: Box Shadows
+## CSS3: Box Shadows
 Horizontal, Vertical Offeset, Blur distance, Spread of shadow. First two & color should me specified.
 
 ```css
@@ -1700,7 +1700,7 @@ p.five {
 	box-shadow: inset 0 0 10px #777777;} /*inset: inner shadow*/
 ```
 
-### CSS3: Rounded Corners
+## CSS3: Rounded Corners
 ```css
 p {
 	border: 5px solid #ee3e80;
@@ -1711,7 +1711,7 @@ p {
 	-webkit-border-radius: 10px;}
 ```
 
-### CSS3: Elliptical Shapes
+## CSS3: Elliptical Shapes
 specify horizontal and vertical parts of the rounded corners
 
 ```css
@@ -1737,7 +1737,7 @@ p.three {
 	-webkit-border-radius: 100px;}
 ```
 
-### Example
+## Example
 ```html
 <html><head>
 		<title>Boxes</title>
@@ -1801,9 +1801,9 @@ p.three {
 </body></html>
 ```
 
-## List, Table and Form
+# List, Table and Form
 
-### List
+## List
 ```css
 /*List: bullet point styles*/
 ul{list-style-type: none;}
@@ -1834,7 +1834,7 @@ ul{list-style:inside circle; width:300px;}
 li{margin: 10px 0px 0px 0px;}
 ```
 
-### Table
+## Table
 ```css
 /*Table properties*/
 table {
@@ -1871,7 +1871,7 @@ table.two{border-collapse: collapse;}
 table.two{border-collapse: separate;} /*borders are detached from each other*/
 ```
 
-### Forms
+## Forms
 ```css
 /*Forms: Styling text inputs*/
 input {
@@ -2030,7 +2030,7 @@ input#submit:hover {
 </body></html>
 ```
 
-### Cursor styles
+## Cursor styles
 ```html
 <!--auto crosshair default pointer move text wait help url("cursor.gif")-->
 <html><head>
@@ -2041,10 +2041,10 @@ input#submit:hover {
 </body></html>
 ```
 
-### Web developer toolbar
+## Web developer toolbar
 <a href="www.chrispederick.com/work/web-developer">web developer tool</a>
 
-### Example
+## Example
 ```html
 <html><head>
 		<title>Lists, Tables and Forms</title>
@@ -2193,9 +2193,9 @@ input#submit:hover {
 </body></html>
 ```
 
-## Layout
+# Layout
 
-### Normal flow
+## Normal flow
 ```css
 /*position: static;*/
 body{
@@ -2213,7 +2213,7 @@ there are :
 * Absolute positioning
 * Fixed positioning
 
-### Relavtive positioning
+## Relavtive positioning
 moves an element in relation to where it would have been in normal flow
 
 ```css
@@ -2223,7 +2223,7 @@ p.example{
 	left:100px;}
 ```
 
-### Absolute positioning
+## Absolute positioning
 taken out of normal flow and no longer affects the positon of other elements on the page box offset specify where the elements should appear in relation to its containing element
 
 ```css
@@ -2234,7 +2234,7 @@ h1{
 	width:250px;}
 ```
 
-### Fixed positioning
+## Fixed positioning
 type of absolute positioning in relation to the browser window. It stays in the same exact place when a user scrolls down the page
 
 ```css
@@ -2249,7 +2249,7 @@ h1{
 	background-color: #efefef;}
 ```
 
-### Overlapping elements
+## Overlapping elements
 ```css
 /*higher z-index(stacking context), closer element is to the front*/
 h1{
@@ -2267,7 +2267,7 @@ p{
 	left: 70px;}
 ```
 
-### Floating elements
+## Floating elements
 The float property allows you to take an element in normal flow and place it as far to the left or right of the containing element as possible
 
 ```css
@@ -2288,7 +2288,7 @@ blockquote {
 	border-bottom: 1px solid #665544;}
 ```
 
-### Using Float to place elements side-by-side
+## Using Float to place elements side-by-side
 Fourth paragraph is located below third due to short height of third paragraph.
 
 ```html
@@ -2324,7 +2324,7 @@ Fourth paragraph is located below third due to short height of third paragraph.
 
 Setting the height of the paragraphs (as the height of the highest) is rarely suited to real world designs: use 'clear' property!
 
-### Clearing Floats
+## Clearing Floats
 ```css
 /*left or right side of the box should not touch any other elements
 appearing in the same containing element*/
@@ -2369,14 +2369,14 @@ appearing in the same containing element*/
 </html>
 ```
 
-### Parents of Floated elements: PROBLEM
+## Parents of Floated elements: PROBLEM
 ```css
 /*If a containing element (div, containing p) only contains floated elements,
 some browsers treat it as 0px tall resulting in collapsed border*/
 div{border: 1px solid #665544;}
 ```
 
-### Parents of Floated elements: SOLUTION
+## Parents of Floated elements: SOLUTION
 ```css
 /*1. overflow: auto; 2. width:100%;*/
 div {border: 1px solid #665544;
@@ -2384,7 +2384,7 @@ div {border: 1px solid #665544;
 	width: 100%;}
 ```
 
-### Creating multi-column layouts with Floats
+## Creating multi-column layouts with Floats
 div to represent each column
 
 ```html
@@ -2427,10 +2427,10 @@ div to represent each column
 </body></html>
 ```
 
-### Screen size and resolution
+## Screen size and resolution
 higher resolution smaller texts
 
-### Fixed width layouts
+## Fixed width layouts
 fixed size regardless of browser window size
 
 ```css
@@ -2458,7 +2458,7 @@ li {
 	padding: 5px;}
 ```
 
-### Liquid layouts
+## Liquid layouts
 stretch and contract as browser window size changes
 
 ```css
@@ -2491,13 +2491,13 @@ li {
 	background-color: #efefef;}
 ```
 
-### Layout Grids
+## Layout Grids
 960 pixel grid
 
-### CSS Framework
+## CSS Framework
 framework code provide code for common tasks in your project. e.g. 960 grid system (framwork)
 
-### A Grid-based Layout using 960.gs framwork
+## A Grid-based Layout using 960.gs framwork
 * 960\_12\_col.css classes
 * 		container_12 class: container for the whole page and indicate 12-column grid
 *		clearfix class: inform browser height of the containing box since all floating elements
@@ -2557,7 +2557,7 @@ framework code provide code for common tasks in your project. e.g. 960 grid syst
 </body></html>
 ```
 
-### Multiple style sheets
+## Multiple style sheets
 modular approach, split up CSS style rules into separate style sheets(fonts, layout, colors)
 
 ```html
@@ -2625,7 +2625,7 @@ h3 {
 </head>
 ```
 
-### Example
+## Example
 ```html
 <html><head>
 		<title>Layout</title>
@@ -2774,9 +2774,9 @@ h3 {
 </body></html>
 ```
 
-## Images
+# Images
 
-### Sizes of images
+## Sizes of images
 ```css
 img.large{
 	width: 500px;
@@ -2784,7 +2784,7 @@ img.large{
 }
 ```
 
-### Align images using CSS
+## Align images using CSS
 float property can be used to move an element to the left or right of its containing block, allowing text to flow around it. Rather than using the \<img\> element's align attribute, web page authors are increasingly using the float property to align images.
 
 ```html
@@ -2806,7 +2806,7 @@ img.medium{
 }
 ```
 
-### Centering images using CSS
+## Centering images using CSS
 By default, images are inline elements. This means that they flow within the surrounding text. In order to center an image, it should be turned into a block-level element using the display property with a value of block.
 
 ```html
@@ -2823,7 +2823,7 @@ img.medium {
 }
 ```
 
-### Background images
+## Background images
 ```css
 body{
 	background-image: url("images/pattern.gif");} /*for body*/
@@ -2831,7 +2831,7 @@ p{
 	background-image: url("images/pattern.gif");} /*for element*/
 ```
 
-### Repeating images
+## Repeating images
 ```css
 body {
 	background-image: url("images/header.gif");
@@ -2842,7 +2842,7 @@ h1 {
 	color: white;}
 ```
 
-### Attach images
+## Attach images
 The background-attachment property specifies whether a background image should stay in one position or move as the user scrolls up and down the page. 
 ```css
 body {
@@ -2853,7 +2853,7 @@ body {
 	padding: 20px;}
 ```
 
-### Background position
+## Background position
 ```css
 body{
 	background-image:url("images/tulip.gif");
@@ -2864,7 +2864,7 @@ body{
 	/*background-position: 0px 0px;*/}
 ```
 
-### Background Shorthand
+## Background Shorthand
 1. background-color
 2. background-image
 3. background-repeat
@@ -2876,7 +2876,7 @@ body{
 	background: #ffffff url("images/tulip.gif") no-repeat top right;}
 ```
 
-### image rollovers & sprites
+## image rollovers & sprites
 a link or button that changes to a second style when a user moves their mouse over it(rollover) and a third style when clicked(activated). When a single image is used for several different parts of an interface, it is known as a sprite.
 
 ```html
@@ -2911,7 +2911,7 @@ a link or button that changes to a second style when a user moves their mouse ov
 </body></html>
 ```
 
-### CSS3: gradients
+## CSS3: gradients
 ```html
 <!DOCTYPE html>
 <html>
@@ -2942,7 +2942,7 @@ a link or button that changes to a second style when a user moves their mouse ov
 </html>
 ```
 
-### Example
+## Example
 ```html
 <!DOCTYPE html>
 <html>
@@ -3027,12 +3027,12 @@ a link or button that changes to a second style when a user moves their mouse ov
 </html>
 ```
 
-## HTML5 Layout
+# HTML5 Layout
 
-### Traditional HTML layouts
+## Traditional HTML layouts
 use \<div\> for each main section in a page
 
-### New HTML5 layout elements
+## New HTML5 layout elements
 * \<header\> \<footer\>
 * \<nav\>
 * \<article\>
@@ -3042,29 +3042,29 @@ use \<div\> for each main section in a page
 * \<figure\> \<figcaption\>
 * \<div\>
 
-#### Header Footer (HTML5)
+## Header Footer (HTML5)
 First, top and bottom of the page
 Second, Each individual \<article\> and \<section\> element can also have its own \<header\> and \<footer\> elements to hold the header or footer information for that section within the page. For example, on a page with several blog posts, each individual post can be thought of as a separate section. The \<header\> element can therefore be used to contain the title and date of each individual post, and the \<footer\> might contain links to share the article on social networking sites.
 
-#### Navigation (HTML5)
+## Navigation (HTML5)
 The \<nav\> element is used to contain the major navigational blocks on the site such as the primary site navigation.
 
-#### Article (HTML5)
+## Article (HTML5)
 The \<article\> is a container for any section of a page that could stand alone indepenent piece of content such as article, blog entry, comment, forum post. If a page contains several articles (or even summaries), each individual article would live inside its own \<article\> element. The \<article\> elements can even be nested inside each other. For example, a blog post might live inside one \<article\> element and each comment on the article could live inside its own child \<article\> element.
 
-#### Aside (HTML5)
+## Aside (HTML5)
 The \<aside\> element has two purposes, depending on whether it is inside an \<article\> element or not. Inside an article, it might contain info related to the article. e.g. pullquote, glossary. Outside an article, container for content related to the entire page. e.g. links, other posts, searchbox, tweets.
 
-#### Section (HTML5)
+## Section (HTML5)
 Groups related contents together and each section(e.g. latest news, top products, newsletter sign up) would have its own heading. It may contain several distinct \<article\> elements that have a common theme or purpose. Alternatively, if you have a page with a long article, split up into sections. The \<section\> element should not be used as a wrapper for the entire page. A containing element for the entire page, is still best left to the \<div\> element.
 
-#### Heading Group (HTML5)
+## Heading Group (HTML5)
 The purpose of the \<hgroup\> element is to group together a set of one or more \<h1\> through \<h6\> elements so that they are treated as one single heading.
 
-#### Figure (HTML5)
+## Figure (HTML5)
 \<figure\> can be used to contain any content that is referenced from the main flow of an article (not just images) e.g. image, video, graph, diagram, code samples, text support for main body of an article. The article should still make sense if the content of the \<figure\> element were moved to another part of the page or even a differnt page. For this reason, it should only be used when the content simply references the element (and not for something that is absolutely integral to the flow of a page)
 
-#### div (HTML5)
+## div (HTML5)
 \<div\> element will remain an important way to group together related elements, because you should not be using these new elements that you have just met for purposes other than those explicitly stated.
 
 ```html
@@ -3076,14 +3076,14 @@ The purpose of the \<hgroup\> element is to group together a set of one or more 
 </div>
 ```
 
-### Linking around block-level elements (HTML5)
+## Linking around block-level elements (HTML5)
 ```html
 <a href="introduction.html">
 	<article></article>
 </a>
 ```
 
-### Helping older browsers understand
+## Helping older browsers understand
 Older browsers that do not know the new HTML5 elements will automatically treat them as inline elements. Therefore, to help older browsers, you should include the line of CSS on the left which states which new elements should be rendered as block-level elements.
 
 ```css
@@ -3099,7 +3099,7 @@ Also, IE9 was the first version of Internet Explorer to allow CSS  rules to be a
 <![endif]-->
 ```
 
-### Example
+## Example
 ```html
 <!DOCTYPE html>
 <html>
@@ -3259,11 +3259,11 @@ Also, IE9 was the first version of Internet Explorer to allow CSS  rules to be a
 </html>
 ```
 
-## Process and Design
+# Process and Design
 
-## Practical Information
+# Practical Information
 
-### Domain names & Hosting
+## Domain names & Hosting
 so that people can see your site, you need to upload it to a web server.
 
 * disk space: html css images scripts
@@ -3273,7 +3273,7 @@ so that people can see your site, you need to upload it to a web server.
 * server-side language and databases: PHP & MySQL db,  ASP.Net & SQL Server db
 * check the review of the hosting companies
 
-### FTP & Third party tools
+## FTP & Third party tools
 FTP allows you to transfer files across the internet from you pc to web server. e.g. ftp://mydomain.com
 
 * FTP applications: FileZilla FireFTP CuteFTP SmartFTP Transmit
