@@ -2551,7 +2551,7 @@ framework code provide code for common tasks in your project. e.g. 960 grid syst
 				<p>Column Three</p>
 			</div>
 			<div id="footer" class="grid_12">
-				<p>© Copyright 2011</p>
+				<p>&copy; Copyright 2011</p>
 			</div>
 		</div><!-- .container_12 -->
 </body></html>
@@ -2768,7 +2768,7 @@ h3 {
 		</div><!-- .wrapper -->
 		<div class="footer clearfix">
 			<div class="container_12">
-				<p class="grid_12"><a href="">Legal Information</a> | <a href="">Privacy Policy</a> | <a href="">Copyright © Pedal Faster 2011</a></p>
+				<p class="grid_12"><a href="">Legal Information</a> | <a href="">Privacy Policy</a> | <a href="">Copyright &copy; Pedal Faster 2011</a></p>
 			</div>
 		</div>
 </body></html>
@@ -3252,7 +3252,7 @@ Also, IE9 was the first version of Internet Explorer to allow CSS  rules to be a
 				</section>
 			</aside>
 			<footer>
-				© 2011 Yoko's Kitchen
+				&copy; 2011 Yoko's Kitchen
 			</footer>
 		</div><!-- .wrapper -->
 	</body>
